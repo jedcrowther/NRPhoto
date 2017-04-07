@@ -1,0 +1,35 @@
+.instagram-pics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  li {
+    margin-right: 20px;
+    img {
+    height: 250px;
+    max-width: 250px;
+    }
+    &:last-child {
+     margin-right: 0; 
+    }
+  }
+}
+
+.social-icons {
+  width: 100px;
+  margin: 50px auto;
+  i {
+    margin: 0 5px;
+  }
+}
+
+.water-color-logo {
+  img {
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+  }
+}
+
