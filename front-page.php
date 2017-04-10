@@ -9,38 +9,37 @@ get_header();
   <main id="main" class="site-main" role="main">
 
     <section class="galleries">
-      <?php wp_nav_menu( array( 'theme_location' => 'gallery-menu', 'container_class' => 'gallery_menu_class' ) ); ?>
+      <?php
+      wp_nav_menu(array('theme_location' => 'gallery-menu', 'container_class' => 'gallery_menu_class'));
+
+
+
+      $latest_posts = get_posts(array(
+          'numberposts' => 6
+      ));
+      ?>
+
       <div class="gallery-container"> 
-        <div class="gallery-thumb">
-          <img>
-          <div></div>
-          <h4></h4>
-        </div>
-        <div class="gallery-thumb">
-          <img>
-          <div></div>
-          <h4></h4>
-        </div>
-        <div class="gallery-thumb">
-          <img>
-          <div></div>
-          <h4></h4>
-        </div>
-        <div class="gallery-thumb">
-          <img>
-          <div></div>
-          <h4></h4>
-        </div>
-        <div class="gallery-thumb">
-          <img>
-          <div></div>
-          <h4></h4>
-        </div>
-        <div class="gallery-thumb">
-          <img>
-          <div></div>
-          <h4></h4>
-        </div>
+
+        <?php
+        if ($latest_posts) {
+          foreach ($latest_posts as $post) {
+            setup_postdata($post);
+            ?>
+
+            <div class="post-container">
+              <a href="<?php the_permalink(); ?>">
+    <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
+
+                <p> <?php the_title(); ?></p>
+              </a>
+            </div>
+
+            <?php
+          }
+          wp_reset_postdata();
+        }
+        ?>
       </div>
     </section> 
     
