@@ -21,5 +21,8 @@
     "gulp-uglify": "^2.1.2",
     "gulp-watch": "^4.3.11",
     "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "rellax": "^1.0.0"
   }
 }

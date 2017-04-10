@@ -757,12 +757,26 @@ object {
     margin: 0; } }
 .nrphoto-logo-white {
   margin: 25vh;
-  width: 800px;
-  background-attachment: fixed; }
+  width: 800px; }
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; }
 
 .site-header {
   background-size: cover;
-  background-attachment: fixed; }
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25; }
 
 .site-branding {
   text-align: center; }
@@ -834,6 +848,7 @@ section {
 
 .stars {
   background-image: url("images/stars.jpg");
+  background-attachment: fixed;
   background-size: cover;
   height: 600px;
   color: white; }
@@ -863,6 +878,7 @@ section {
 
 .contact {
   background-image: url("images/contact.jpg");
+  background-attachment: fixed;
   background-size: cover;
   height: 600px;
   padding: 50px 0; }

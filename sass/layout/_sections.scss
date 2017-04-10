@@ -24,6 +24,7 @@ section {
 
 .stars {
   background-image: url('images/stars.jpg');
+  background-attachment: fixed;
   background-size: cover;
   height:600px;
   color: white;
@@ -61,6 +62,7 @@ section {
 
 .contact {
   background-image: url('images/contact.jpg');
+  background-attachment: fixed;
   background-size: cover;
   height:600px;
   padding: 50px 0;

@@ -18,7 +18,7 @@ get_header();
           'numberposts' => 6
       ));
       ?>
-
+      
       <div class="gallery-container"> 
 
         <?php
@@ -32,6 +32,7 @@ get_header();
     <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
 
                 <p> <?php the_title(); ?></p>
+                <p><?php the_category(); ?></p>
               </a>
             </div>
 

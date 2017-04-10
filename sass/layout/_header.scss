@@ -9,64 +9,80 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-.header-image .site-title > a {
-        float: left;
-        min-height: 130px;
-        width: 100%;
-        /*background: url(images/crunchify@2x.png) no-repeat left top !important;*/
-        background-size: 130px 65px !important;
-}
- 
-.header-image .title-area,
-.header-image .site-title,
-.header-image .site-title a {
+  .header-image .site-title > a {
+    float: left;
+    min-height: 130px;
+    width: 100%;
+    /*background: url(images/crunchify@2x.png) no-repeat left top !important;*/
+    background-size: 130px 65px !important;
+  }
+
+  .header-image .title-area,
+  .header-image .site-title,
+  .header-image .site-title a {
     max-width: 130px;
     min-height: 65px;
     padding: 0;
     width: 100%;
     float: left;
     margin: 0;
-}
+  }
 }
 
 .nrphoto-logo-white {
   margin: 25vh;
   width: 800px;
-  background-attachment: fixed;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .site-header {
-    background-size: cover;
-    background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+
 }
 
 .site-branding {
-    text-align: center;
+  text-align: center;
 }
 
 .site-title {
-    margin: 5em 1em 0;
-    font-family: $font__main;
-    font-size: 2.4em;
-    font-weight: light;
-    line-height: 1.3em;
-    color: #fff;
-    text-transform: uppercase;
-    word-break: break-word;
+  margin: 5em 1em 0;
+  font-family: $font__main;
+  font-size: 2.4em;
+  font-weight: light;
+  line-height: 1.3em;
+  color: #fff;
+  text-transform: uppercase;
+  word-break: break-word;
 }
 
 @media screen and (max-width: 30em){
 
-    .site-title {
-        font-size: 2em;
-    }
+  .site-title {
+    font-size: 2em;
+  }
 }
 
 .site-title a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .site-title a:hover,
 .site-title a:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
