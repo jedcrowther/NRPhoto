@@ -953,11 +953,11 @@ section {
 
 .gallery-container {
   margin: 3%;
-  column-width: 30vw;
+  column-width: 300px;
   column-gap: 5px;
   padding: 5px; }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .gallery-container {
     column-width: 300px; } }
 .post-overlay {

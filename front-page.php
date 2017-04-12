@@ -28,12 +28,12 @@ get_header();
             
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
-                <div class="post-overlay">
+<!--                <div class="post-overlay">
                   <div class="content">
-                    <p> <?php the_title(); ?></p>
-                    <p><?php the_category(); ?></p>
+                    <p> <?php // the_title(); ?></p>
+                    <p><?php //the_category(); ?></p>
                   </div>
-                </div>
+                </div>-->
               </a>
 
             <?php
