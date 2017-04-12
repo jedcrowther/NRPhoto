@@ -3,8 +3,9 @@ section {
   width: 100%;
 }
 
-
+/*
 .gallery-container {
+  position: relative;
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -22,17 +23,75 @@ section {
   height: 400px;
 }
 
+.post-overlay {
+    transition: .5s ease;
+    opacity: 1;
+  
+   &:hover {
+    opacity: 1;
+  }
+}
+
+.content {
+    background-color: $white;
+  color: $black;
+  font-size: 16px;
+  padding: 16px 32px;
+}*/
+
+.gallery-container {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.gallery-thumb {
+  height: 300px;
+  width: 450px;
+  background-color: lightgrey;
+}
+
+.post-container {
+  height: 400px;
+}
+
+.post-overlay {
+  transition: .5s ease;
+  opacity: 0;
+  background-color: $white;
+  height: 260px;
+  width: 410px;
+  position: relative;
+  top: -300px;
+  left: 20px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.content {
+  text-align: center;
+  color: $black;
+  font-size: 16px;
+
+
+}
+
 .stars {
   background-image: url('images/stars.jpg');
   background-attachment: fixed;
   background-size: cover;
   height:600px;
-  color: white;
+  color: $white;
   .stars-quote {
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1px;
-    width: 950px;
+    width: 65%;
     margin: 0 auto;
     padding: 220px 0 0 50px;
   }
@@ -68,7 +127,7 @@ section {
   padding: 50px 0;
 }
 .contact-container {
-  background-color: whitesmoke;
+  background-color: $white;
   width: 600px;
   height: 450px;
   margin: 0 auto;

@@ -7,15 +7,15 @@
   width: 100%;
   li {
     margin-right: 20px;
-    img {
-    height: 250px;
-    max-width: 250px;
-    }
+    
     &:last-child {
      margin-right: 0; 
     }
   }
 }
+
+
+
 
 .social-icons {
   width: 100px;

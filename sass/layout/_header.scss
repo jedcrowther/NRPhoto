@@ -30,17 +30,29 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .nrphoto-logo-white {
-  margin: 25vh;
+  display: block;
   width: 800px;
+  &.home {
+    margin: 25vh auto;
+  }
+  &.other {
+    margin: 15vh auto;
+  }
 }
+
 
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   position: relative;
   overflow: hidden;
+  &.home__hero {
+    height: 85vh;
+  }
+  &.other__hero {
+    height: 60vh;
+  }
 }
 
 .site-header {
