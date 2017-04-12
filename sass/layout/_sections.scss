@@ -1,6 +1,5 @@
 section {
   margin: 100px 0;
-  width: 100%;
 }
 
 /*
@@ -39,31 +38,33 @@ section {
   padding: 16px 32px;
 }*/
 
-.gallery-container {
-  position: relative;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+
+.gallery-thumb {
   width: 100%;
 }
 
-.gallery-thumb {
-  height: 300px;
-  width: 450px;
-  background-color: lightgrey;
+.gallery-container {
+  margin: 3%;
+  column-width: 30vw;
+  column-gap: 5px;
+  padding: 5px;
 }
 
-.post-container {
-  height: 400px;
+
+@include breakpoint(tablet) {
+  .gallery-container {
+  column-width: 300px;
+  }
 }
+
 
 .post-overlay {
   transition: .5s ease;
   opacity: 0;
   background-color: $white;
-  height: 260px;
-  width: 410px;
+/*  height: 260px;
+  width: 410px;*/
   position: relative;
   top: -300px;
   left: 20px;
@@ -76,7 +77,7 @@ section {
 .content {
   text-align: center;
   color: $black;
-  font-size: 16px;
+  /*font-size: 16px;*/
 
 
 }
@@ -88,7 +89,7 @@ section {
   height:600px;
   color: $white;
   .stars-quote {
-    font-size: 30px;
+    /*font-size: 30px;*/
     font-weight: 400;
     letter-spacing: 1px;
     width: 65%;
@@ -97,15 +98,15 @@ section {
   }
   .stars-quote-mark {
     position: absolute;
-    font-size: 180px;
-    left: 200px;
+    /*font-size: 180px;*/
+    left: 15%;
   }
 }
 
 
 .about {
   display: flex;
-  justify-content: space-between;
+  margin: 150px 3%;
   div {
     width: 50%;
     height: 400px;
@@ -115,7 +116,9 @@ section {
     background-size: cover;
   }
   .about-text {
-    padding: 0 150px 0 50px;
+    padding: 0 6% 0 2%;
+    max-height:  400px;
+    overflow: hidden;
   }
 }
 
@@ -128,7 +131,7 @@ section {
 }
 .contact-container {
   background-color: $white;
-  width: 600px;
+  width: 50%;
   height: 450px;
   margin: 0 auto;
   box-shadow: 2px 2px 10px #111;

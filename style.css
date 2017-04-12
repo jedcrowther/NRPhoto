@@ -41,6 +41,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/*********************
+BREAKPOINTS
+*********************/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -281,6 +284,15 @@ big {
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box; }
+  html html {
+    font-size: 100%;
+    line-height: 1.4; }
+    @media all and (min-width: 600px) {
+      html html {
+        font-size: 112.5%; } }
+    @media all and (min-width: 1200px) {
+      html html {
+        font-size: 125%; } }
 
 *,
 *:before,
@@ -409,7 +421,7 @@ form {
   margin-bottom: 100px; }
   form textarea, form input[type="text"] {
     border: solid 1px lightgrey;
-    font-size: 15px;
+    /*    font-size:15px;*/
     padding: 5px 5px;
     margin-bottom: 5px; }
 
@@ -473,7 +485,6 @@ a {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    /*    float: left;*/
     position: relative; }
   .main-navigation a {
     display: block;
@@ -587,7 +598,7 @@ a {
   width: 50%; }
 
 .gallery_menu_class {
-  margin-top: 50px;
+  margin: 50px 0;
   display: block; }
   .gallery_menu_class ul {
     margin: 0 auto;
@@ -826,7 +837,7 @@ object {
     margin: 0; } }
 .nrphoto-logo-white {
   display: block;
-  width: 800px; }
+  width: 60%; }
   .nrphoto-logo-white.home {
     margin: 25vh auto; }
   .nrphoto-logo-white.other {
@@ -878,12 +889,11 @@ object {
   text-decoration: underline; }
 
 .instagram-pics {
-  margin: 0;
+  margin: 4%;
   padding: 0;
   list-style: none;
   display: inline-flex;
-  justify-content: space-between;
-  width: 100%; }
+  justify-content: space-between; }
   .instagram-pics li {
     margin-right: 20px; }
     .instagram-pics li:last-child {
@@ -901,8 +911,7 @@ object {
   margin: 0 auto; }
 
 section {
-  margin: 100px 0;
-  width: 100%; }
+  margin: 100px 0; }
 
 /*
 .gallery-container {
@@ -939,28 +948,24 @@ section {
   font-size: 16px;
   padding: 16px 32px;
 }*/
-.gallery-container {
-  position: relative;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.gallery-thumb {
   width: 100%; }
 
-.gallery-thumb {
-  height: 300px;
-  width: 450px;
-  background-color: lightgrey; }
+.gallery-container {
+  margin: 3%;
+  column-width: 30vw;
+  column-gap: 5px;
+  padding: 5px; }
 
-.post-container {
-  height: 400px; }
-
+@media (min-width: 50em) {
+  .gallery-container {
+    column-width: 300px; } }
 .post-overlay {
   transition: .5s ease;
   opacity: 0;
   background-color: #f9f9f9;
-  height: 260px;
-  width: 410px;
+  /*  height: 260px;
+    width: 410px;*/
   position: relative;
   top: -300px;
   left: 20px; }
@@ -970,7 +975,7 @@ section {
 .content {
   text-align: center;
   color: #0f0f0f;
-  font-size: 16px; }
+  /*font-size: 16px;*/ }
 
 .stars {
   background-image: url("images/stars.jpg");
@@ -979,7 +984,7 @@ section {
   height: 600px;
   color: #f9f9f9; }
   .stars .stars-quote {
-    font-size: 30px;
+    /*font-size: 30px;*/
     font-weight: 400;
     letter-spacing: 1px;
     width: 65%;
@@ -987,12 +992,12 @@ section {
     padding: 220px 0 0 50px; }
   .stars .stars-quote-mark {
     position: absolute;
-    font-size: 180px;
-    left: 200px; }
+    /*font-size: 180px;*/
+    left: 15%; }
 
 .about {
   display: flex;
-  justify-content: space-between; }
+  margin: 150px 3%; }
   .about div {
     width: 50%;
     height: 400px; }
@@ -1000,7 +1005,9 @@ section {
     background-image: url("images/about.jpg");
     background-size: cover; }
   .about .about-text {
-    padding: 0 150px 0 50px; }
+    padding: 0 6% 0 2%;
+    max-height: 400px;
+    overflow: hidden; }
 
 .contact {
   background-image: url("images/contact.jpg");
@@ -1011,7 +1018,7 @@ section {
 
 .contact-container {
   background-color: #f9f9f9;
-  width: 600px;
+  width: 50%;
   height: 450px;
   margin: 0 auto;
   box-shadow: 2px 2px 10px #111;

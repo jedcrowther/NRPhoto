@@ -55,7 +55,6 @@
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-/*    float: left;*/
     position: relative;
 
     &:hover > a,
@@ -163,6 +162,7 @@
       text-align: center;
       margin: 0;
       padding:0;
+      
       li {
         padding: 10px 0;
         list-style: none;
@@ -170,8 +170,6 @@
         .link {
           color: $color__nav-text-mobile;
           text-decoration: none;
-          // transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-          
         }
 
 a{
@@ -251,7 +249,7 @@ a{
 
 
 .gallery_menu_class {
-  margin-top: 50px;
+  margin: 50px 0;
   display: block;
 
   ul {

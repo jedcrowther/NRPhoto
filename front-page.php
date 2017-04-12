@@ -25,7 +25,7 @@ get_header();
             setup_postdata($post);
             ?>
 
-            <div class="post-container">
+            
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
                 <div class="post-overlay">
@@ -35,7 +35,6 @@ get_header();
                   </div>
                 </div>
               </a>
-            </div>
 
             <?php
           }
