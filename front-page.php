@@ -39,7 +39,7 @@ get_header();
         ?>
       </div>
 
-    </section></section> 
+    </section>
 
     <section class="stars">
       <p class="stars-quote-mark">“</p><h3 class="stars-quote">Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus.</h3>

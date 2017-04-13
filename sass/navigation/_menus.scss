@@ -75,7 +75,8 @@
       &:focus,
       &:active {
       color: $color__nav-text;
-      text-decoration: underline;
+/*      text-decoration: underline;*/
+      opacity: 0.5;
     }
     &:focus {
       outline: thin dotted;
@@ -180,7 +181,8 @@ a{
             &:focus,
             &:active {
             color: $color__nav-text-mobile;
-            text-decoration: underline;
+/*            text-decoration: underline;*/
+opacity: 0.5;
           }
           &:focus {
             outline: thin dotted;

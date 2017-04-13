@@ -18,75 +18,91 @@ get_header();
 
 <h3>Events</h3>
 
-<div class="galleries">
-  <div class="gallery-container"> 
 
+<section class="galleries">
+
+      <div class="container">
         <?php
         if ($event_posts) {
           foreach ($event_posts as $post) {
             setup_postdata($post);
             ?>
 
-            <div class="post-container">
-              <a href="<?php the_permalink(); ?>">
-    <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
 
-                <p> <?php the_title(); ?></p>
+            <div class="image-container">
+              <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('thumbnail', array('class' => 'image')); ?>
+                <div class="overlay">
+                  <div class="text"><?php the_title(); ?></div>
+                </div>
               </a>
             </div>
-
             <?php
           }
           wp_reset_postdata();
         }
         ?>
       </div>
+
+    </section>
+
+
   
   <h3>Weddings</h3>
-  <div class="gallery-container"> 
-              <?php
+<section class="galleries">
+
+      <div class="container">
+        <?php
         if ($wedding_posts) {
           foreach ($wedding_posts as $post) {
             setup_postdata($post);
             ?>
 
-            <div class="post-container">
-              <a href="<?php the_permalink(); ?>">
-    <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
 
-                <p> <?php the_title(); ?></p>
+            <div class="image-container">
+              <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('thumbnail', array('class' => 'image')); ?>
+                <div class="overlay">
+                  <div class="text"><?php the_title(); ?></div>
+                </div>
               </a>
             </div>
-
             <?php
           }
           wp_reset_postdata();
         }
         ?>
-  </div>
+      </div>
+
+    </section>
   
   <h3>Landscapes</h3>
-  <div class="gallery-container"> 
-      <?php
+<section class="galleries">
+
+      <div class="container">
+        <?php
         if ($landscape_posts) {
           foreach ($landscape_posts as $post) {
             setup_postdata($post);
             ?>
 
-            <div class="post-container">
-              <a href="<?php the_permalink(); ?>">
-    <?php the_post_thumbnail('thumbnail', array('class' => 'gallery-thumb')); ?> 
 
-                <p> <?php the_title(); ?></p>
+            <div class="image-container">
+              <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('thumbnail', array('class' => 'image')); ?>
+                <div class="overlay">
+                  <div class="text"><?php the_title(); ?></div>
+                </div>
               </a>
             </div>
-
             <?php
           }
           wp_reset_postdata();
         }
         ?>
-  </div>
+      </div>
+
+    </section>
     </div> 
 
 <?php

@@ -66,23 +66,3 @@
         </div>
             <!-- #site-navigation -->
             <div id="content" class="site-content">
-
-              
-<!--              <script>
-                // Declare the variable
-var $toggles = $('.menu__icon');
-
-// This function adds the class that displays the menu
-$toggles.on('click', function () {
-  console.log('hi');
-    $(this).closest('.menu').toggleClass('open');
-});
-
-// Declare the variable
-var $toggleLink = $('.link');
-
-// This function removes the class that displays the menu
-$toggleLink.on('click', function () {
-    $(this).closest('.menu').toggleClass('open');
-});
-                </script>-->
