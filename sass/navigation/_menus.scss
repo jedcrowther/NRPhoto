@@ -13,7 +13,8 @@
     padding-left: 0;
 
     ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      display: block;
+      /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);*/
       float: left;
       position: absolute;
       top: 1.5em;
@@ -52,7 +53,7 @@
   }
 
   li {
-    margin: 0;
+    margin: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
@@ -95,6 +96,11 @@
   }
 }
 
+.sub-menu li {
+  margin: 20px 0;
+}
+
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -113,8 +119,10 @@
 }
 
 @media screen and (max-width: 37.5em) {
-  // Variables
 
+  .menu nav ul .sub-menu {
+    display: none;
+  }
 // Menu - closed
 .menu {
   width: 100%;

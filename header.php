@@ -44,8 +44,10 @@
           <div class="hero other__hero">
             <?php if (get_header_image()) : ?>
               <header id="masthead" class="site-header" style="background-image: url(<?php header_image() ?>)" role="banner">
+                <div id="ParallaxContent" class="site-branding">
                 <img class="nrphoto-logo-white other" src="<?php echo $image[0]; ?>" alt="Natalie Rose Photography Logo">
-              <?php endif; ?>
+                </div>
+                  <?php endif; ?>
             <?php } ?>
             </div>
 
