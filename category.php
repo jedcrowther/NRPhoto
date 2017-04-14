@@ -11,13 +11,6 @@ get_header(); ?>
 <?php if ( have_posts() ) : 
 while ( have_posts() ) : the_post(); ?>
 
-  
-  
-
-      
-       
-
-
             <div class="image-container">
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('thumbnail', array('class' => 'image')); ?>
@@ -26,11 +19,6 @@ while ( have_posts() ) : the_post(); ?>
                 </div>
               </a>
             </div>
-            
-         
-      
-
-    
   
 <?php endwhile; 
 

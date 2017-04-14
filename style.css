@@ -1025,9 +1025,70 @@ section {
   margin: 0 auto;
   max-width: 1200px; }
 
+/*
 .image-container {
   position: relative;
-  padding: 5px; }
+  padding: 5px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+  .overlay {
+        position: relative;
+        padding: 100px 10px;
+            opacity: 1;
+            background-color: $white;
+            
+  }
+
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: $black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+@include breakpoint(laptop) {
+  .overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 4%;
+  right: 0;
+  height: 90%;
+  width: 92%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: $white;
+  z-index: 100;
+  }
+}*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1200px; }
+
+.image-container {
+  flex-basis: 31%;
+  position: relative;
+  margin: 5px; }
 
 .image {
   display: block;
@@ -1035,10 +1096,17 @@ section {
   height: auto; }
 
 .overlay {
-  position: relative;
-  padding: 100px 10px;
-  opacity: 1;
-  background-color: #f9f9f9; }
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 4%;
+  right: 0;
+  height: 90%;
+  width: 92%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #f9f9f9;
+  z-index: 100; }
 
 .image-container:hover .overlay {
   opacity: 1; }
@@ -1052,18 +1120,37 @@ section {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
 
-@media (min-width: 64em) {
+@media screen and (min-width: 450px) and (max-width: 910px) {
+  .image-container {
+    flex-basis: 47%;
+    margin: 5px; } }
+@media screen and (max-width: 800px) {
   .overlay {
-    position: absolute;
+    position: relative;
+    padding: 100px 10px;
+    opacity: 1;
+    background-color: #f9f9f9;
     top: 5%;
     bottom: 0;
-    left: 4%;
+    left: 0;
     right: 0;
-    height: 90%;
-    width: 92%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #f9f9f9;
-    z-index: 100; } }
+    height: inherit;
+    width: inherit; } }
+@media screen and (max-width: 450px) {
+  .container {
+    display: block;
+    column-width: 300px;
+    column-gap: 5px;
+    margin: 0 auto;
+    max-width: 1200px; }
+
+  .image-container {
+    position: relative;
+    margin-bottom: 5px; }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */
