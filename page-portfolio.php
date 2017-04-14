@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<div class="portfolio-link">
+<div class="portfolio__link">
   <h2></h2>
 </div>
 

@@ -29,7 +29,7 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
-.nrphoto-logo-white {
+.nrphoto__logo--white {
   display: block;
   width: 50%;
   &.home {
@@ -55,7 +55,7 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
-.site-header {
+.site__header {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -68,7 +68,7 @@ only screen and (                min-resolution: 2dppx) {
 
 }
 
-.site-branding {
+.site__branding {
   text-align: center;
 }
 

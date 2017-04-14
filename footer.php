@@ -13,26 +13,25 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-  
+
   <div class="water-color-logo">
     <img src="<?php echo get_template_directory_uri() . '/images/logo.png'; ?>" />
-</div>
-  
-  <div class="social-icons">
+  </div>
+
+  <div class="social__icons">
     <i class="fa fa-pinterest" aria-hidden="true"></i>
     <i class="fa fa-instagram" aria-hidden="true"></i>
     <i class="fa fa-facebook-square" aria-hidden="true"></i>
   </div>
 
-  
-  <div class="site-info">
+
+  <div class="site__info">
+
   </div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php 
-
-wp_footer(); ?>
+<?php wp_footer(); ?>
 
 
 

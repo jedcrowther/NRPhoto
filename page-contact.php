@@ -8,6 +8,11 @@ get_header();
 <p>+ 036-3478-384</p>
 <p>natalierose@gmail.com</p>
 
+</div>
+
+<div id="yourfooterwidgetid">
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Contact Widget') ) : ?>
+<?php endif; ?>
 
 </div>
 

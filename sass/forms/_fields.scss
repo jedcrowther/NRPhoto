@@ -1,4 +1,4 @@
-/*input[type="text"],
+input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
@@ -30,8 +30,15 @@ select {
 
 textarea {
 	width: 100%;
-}*/
+}
 
 
 
 
+#ninja_forms_widget-3 {
+    list-style: none;
+    width: 50%;
+    padding-top: 50px;
+    margin: 0 auto;
+  
+}
