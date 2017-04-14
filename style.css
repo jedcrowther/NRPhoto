@@ -412,26 +412,6 @@ select {
 textarea {
 	width: 100%;
 }*/
-.half {
-  margin: 0;
-  width: 198px; }
-
-form {
-  padding: 50px;
-  margin-bottom: 100px; }
-  form textarea, form input[type="text"] {
-    border: solid 1px lightgrey;
-    /*    font-size:15px;*/
-    padding: 5px 5px;
-    margin-bottom: 5px; }
-
-.drop {
-  display: block;
-  width: 400px; }
-
-textarea {
-  height: 200px; }
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -796,34 +776,80 @@ object {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em; }
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1200px; }
 
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%; }
-  .gallery-columns-2 .gallery-item {
-    max-width: 50%; }
-  .gallery-columns-3 .gallery-item {
-    max-width: 33.33%; }
-  .gallery-columns-4 .gallery-item {
-    max-width: 25%; }
-  .gallery-columns-5 .gallery-item {
-    max-width: 20%; }
-  .gallery-columns-6 .gallery-item {
-    max-width: 16.66%; }
-  .gallery-columns-7 .gallery-item {
-    max-width: 14.28%; }
-  .gallery-columns-8 .gallery-item {
-    max-width: 12.5%; }
-  .gallery-columns-9 .gallery-item {
-    max-width: 11.11%; }
+.image__container {
+  flex-basis: 31%;
+  position: relative;
+  margin: 5px; }
 
-.gallery-caption {
-  display: block; }
+.image__thumb {
+  display: block;
+  width: 100%;
+  height: auto; }
 
+.image__thumb--overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 4%;
+  right: 0;
+  height: 90%;
+  width: 92%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #f9f9f9;
+  z-index: 100; }
+
+.image__container:hover .image__thumb--overlay {
+  opacity: 1; }
+
+.image__thumb--text {
+  color: #0f0f0f;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+
+@media screen and (min-width: 450px) and (max-width: 910px) {
+  .image__container {
+    flex-basis: 47%;
+    margin: 5px; } }
+@media screen and (max-width: 800px) {
+  .image__thumb--overlay {
+    position: relative;
+    padding: 100px 10px;
+    opacity: 1;
+    background-color: #f9f9f9;
+    top: 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    width: inherit; } }
+@media screen and (max-width: 450px) {
+  .gallery__container {
+    display: block;
+    column-width: 300px;
+    column-gap: 5px;
+    margin: 0 auto;
+    max-width: 1200px; }
+
+  .image__container {
+    position: relative;
+    margin-bottom: 5px; }
+
+  .image__thumb {
+    display: block;
+    width: 100%;
+    height: auto; } }
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -922,59 +948,57 @@ object {
 section {
   margin: 100px 0; }
 
-.stars {
+.stars__section {
   background-image: url("images/stars.jpg");
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
   color: #f9f9f9; }
-  .stars .stars-quote {
-    /*font-size: 30px;*/
+  .stars__section .stars__quote {
     font-weight: 400;
     letter-spacing: 1px;
     width: 65%;
     margin: 0 auto;
     padding: 220px 0 0 50px; }
-  .stars .stars-quote-mark {
+  .stars__section .stars__quote-mark {
     position: absolute;
-    /*font-size: 180px;*/
     left: 15%; }
 
-.about {
+.about__section {
   display: flex;
   margin: 150px 5%; }
-  .about div {
+  .about__section div {
     width: 50%;
     height: 600px; }
-  .about .about-image {
+  .about__section .about__image {
     background-image: url("images/about.jpg");
     background-size: cover; }
-  .about .about-page {
+  .about__section .about__page {
     height: 500px; }
-  .about .about-text {
+  .about__section .about__text {
     padding: 0 6% 0 2%;
     max-height: 400px;
     overflow: hidden; }
 
-.gear-list {
+.gear__list {
   max-width: 1000px;
   padding: 100px 0;
   margin: 0 auto; }
 
-.flat-lay {
+.flatlay__section {
   background-image: url("images/flatlay.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 600px; }
 
-.contact {
+.contact__section {
   background-image: url("images/contact.jpg");
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
   padding: 50px 0; }
 
-.contact-container {
+.contact__container {
   background-color: #f9f9f9;
   width: 50%;
   height: 450px;
@@ -986,91 +1010,10 @@ section {
   letter-spacing: 1.5px;
   text-transform: uppercase; }
 
-.contact-section {
+.contact__page {
   text-align: center;
   width: 500px;
   margin: 0 auto;
   padding-top: 50px; }
-
-.container {
-  column-width: 300px;
-  column-gap: 5px;
-  margin: 0 auto;
-  max-width: 1200px; }
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: center;
-  max-width: 1200px; }
-
-.image-container {
-  flex-basis: 31%;
-  position: relative;
-  margin: 5px; }
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-.overlay {
-  position: absolute;
-  top: 5%;
-  bottom: 0;
-  left: 4%;
-  right: 0;
-  height: 90%;
-  width: 92%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #f9f9f9;
-  z-index: 100; }
-
-.image-container:hover .overlay {
-  opacity: 1; }
-
-.text {
-  color: #0f0f0f;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
-
-@media screen and (min-width: 450px) and (max-width: 910px) {
-  .image-container {
-    flex-basis: 47%;
-    margin: 5px; } }
-@media screen and (max-width: 800px) {
-  .overlay {
-    position: relative;
-    padding: 100px 10px;
-    opacity: 1;
-    background-color: #f9f9f9;
-    top: 5%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: inherit;
-    width: inherit; } }
-@media screen and (max-width: 450px) {
-  .container {
-    display: block;
-    column-width: 300px;
-    column-gap: 5px;
-    margin: 0 auto;
-    max-width: 1200px; }
-
-  .image-container {
-    position: relative;
-    margin-bottom: 5px; }
-
-  .image {
-    display: block;
-    width: 100%;
-    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */

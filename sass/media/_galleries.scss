@@ -1,46 +1,90 @@
-.gallery {
-	margin-bottom: 1.5em;
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1200px;
 }
 
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-
-	.gallery-columns-2 & {
-		max-width: 50%;
-	}
-
-	.gallery-columns-3 & {
-		max-width: 33.33%;
-	}
-
-	.gallery-columns-4 & {
-		max-width: 25%;
-	}
-
-	.gallery-columns-5 & {
-		max-width: 20%;
-	}
-
-	.gallery-columns-6 & {
-		max-width: 16.66%;
-	}
-
-	.gallery-columns-7 & {
-		max-width: 14.28%;
-	}
-
-	.gallery-columns-8 & {
-		max-width: 12.5%;
-	}
-
-	.gallery-columns-9 & {
-		max-width: 11.11%;
-	}
+.image__container {
+  flex-basis: 31%;
+  position: relative;
+  margin: 5px;
 }
 
-.gallery-caption {
-	display: block;
+.image__thumb {
+  display: block;
+  width: 100%;
+  height: auto;
 }
+
+.image__thumb--overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 4%;
+  right: 0;
+  height: 90%;
+  width: 92%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: $white;
+  z-index: 100;
+}
+
+.image__container:hover .image__thumb--overlay {
+  opacity: 1;
+}
+
+.image__thumb--text {
+  color: $black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 450px) and (max-width: 910px) {
+  .gallery__container {}
+  .image__container {
+    flex-basis: 47%;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image__thumb--overlay {
+    position: relative;
+    padding: 100px 10px;
+    opacity: 1;
+    background-color: $white;
+    top: 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    width: inherit;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .gallery__container {
+    display: block;
+    column-width: 300px;
+    column-gap: 5px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .image__container {
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .image__thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
