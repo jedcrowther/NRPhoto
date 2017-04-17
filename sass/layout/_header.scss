@@ -13,7 +13,6 @@ only screen and (                min-resolution: 2dppx) {
     float: left;
     min-height: 130px;
     width: 100%;
-    /*background: url(images/crunchify@2x.png) no-repeat left top !important;*/
     background-size: 130px 65px !important;
   }
 
@@ -31,13 +30,24 @@ only screen and (                min-resolution: 2dppx) {
 
 .nrphoto__logo--white {
   display: block;
-  width: 50%;
+/*  width: 50%;*/
   &.home {
     margin: 28vh auto;
+    padding: 0 10%;
   }
   &.other {
-    margin: 15vh auto;
+    padding: 0 10%;
+    margin: 20vh auto;
   }
+}
+
+@include breakpoint(tablet) {
+      .nrphoto__logo--white {
+        &.home, &.other {
+        width: 50%;
+        padding: 0 0;
+        }
+      }
 }
 
 
@@ -84,7 +94,6 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 30em){
-
   .site-title {
     font-size: 2em;
   }

@@ -41,20 +41,22 @@ get_header();
       <p class="stars__quote-mark">“</p><h3 class="stars__quote">Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus.</h3>
     </section>
     
+    
     <section class="about__section">
       <div class="about__image"></div>
       <div class="about__text">
         <h2>About Natalie</h2>
         <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum.</p>
-        <a>Read More</a>
+        <a href="about">Read More</a>
       </div>
     </section>
+    
     
     <section class="contact__section">
       <div class="contact__container">
         <h2>Contact</h2>
         <p>+64 027 1234567</p>
-        <p>natalierosephoto@gmail.com</p>
+        <p class="contact-email">natalierosephoto@gmail.com</p>
       </div>
     </section> 
 
