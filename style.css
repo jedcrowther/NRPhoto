@@ -233,7 +233,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #0f0f0f;
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5; }
 
@@ -357,7 +357,7 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
+  border-radius: 0;
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1;
@@ -435,9 +435,9 @@ textarea {
 a {
   color: #1b2c4a; }
   a:visited {
-    color: purple; }
+    color: #0f0f0f; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #0f0f0f; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -1062,5 +1062,61 @@ section {
   width: 500px;
   margin: 0 auto;
   padding-top: 50px; }
+
+.woocommerce main#main.site-main {
+  margin: 6em; }
+
+.woocommerce div #container {
+  margin: 2em; }
+
+span.woocommerce-Price-amount.amount {
+  color: #0f0f0f; }
+
+.woocommerce-products-header__title {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.woocommerce ul.products li.product .price {
+  color: #485665 !important; }
+
+button,
+a.checkout-button.button.alt.wc-forward {
+  background-color: #0f0f0f !important;
+  border-radius: 0; }
+
+.woocommerce-message {
+  border-top-color: #0f0f0f !important; }
+
+.woocommerce {
+  border-radius: 0 !important; }
+
+.woocommerce .quantity .qty {
+  height: 35px; }
+
+.woocommerce-result-count,
+select.orderby {
+  display: none !important; }
+
+.woocommerce-products-header__title.page-title {
+  text-align: center !important; }
+
+.product_type_simple {
+  width: 100% !important;
+  text-align: center !important;
+  border: 1px solid #0f0f0f !important;
+  background: #f9f9f9 !important;
+  color: #0f0f0f !important; }
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  float: left !important;
+  margin: 20px !important;
+  padding: 0 !important;
+  position: relative !important;
+  width: 30% !important; }
+
+.woocommerce ul.products {
+  display: flex !important;
+  align-items: stretch !important;
+  flex-wrap: wrap !important; }
 
 /*# sourceMappingURL=style.css.map */

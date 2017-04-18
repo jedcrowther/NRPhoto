@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "../node_modules/typi/scss/typi";
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "woocommerce/woocommerce";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -111,3 +112,86 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 
 @import "layout/layout";
+
+
+
+
+.woocommerce main#main.site-main {
+  margin: 6em;
+}
+
+.woocommerce div #container {
+  margin: 2em;
+}
+
+span.woocommerce-Price-amount.amount {
+  color: $black;
+}
+
+.woocommerce-products-header__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.woocommerce ul.products li.product .price {
+  color: $steelgrey !important;
+}
+
+button,
+a.checkout-button.button.alt.wc-forward {
+  background-color: $black !important;
+  border-radius: 0;
+}
+
+
+.woocommerce-message {
+    border-top-color: $black !important;
+}
+
+.woocommerce {
+   border-radius: 0 !important;
+}
+.woocommerce .quantity {
+
+.qty {
+  height: 35px;
+}
+}
+
+
+
+.woocommerce-result-count,
+select.orderby {
+  display: none !important;
+}
+
+
+.woocommerce-products-header__title.page-title {
+    text-align: center !important;
+}
+
+.product_type_simple {
+  width: 100% !important;
+  text-align: center !important;
+  border: 1px solid $black !important;
+  background: $white !important;
+  color: $black !important;
+}
+
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+
+    float: left !important;
+    margin: 20px !important;
+    padding: 0 !important;
+    position: relative !important;
+    width: 30% !important;
+}
+
+
+.woocommerce ul.products {
+    display: flex !important;
+  align-items:stretch !important;
+  flex-wrap: wrap !important;
+}

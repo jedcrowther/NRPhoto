@@ -158,6 +158,9 @@ function woocommerce_support() {
 add_theme_support( 'woocommerce' );
 }
 
+
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -182,3 +185,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// hide description and reviews tabs for woocommerce
+add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+    function wcs_woo_remove_reviews_tab($tabs) {
+    unset($tabs);
+    return $tabs;
+}

@@ -11,6 +11,7 @@ window.addEventListener('scroll', function windowScroll() {
 });
 
 
+
 var $toggles = $('.menu__icon');
 var $toggleLink = $('.link');
 
@@ -23,3 +24,6 @@ $toggleLink.on('click', function () {
     $(this).closest('.menu').toggleClass('open');
 });
          
+         
+         
+      
