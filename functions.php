@@ -192,3 +192,27 @@ add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
     unset($tabs);
     return $tabs;
 }
+
+
+add_filter( 'rwmb_meta_boxes', 'your_prefix_image_demo' );
+function your_prefix_image_demo( $meta_boxes ) {
+	$meta_boxes[] = array(
+		'title'  => esc_html__( 'Image Upload Demo', 'your-prefix' ),
+		'fields' => array(
+			array(
+				'id'               => 'hover-image',
+				'name'             => esc_html__( 'Image', 'your-prefix' ),
+				'type'             => 'image',
+				// Delete image from Media Library when remove it from post meta?
+				// Note: it might affect other posts if you use same image for multiple posts
+				'force_delete'     => false,
+				// Maximum image uploads
+				'max_file_uploads' => 1,
+			),
+		),
+	);
+	return $meta_boxes;
+}
+
+
+

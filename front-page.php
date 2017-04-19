@@ -21,13 +21,21 @@ get_header();
           foreach ($latest_posts as $post) {
             setup_postdata($post);
             ?>
+        
             <div class="image__container">
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('thumbnail', array('class' => 'image__thumb')); ?>
                 <div class="image__thumb--overlay">
                   <div class="image__thumb--text"><?php the_title(); ?></div>
+                  <div class="image__thumb--icon"><?php
+                  $img = rwmb_meta('hover-image', 'type=plupload_image&size=round-feature-image');
+                  foreach ($img as $image) {
+                    echo "<img src='" . "{$image['url']}" . "' alt='" . "{$image['title']}" . "'>";
+                  }
+                  ?></div>
                 </div>
               </a>
+                  
             </div>
             <?php
           }
