@@ -5,6 +5,13 @@
 get_header();
 ?>
 
+
+<div class="your-class">
+  <div class="blue">your content</div>
+  <div class="green">your content</div>
+  <div class="purple">your content</div>
+</div>
+
 <div class="portfolio-carousel"></div>
 
 <div class="portfolio__link">

@@ -197,10 +197,10 @@ select.orderby {
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     float: left !important;
-    margin: 0 20px 70px 20px !important;
-    padding: 0 !important;
+    margin: 0!important;
+    padding-bottom: 50px !important;
     position: relative !important;
-    width: 30% !important;
+    width: 100% !important;
 }
 
 .input-text {
@@ -210,6 +210,36 @@ select.orderby {
 
 .woocommerce ul.products {
    display: flex !important;
+   flex-direction: column;
   align-items:stretch !important;
   flex-wrap: wrap !important;
 }
+
+@include breakpoint(tablet) {
+    .woocommerce ul.products {
+      
+  flex-direction: row !important;
+  justify-content: center !important;
+  }
+  
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 40% !important;
+}
+}
+
+
+@include breakpoint(laptop) {
+  .woocommerce ul.products {
+  justify-content: flex-start !important;
+  flex-direction: row !important;
+  padding-left: 3%;
+}
+  
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 29% !important;
+}
+}
+
+

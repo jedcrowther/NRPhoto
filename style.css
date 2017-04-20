@@ -876,6 +876,22 @@ object {
   height: 800px;
   background-color: grey; }
 
+.your-class {
+  height: 600px;
+  width: 80%; }
+  .your-class .blue {
+    background-color: blue;
+    height: 600px;
+    width: 80%; }
+  .your-class .green {
+    background-color: green;
+    height: 600px;
+    width: 80%; }
+  .your-class .purple {
+    background-color: purple;
+    height: 600px;
+    width: 80%; }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -979,28 +995,48 @@ object {
 
 .water-color-logo img {
   display: block;
-  width: 25%;
+  width: 50%;
   margin: 0 auto; }
+@media (min-width: 50em) {
+  .water-color-logo img {
+    width: 25%; } }
 
 section {
   margin: 100px 0; }
 
 .stars__section {
+  color: white;
+  font-family: "Source Sans Pro";
   background-image: url("images/stars.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 600px;
-  color: #f9f9f9; }
+  height: 600px; }
   .stars__section .stars__quote {
-    font-weight: 400;
-    letter-spacing: 1px;
-    width: 65%;
-    margin: 0 auto;
-    padding: 220px 0 0 50px; }
+    width: 70%;
+    font-size: 30px; }
   .stars__section .stars__quote-mark {
-    position: absolute;
-    left: 15%; }
+    font-size: 200px;
+    font-weight: 800;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    line-height: 0; }
 
+.quote-block {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+@media (min-width: 50em) {
+  .quote-block {
+    flex-direction: row;
+    padding-top: 150px; }
+
+  .stars__section .stars__quote-mark {
+    line-height: 280px;
+    padding-bottom: 0px; } }
 .about__section {
   padding: 0 20px; }
   .about__section::after {
@@ -1012,11 +1048,12 @@ section {
       padding: 0 80px; } }
 
 .about__image {
-  width: calc(100% - 40px);
+  width: calc(100%);
   float: left;
-  margin-left: 20px;
+  margin-left: 0;
   background-image: url("images/about.jpg");
   background-size: cover;
+  background-position: center;
   height: 500px; }
   @media only screen and (min-width: 50em) {
     .about__image {
@@ -1025,9 +1062,9 @@ section {
       margin-left: 50px; } }
 
 .about__text {
-  width: calc(100% - 40px);
+  width: calc(100%);
   float: left;
-  margin-left: 20px; }
+  margin-left: 0; }
   @media only screen and (min-width: 50em) {
     .about__text {
       width: calc(50% - 75px);
@@ -1043,6 +1080,7 @@ section {
   background-image: url("images/flatlay.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   height: 600px; }
 
 .contact__section {
@@ -1057,7 +1095,7 @@ section {
   width: 80%;
   height: 450px;
   margin: 0 auto;
-  box-shadow: 2px 2px 10px #111;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 80px 20px;
   letter-spacing: 1.5px;
@@ -1073,9 +1111,15 @@ section {
     width: 50%; } }
 .contact__page {
   text-align: center;
-  width: 500px;
-  margin: 0 auto;
-  padding-top: 50px; }
+  max-width: 500px;
+  margin: 0 auto; }
+  .contact__page .contact__title {
+    padding: 50px 0 20px; }
+  .contact__page .contact__blurb {
+    margin: 0 10%; }
+  @media (min-width: 50em) {
+    .contact__page .contact__blurb {
+      margin: 0; } }
 
 .woocommerce-page main#main.site-main,
 .woocommerce main#main.site-main {
@@ -1138,10 +1182,10 @@ select.orderby {
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   float: left !important;
-  margin: 0 20px 70px 20px !important;
-  padding: 0 !important;
+  margin: 0 !important;
+  padding-bottom: 50px !important;
   position: relative !important;
-  width: 30% !important; }
+  width: 100% !important; }
 
 .input-text {
   width: 180px !important;
@@ -1149,7 +1193,26 @@ select.orderby {
 
 .woocommerce ul.products {
   display: flex !important;
+  flex-direction: column;
   align-items: stretch !important;
   flex-wrap: wrap !important; }
+
+@media (min-width: 50em) {
+  .woocommerce ul.products {
+    flex-direction: row !important;
+    justify-content: center !important; }
+
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 40% !important; } }
+@media (min-width: 64em) {
+  .woocommerce ul.products {
+    justify-content: flex-start !important;
+    flex-direction: row !important;
+    padding-left: 3%; }
+
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 29% !important; } }
 
 /*# sourceMappingURL=style.css.map */

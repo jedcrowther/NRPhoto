@@ -104,3 +104,23 @@
   height: 800px;
   background-color: grey;
 }
+
+.your-class {
+  height:600px;
+  width: 80%;  
+  .blue {
+    background-color: blue;
+    height:600px;
+  width: 80%; 
+  }
+  .green {
+    background-color: green;
+    height:600px;
+  width: 80%; 
+  }
+  .purple {
+    background-color: purple;
+    height:600px;
+  width: 80%; 
+  }
+}

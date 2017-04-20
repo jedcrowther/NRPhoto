@@ -24,6 +24,11 @@ $toggleLink.on('click', function () {
     $(this).closest('.menu').toggleClass('open');
 });
          
+// scroll reveal on homepage         
+window.sr = ScrollReveal();
+sr.reveal('.reveal', { delay: 0.2, scale: 0.98, duration: 1000 });         
          
          
-      
+ $(document).ready(function(){
+  $('.your-class').slick();
+});     

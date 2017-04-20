@@ -17,6 +17,11 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <script src="https://use.fontawesome.com/176a9d574f.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <?php wp_head(); ?>
   </head>
 
@@ -31,12 +36,12 @@
 
       <?php if (is_home()) { ?>
         <div class="hero home__hero">
-          <?php if (get_header_image()) : ?>
+          <?php if (get_custom_header()) : ?>
             <header id="masthead" class="site__header" style="background-image: url(<?php header_image() ?>)" role="banner">
             <?php endif; ?>
             <div id="ParallaxContent" class="site__branding">
 
-              <img class="nrphoto__logo--white home" src="<?php echo $image[0]; ?>" alt="Natalie Rose Photography Logo">
+              <a href="<?php echo get_home_url(); ?>"><img class="nrphoto__logo--white home" src="<?php echo $image[0]; ?>" alt="Natalie Rose Photography Logo"></a>
             </div><!-- .site__branding -->		
           </header><!-- #masthead -->
 
@@ -45,7 +50,7 @@
             <?php if (get_header_image()) : ?>
               <header id="masthead" class="site__header" style="background-image: url(<?php header_image() ?>)" role="banner">
                 <div id="ParallaxContent" class="site__branding">
-                  <img class="nrphoto__logo--white other" src="<?php echo $image[0]; ?>" alt="Natalie Rose Photography Logo">
+                  <a href="<?php echo get_home_url(); ?>"><img class="nrphoto__logo--white other" src="<?php echo $image[0]; ?>" alt="Natalie Rose Photography Logo"></a>
                 </div>
               <?php endif; ?>
             <?php } ?>
