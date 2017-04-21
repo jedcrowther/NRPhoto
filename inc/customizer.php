@@ -14,6 +14,25 @@ function wp_underscore_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+        $wp_customize->add_setting(
+    'tcx_footer_logo',
+    array(
+        'default'     => ''
+    )
+);
+    
+        $wp_customize->add_control(
+    new WP_Customize_Image_Control($wp_customize,  'footer_logo',
+        array(
+            'label'      => __( 'Footer Logo', 'tcx' ),
+            'section'    => 'title_tagline',
+            'priority' => '40',
+            'settings'   => 'tcx_footer_logo'
+        )
+    )
+);
+        
 }
 add_action( 'customize_register', 'wp_underscore_customize_register' );
 
@@ -24,3 +43,87 @@ function wp_underscore_customize_preview_js() {
 	wp_enqueue_script( 'wp_underscore_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'wp_underscore_customize_preview_js' );
+
+
+
+
+
+
+
+
+function ct_tribes_social_array() {
+
+	$social_sites = array(
+		'twitter'       => 'tribes_twitter_profile',
+		'facebook'      => 'tribes_facebook_profile',
+		'pinterest'     => 'tribes_pinterest_profile',
+		'youtube'       => 'tribes_youtube_profile',
+		'tumblr'        => 'tribes_tumblr_profile',
+		'instagram'     => 'tribes_instagram_profile',
+		'flickr'        => 'tribes_flickr_profile'
+	);
+
+	return apply_filters( 'ct_tribes_social_array_filter', $social_sites );
+}
+
+function my_add_customizer_sections( $wp_customize ) {
+
+	$social_sites = ct_tribes_social_array();
+
+	// set a priority used to order the social sites
+	$priority = 5;
+
+	// section
+	$wp_customize->add_section( 'ct_tribes_social_media_icons', array(
+		'title'       => __( 'Social Media Icons', 'tribes' ),
+		'priority'    => 25,
+		'description' => __( 'Add the URL for each of your social profiles.', 'tribes' )
+	) );
+
+	// create a setting and control for each social site
+	foreach ( $social_sites as $social_site => $value ) {
+
+		$label = ucfirst( $social_site );
+		// setting
+		$wp_customize->add_setting( $social_site, array(
+			'sanitize_callback' => 'esc_url_raw'
+		) );
+		// control
+		$wp_customize->add_control( $social_site, array(
+			'type'     => 'url',
+			'label'    => $label,
+			'section'  => 'ct_tribes_social_media_icons',
+			'priority' => $priority
+		) );
+		// increment the priority for next site
+		$priority = $priority + 5;
+	}
+}
+add_action( 'customize_register', 'my_add_customizer_sections' );
+
+
+function my_social_icons_output() {
+
+	$social_sites = ct_tribes_social_array();
+
+	foreach ( $social_sites as $social_site => $profile ) {
+
+		if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
+			$active_sites[ $social_site ] = $social_site;
+		}
+	}
+
+	if ( ! empty( $active_sites ) ) {
+
+		echo '<ul class="social-media-icons">';
+		foreach ( $active_sites as $key => $active_site ) { 
+        	$class = 'fa fa-' . $active_site; ?>
+		 	
+				<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
+					<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
+				</a>
+			
+		<?php } 
+		echo "</ul>";
+	}
+}
