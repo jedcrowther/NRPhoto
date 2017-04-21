@@ -17,13 +17,16 @@ get_header();
         ?>
 <h1 class="contact__title"><?php echo get_the_title();  ?></h1>
 <div class="contact__blurb"><?php echo get_the_content()  ?></div>
-
+<p><?php echo rwmb_meta( 'phone' ); ?></p>
+<p><?php echo rwmb_meta( 'email' ); ?></p>
 <?php
       endwhile;
       wp_reset_postdata();
     ?>
 <?php endif; ?>
 </div>
+
+
 
 <?php edit_post_link(); ?>
 

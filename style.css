@@ -1051,7 +1051,6 @@ section {
   width: calc(100%);
   float: left;
   margin-left: 0;
-  background-image: url("images/about.jpg");
   background-size: cover;
   background-position: center;
   height: 500px; }
@@ -1077,7 +1076,6 @@ section {
   margin: 0 auto; }
 
 .flatlay__section {
-  background-image: url("images/flatlay.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

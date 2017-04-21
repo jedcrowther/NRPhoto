@@ -66,8 +66,7 @@ $about-layout: (
 }
 
 .about__image {
-  @include grid-column(1, $about-layout-mobile);
-    background-image: url('images/about.jpg');
+ @include grid-column(1, $about-layout-mobile);
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -92,7 +91,6 @@ $about-layout: (
 }
 
 .flatlay__section {
-  background-image: url('images/flatlay.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

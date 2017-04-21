@@ -195,41 +195,23 @@ function wcs_woo_remove_reviews_tab($tabs) {
   return $tabs;
 }
 
-add_filter('rwmb_meta_boxes', 'your_prefix_image_demo');
 
-function your_prefix_image_demo($meta_boxes) {
-  $meta_boxes[] = array(
-      'title' => esc_html__('Hover Label Image', 'your-prefix'),
-      'fields' => array(
-          array(
-              'id' => 'hover-image',
-              'name' => esc_html__('Image', 'your-prefix'),
-              'type' => 'image',
-              // Delete image from Media Library when remove it from post meta?
-              // Note: it might affect other posts if you use same image for multiple posts
-              'force_delete' => false,
-              // Maximum image uploads
-              'max_file_uploads' => 1,
-          ),
-      ),
-  );
-  return $meta_boxes;
-}
 
-// About & Contact Post Types
+// Add About & Contact Post Types
 add_action('init', 'all_custom_post_types');
 
 function all_custom_post_types() {
 
   $types = array(
-      // News and Events
       array('the_type' => 'About',
           'single' => 'About',
           'plural' => 'About'),
-      // Careers
       array('the_type' => 'Contact',
           'single' => 'Contact',
           'plural' => 'Contact'),
+      array('the_type' => 'Portfolio',
+          'single' => 'Portfolio',
+          'plural' => 'Portfolio'),
   );
 
   foreach ($types as $type) {
@@ -255,10 +237,10 @@ function all_custom_post_types() {
 
     $args = array(
         'labels' => $labels,
-        'description' => 'Holds information for the About Page',
+        'description' => 'Holds information for the Page',
         'public' => true,
         'menu_position' => 5,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'has_archive' => false,
     );
 
@@ -266,7 +248,29 @@ function all_custom_post_types() {
   }
 }
 
+// removes slug from custom post permalinks
+function na_remove_slug( $post_link, $post, $leavename ) {
+    if ( ('about' || 'contact') != $post->post_type || 'publish' != $post->post_status ) {
+        return $post_link;
+    }
+    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    return $post_link;
+}
+add_filter( 'post_type_link', 'na_remove_slug', 10, 3 );
 
+function na_parse_request( $query ) {
+    if ( ! $query->is_main_query() ) {
+        return;
+    }
+    if ( ! empty( $query->query['name'] ) ) {
+        $query->set( 'post_type', (array( 'post', 'about', 'page' ) || array( 'post', 'contact', 'page' ) ));
+    }
+}
+add_action( 'pre_get_posts', 'na_parse_request' );
+
+
+
+//change labels for 'Posts' in admin dashboard to 'Galleries'
 
 function change_post_label() {
     global $menu;
@@ -296,3 +300,114 @@ function change_post_object() {
  
 add_action( 'admin_menu', 'change_post_label' );
 add_action( 'init', 'change_post_object' );
+
+
+
+add_filter( 'rwmb_meta_boxes', 'register_meta_boxes' );
+function register_meta_boxes( $meta_boxes ) {
+  //add metabox to Gallery Posts for hover image
+    $meta_boxes[] = array(
+      'title' => esc_html__('Hover Label Image', 'your-prefix'),
+      'fields' => array(
+          array(
+              'id' => 'hover-image',
+              'name' => esc_html__('Image', 'your-prefix'),
+              'type' => 'image_upload',
+              'force_delete' => false,
+              'max_file_uploads' => 1,
+          ),
+      ),
+  );
+    //add metaboxes to Contact Page
+    $meta_boxes[] = array(
+        'title'      => __( 'Contact Details', 'textdomain' ),
+        'post_types' => 'contact',
+        'fields'     => array(
+            array(
+                'id'   => 'email',
+                'name' => __( 'Email', 'textdomain' ),
+                'type' => 'email',
+            ),
+            array(
+                'id'   => 'phone',
+                'name' => __( 'Phone Number', 'textdomain' ),
+                'type' => 'text',
+            ),
+        )
+    );
+        //add metaboxes to About Page
+    $meta_boxes[] = array(
+        'title'      => __( 'About Me Details', 'textdomain' ),
+        'post_types' => 'about',
+        'fields'     => array(
+            array(
+                'id'   => 'about-title',
+                'name' => __( 'About Title', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
+              'id' => 'about-image',
+              'name' => esc_html__('About Me Image', 'textdomain'),
+              'type' => 'image_upload',
+              'force_delete' => false,
+              'max_file_uploads' => 1,
+          ),
+        )
+          
+    );
+    
+    
+    $meta_boxes[] = array(
+      'title' => esc_html__('Advanced Fields', 'your-prefix'),
+      'post_types' => 'about',
+      'fields' => array(
+          // SLIDER
+          array(
+              'name' => esc_html__('Slider', 'your-prefix'),
+              'id' => "{$prefix}slider",
+              'type' => 'slider',
+              // Text labels displayed before and after value
+              'prefix' => esc_html__('$', 'your-prefix'),
+              'suffix' => esc_html__(' USD', 'your-prefix'),
+              // jQuery UI slider options. See here http://api.jqueryui.com/slider/
+              'js_options' => array(
+                  'min' => 10,
+                  'max' => 255,
+                  'step' => 5,
+              ),
+              // Default value
+              'std' => 155,
+          ),
+      )
+  );
+
+  $meta_boxes[] = array(
+        'title'      => __( 'Gear Details', 'textdomain' ),
+        'post_types' => 'about',
+        'fields'     => array(
+            array(
+                'id'   => 'gear-title',
+                'name' => __( 'Gear Title', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
+              'id' => 'gear-image',
+              'name' => esc_html__('Gear Background Image', 'textdomain'),
+              'type' => 'image_upload',
+              'force_delete' => false,
+              'max_file_uploads' => 1,
+          ),
+          array(
+                'id'   => 'gear-list',
+                'name' => __( 'Gear List', 'textdomain' ),
+                'type' => 'wysiwyg',
+            ),
+        )
+    );
+    
+    return $meta_boxes;
+}
+
+
+
+
