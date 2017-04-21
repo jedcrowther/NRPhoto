@@ -1,16 +1,39 @@
 <?php
-/**
 
- */
+$args = array(
+    'post_type' => 'Portfolio',
+    'post_status' => 'publish',
+    'numberposts' => 1
+);
+
+$portfolio = new WP_Query($args);
+
 get_header();
 ?>
+
+<?php if ($portfolio->have_posts()) : ?>
+
+  <?php
+  while ($portfolio->have_posts()) :
+    $portfolio->the_post();
+    ?>
+    <div class="portfolio__text"> 
+      <h2><?php echo get_the_title(); ?></h2>
+      <p><?php echo get_the_content(); ?></p>
+    </div>
+    <?php
+  endwhile;
+  wp_reset_postdata();
+  ?>
+<?php endif; ?>
+<?php edit_post_link(); ?>
 
 
 <section class="home__galleries">
       <?php
       wp_nav_menu(array('theme_location' => 'gallery-menu', 'container_class' => 'gallery_menu_class'));
       $latest_posts = get_posts(array(
-          'numberposts' => 6
+          'numberposts' => 30
       ));
       ?>
       <div class="gallery__container">

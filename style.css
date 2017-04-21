@@ -614,6 +614,9 @@ a {
     color: #333;
     text-decoration: none; }
 
+@media (max-width: 37.5em) {
+  .gallery_menu_class ul li {
+    display: none; } }
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1118,6 +1121,11 @@ section {
   @media (min-width: 50em) {
     .contact__page .contact__blurb {
       margin: 0; } }
+
+.portfolio__text {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto; }
 
 .woocommerce-page main#main.site-main,
 .woocommerce main#main.site-main {

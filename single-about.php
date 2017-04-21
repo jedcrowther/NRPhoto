@@ -17,9 +17,13 @@ if (!empty($about_image)) {
       ?>
       <div class="about__image about__page" style="background-image: url('<?php echo $about_img['full_url'] ?>')">
     <?php }
-  } ?>
+  } 
+//   var_dump($about_image);
+//die();
+  ?>
 
 </div>
+  
 <?php if ($about->have_posts()) : ?>
 
   <?php

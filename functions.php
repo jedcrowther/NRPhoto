@@ -305,13 +305,16 @@ add_action( 'init', 'change_post_object' );
 
 add_filter( 'rwmb_meta_boxes', 'register_meta_boxes' );
 function register_meta_boxes( $meta_boxes ) {
+  
+  $prefix = 'prefix_';
+  
   //add metabox to Gallery Posts for hover image
     $meta_boxes[] = array(
-      'title' => esc_html__('Hover Label Image', 'your-prefix'),
+      'title' => esc_html__('Hover Label Image', 'textdomain'),
       'fields' => array(
           array(
               'id' => 'hover-image',
-              'name' => esc_html__('Image', 'your-prefix'),
+              'name' => esc_html__('Image', 'textdomain'),
               'type' => 'image_upload',
               'force_delete' => false,
               'max_file_uploads' => 1,
@@ -356,30 +359,7 @@ function register_meta_boxes( $meta_boxes ) {
           
     );
     
-    
-    $meta_boxes[] = array(
-      'title' => esc_html__('Advanced Fields', 'your-prefix'),
-      'post_types' => 'about',
-      'fields' => array(
-          // SLIDER
-          array(
-              'name' => esc_html__('Slider', 'your-prefix'),
-              'id' => "{$prefix}slider",
-              'type' => 'slider',
-              // Text labels displayed before and after value
-              'prefix' => esc_html__('$', 'your-prefix'),
-              'suffix' => esc_html__(' USD', 'your-prefix'),
-              // jQuery UI slider options. See here http://api.jqueryui.com/slider/
-              'js_options' => array(
-                  'min' => 10,
-                  'max' => 255,
-                  'step' => 5,
-              ),
-              // Default value
-              'std' => 155,
-          ),
-      )
-  );
+ 
 
   $meta_boxes[] = array(
         'title'      => __( 'Gear Details', 'textdomain' ),

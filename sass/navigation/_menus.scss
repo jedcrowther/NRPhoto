@@ -230,3 +230,10 @@
     text-decoration: none;
   }
 }
+
+
+@include breakpoint(mobileonly){
+    .gallery_menu_class ul li {
+    display: none;
+  }
+}
