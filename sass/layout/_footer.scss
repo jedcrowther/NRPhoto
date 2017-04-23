@@ -27,11 +27,13 @@
 }
 
 
-.social__icons {
-  width: 100px;
-  margin: 50px auto;
+.social-media-icons {
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
   i {
-    margin: 0 5px;
+    margin: 0 7px;
   }
 }
 

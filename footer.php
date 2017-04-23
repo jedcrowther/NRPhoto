@@ -23,16 +23,7 @@
   </div>
   <?php endif; ?>
  
-
-
-  <div class="social__icons">
-     <?php my_social_icons_output(); ?>
-  
-<!--    <i class="fa fa-pinterest" aria-hidden="true"></i>
-    <i class="fa fa-instagram" aria-hidden="true"></i>
-    <i class="fa fa-facebook-square" aria-hidden="true"></i>-->
-  </div>
-
+  <?php my_social_icons_output(); ?>
 
   
  

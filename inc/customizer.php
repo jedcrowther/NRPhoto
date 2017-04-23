@@ -51,33 +51,33 @@ add_action( 'customize_preview_init', 'wp_underscore_customize_preview_js' );
 
 
 
-function ct_tribes_social_array() {
+function ct_nrphoto_social_array() {
 
 	$social_sites = array(
-		'twitter'       => 'tribes_twitter_profile',
-		'facebook'      => 'tribes_facebook_profile',
-		'pinterest'     => 'tribes_pinterest_profile',
-		'youtube'       => 'tribes_youtube_profile',
-		'tumblr'        => 'tribes_tumblr_profile',
-		'instagram'     => 'tribes_instagram_profile',
-		'flickr'        => 'tribes_flickr_profile'
+		'twitter'       => 'nrphoto_twitter_profile',
+		'facebook'      => 'nrphoto_facebook_profile',
+		'pinterest'     => 'nrphoto_pinterest_profile',
+		'youtube'       => 'nrphoto_youtube_profile',
+		'tumblr'        => 'nrphoto_tumblr_profile',
+		'instagram'     => 'nrphoto_instagram_profile',
+		'flickr'        => 'nrphoto_flickr_profile'
 	);
 
-	return apply_filters( 'ct_tribes_social_array_filter', $social_sites );
+	return apply_filters( 'ct_nrphoto_social_array_filter', $social_sites );
 }
 
 function my_add_customizer_sections( $wp_customize ) {
 
-	$social_sites = ct_tribes_social_array();
+	$social_sites = ct_nrphoto_social_array();
 
 	// set a priority used to order the social sites
 	$priority = 5;
 
 	// section
-	$wp_customize->add_section( 'ct_tribes_social_media_icons', array(
-		'title'       => __( 'Social Media Icons', 'tribes' ),
+	$wp_customize->add_section( 'ct_nrphoto_social_media_icons', array(
+		'title'       => __( 'Social Media Icons', 'nrphoto' ),
 		'priority'    => 25,
-		'description' => __( 'Add the URL for each of your social profiles.', 'tribes' )
+		'description' => __( 'Add the URL for each of your social profiles.', 'nrphoto' )
 	) );
 
 	// create a setting and control for each social site
@@ -92,7 +92,7 @@ function my_add_customizer_sections( $wp_customize ) {
 		$wp_customize->add_control( $social_site, array(
 			'type'     => 'url',
 			'label'    => $label,
-			'section'  => 'ct_tribes_social_media_icons',
+			'section'  => 'ct_nrphoto_social_media_icons',
 			'priority' => $priority
 		) );
 		// increment the priority for next site
@@ -104,7 +104,7 @@ add_action( 'customize_register', 'my_add_customizer_sections' );
 
 function my_social_icons_output() {
 
-	$social_sites = ct_tribes_social_array();
+	$social_sites = ct_nrphoto_social_array();
 
 	foreach ( $social_sites as $social_site => $profile ) {
 

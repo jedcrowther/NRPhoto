@@ -990,11 +990,13 @@ object {
     flex-wrap: nowrap; }
     .instagram-pics li {
       margin-right: 20px; } }
-.social__icons {
-  width: 100px;
-  margin: 50px auto; }
-  .social__icons i {
-    margin: 0 5px; }
+.social-media-icons {
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; }
+  .social-media-icons i {
+    margin: 0 7px; }
 
 .water-color-logo img {
   display: block;
@@ -1015,8 +1017,13 @@ section {
   background-size: cover;
   height: 600px; }
   .stars__section .stars__quote {
-    width: 70%;
-    font-size: 30px; }
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 60px;
+    text-align: center;
+    line-height: 65px;
+    width: 900px; }
   .stars__section .stars__quote-mark {
     font-size: 200px;
     font-weight: 800;

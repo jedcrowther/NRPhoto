@@ -12,8 +12,13 @@ section {
   
   
   .stars__quote {
-    width: 70%;
-    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 60px;
+    text-align: center;
+    line-height: 65px;
+    width: 900px;
   }
   .stars__quote-mark {
     font-size: 200px;
