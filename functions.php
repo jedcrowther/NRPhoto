@@ -125,8 +125,6 @@ function wp_underscore_scripts() {
 
   wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), 1.1, true);
   
-//  wp_enqueue_script('isotope', get_template_directory_uri() . '/js/jquery.isotope.js', array('jquery'), 1.1, true);
-  
   wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), 1.1, true);
 
   wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array('jquery'), 1.1, true);
@@ -206,7 +204,6 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 
 require get_template_directory() . '/inc/hover-image-metabox.php';
-
 require get_template_directory() . '/inc/about-metaboxes.php';
 require get_template_directory() . '/inc/contact-metaboxes.php';
 

@@ -60,18 +60,17 @@ get_header();
 
     <?php
     $args = array(
-        'post_type' => 'About',
-        'post_status' => 'publish',
-        'numberposts' => 1
+        'page_id' => '304'
     );
 
     $about = new WP_Query($args);
-    $about_meta = get_post_meta(172);
-    $about_image = $about_meta['about-image'][0];
+    $about_meta = get_post_meta(304);
     ?>
 
     <section class="reveal about__section">
-      <div class="about__image" style="background-image: url('<?php echo wp_get_attachment_url($about_image); ?>')">
+      <div class="about__image" style="background-image: url('<?php echo esc_url( get_theme_mod( 'nrphoto_bio_image' ) ); ?>')">
+        
+        
       </div>
       <?php if ($about->have_posts()) : ?>
 
@@ -80,8 +79,8 @@ get_header();
           $about->the_post();
           ?>
           <div class="about__text">
-            <h2><?php echo $about_meta['about-title'][0] ?></h2>
-            <p><?php echo get_the_content() ?></p>
+            <h2><?php echo $about_meta['about_head'][0] ?></h2>
+            <p><?php echo $about_meta['about_bio'][0] ?></p>
             <a href="about">Read More</a>
             <?php
           endwhile;

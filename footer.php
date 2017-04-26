@@ -14,12 +14,11 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 
-  <?php if ( get_theme_mod( 'tcx_footer_logo' ) ) : ?>
+  <?php if ( get_theme_mod( 'nrphoto_footer_logo' ) ) : ?>
   <div class="water-color-logo">
      <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
-          <img src='<?php echo esc_url( get_theme_mod( 'tcx_footer_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+          <img src='<?php echo esc_url( get_theme_mod( 'nrphoto_footer_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
      </a>
- 
   </div>
   <?php endif; ?>
  
