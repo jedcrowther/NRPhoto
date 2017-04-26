@@ -1,0 +1,127 @@
+
+.woocommerce-page main#main.site-main,
+.woocommerce main#main.site-main {
+  margin: 6em;
+}
+
+.woocommerce div #container {
+  margin: 2em;
+}
+
+span.woocommerce-Price-amount.amount {
+  color: $black;
+}
+
+.woocommerce-products-header__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.woocommerce ul.products li.product .price {
+  color: $steelgrey !important;
+}
+
+
+a.checkout-button.button.alt.wc-forward {
+  background-color: $black !important;
+  color: $white !important;
+}
+
+
+.woocommerce-message {
+    border-top-color: $black !important;
+}
+
+.woocommerce {
+   border-radius: 0 !important;
+}
+
+.woocommerce-cart .quantity {
+  display: block !important;
+  .input-text{
+  width: 50px !important;
+  }
+}
+
+.quantity {
+display: none !important;
+}
+
+
+
+.woocommerce-result-count,
+select.orderby {
+  display: none !important;
+}
+
+
+.woocommerce-products-header__title.page-title {
+    text-align: center !important;
+}
+
+.button,
+.woocommerce a.button {
+   border: 2px solid $black !important;
+   background: none !important;
+   color: $black !important;
+}
+.single_add_to_cart_button {
+  width: 50% !important;
+}
+.product_type_simple {
+  width: 100% !important;
+  text-align: center !important;
+  border: 2px solid $black !important;
+  padding: 1em 0 !important;
+  background: $white !important;
+  color: $black !important;
+}
+
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    float: left !important;
+    margin: 0!important;
+    padding-bottom: 50px !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+.input-text {
+      width: 180px !important;
+    height: 38px !important;
+}
+
+.woocommerce ul.products {
+   display: flex !important;
+   flex-direction: column;
+  align-items:stretch !important;
+  flex-wrap: wrap !important;
+}
+
+@include breakpoint(tablet) {
+    .woocommerce ul.products {
+      
+  flex-direction: row !important;
+  justify-content: center !important;
+  }
+  
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 40% !important;
+}
+}
+
+
+@include breakpoint(laptop) {
+  .woocommerce ul.products {
+  justify-content: flex-start !important;
+  flex-direction: row !important;
+  padding-left: 3%;
+}
+  
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 29% !important;
+}
+}

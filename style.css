@@ -49,6 +49,99 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*********************
 BREAKPOINTS
 *********************/
+.woocommerce-page main#main.site-main,
+.woocommerce main#main.site-main {
+  margin: 6em; }
+
+.woocommerce div #container {
+  margin: 2em; }
+
+span.woocommerce-Price-amount.amount {
+  color: #0f0f0f; }
+
+.woocommerce-products-header__title {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.woocommerce ul.products li.product .price {
+  color: #485665 !important; }
+
+a.checkout-button.button.alt.wc-forward {
+  background-color: #0f0f0f !important;
+  color: #f9f9f9 !important; }
+
+.woocommerce-message {
+  border-top-color: #0f0f0f !important; }
+
+.woocommerce {
+  border-radius: 0 !important; }
+
+.woocommerce-cart .quantity {
+  display: block !important; }
+  .woocommerce-cart .quantity .input-text {
+    width: 50px !important; }
+
+.quantity {
+  display: none !important; }
+
+.woocommerce-result-count,
+select.orderby {
+  display: none !important; }
+
+.woocommerce-products-header__title.page-title {
+  text-align: center !important; }
+
+.button,
+.woocommerce a.button {
+  border: 2px solid #0f0f0f !important;
+  background: none !important;
+  color: #0f0f0f !important; }
+
+.single_add_to_cart_button {
+  width: 50% !important; }
+
+.product_type_simple {
+  width: 100% !important;
+  text-align: center !important;
+  border: 2px solid #0f0f0f !important;
+  padding: 1em 0 !important;
+  background: #f9f9f9 !important;
+  color: #0f0f0f !important; }
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  float: left !important;
+  margin: 0 !important;
+  padding-bottom: 50px !important;
+  position: relative !important;
+  width: 100% !important; }
+
+.input-text {
+  width: 180px !important;
+  height: 38px !important; }
+
+.woocommerce ul.products {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  flex-wrap: wrap !important; }
+
+@media (min-width: 50em) {
+  .woocommerce ul.products {
+    flex-direction: row !important;
+    justify-content: center !important; }
+
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 40% !important; } }
+@media (min-width: 64em) {
+  .woocommerce ul.products {
+    justify-content: flex-start !important;
+    flex-direction: row !important;
+    padding-left: 3%; }
+
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 20px 70px 20px !important;
+    width: 29% !important; } }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -541,7 +634,7 @@ a {
       height: 100%;
       top: 0;
       left: 0;
-      background: #1b2c4a;
+      background: #000029;
       padding-top: 33vh;
       z-index: 1001;
       opacity: 0;
@@ -582,7 +675,18 @@ a {
       .menu.open .menu__icon path.icon-bottom {
         transform: rotate(-45deg) translate(-5px, 6px); }
   .menu.open nav {
-    opacity: 0.95; } }
+    opacity: 1; } }
+#sky {
+  height: 100%; }
+
+.star {
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border-radius: 2px;
+  background-color: white; }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -801,7 +905,10 @@ object {
 .image__container {
   flex-basis: 31%;
   position: relative;
-  margin: 5px; }
+  margin: 5px;
+  background: pink;
+  width: 100px;
+  height: 100px; }
 
 .image__thumb {
   display: block;
@@ -1133,99 +1240,5 @@ section {
   text-align: center;
   max-width: 60%;
   margin: 0 auto; }
-
-.woocommerce-page main#main.site-main,
-.woocommerce main#main.site-main {
-  margin: 6em; }
-
-.woocommerce div #container {
-  margin: 2em; }
-
-span.woocommerce-Price-amount.amount {
-  color: #0f0f0f; }
-
-.woocommerce-products-header__title {
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
-.woocommerce ul.products li.product .price {
-  color: #485665 !important; }
-
-a.checkout-button.button.alt.wc-forward {
-  background-color: #0f0f0f !important;
-  color: #f9f9f9 !important; }
-
-.woocommerce-message {
-  border-top-color: #0f0f0f !important; }
-
-.woocommerce {
-  border-radius: 0 !important; }
-
-.woocommerce-cart .quantity {
-  display: block !important; }
-  .woocommerce-cart .quantity .input-text {
-    width: 50px !important; }
-
-.quantity {
-  display: none !important; }
-
-.woocommerce-result-count,
-select.orderby {
-  display: none !important; }
-
-.woocommerce-products-header__title.page-title {
-  text-align: center !important; }
-
-.button,
-.woocommerce a.button {
-  border: 2px solid #0f0f0f !important;
-  background: none !important;
-  color: #0f0f0f !important; }
-
-.single_add_to_cart_button {
-  width: 50% !important; }
-
-.product_type_simple {
-  width: 100% !important;
-  text-align: center !important;
-  border: 2px solid #0f0f0f !important;
-  padding: 1em 0 !important;
-  background: #f9f9f9 !important;
-  color: #0f0f0f !important; }
-
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  float: left !important;
-  margin: 0 !important;
-  padding-bottom: 50px !important;
-  position: relative !important;
-  width: 100% !important; }
-
-.input-text {
-  width: 180px !important;
-  height: 38px !important; }
-
-.woocommerce ul.products {
-  display: flex !important;
-  flex-direction: column;
-  align-items: stretch !important;
-  flex-wrap: wrap !important; }
-
-@media (min-width: 50em) {
-  .woocommerce ul.products {
-    flex-direction: row !important;
-    justify-content: center !important; }
-
-  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-    margin: 0 20px 70px 20px !important;
-    width: 40% !important; } }
-@media (min-width: 64em) {
-  .woocommerce ul.products {
-    justify-content: flex-start !important;
-    flex-direction: row !important;
-    padding-left: 3%; }
-
-  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-    margin: 0 20px 70px 20px !important;
-    width: 29% !important; } }
 
 /*# sourceMappingURL=style.css.map */

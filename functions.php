@@ -112,8 +112,8 @@ add_action('widgets_init', 'wp_underscore_widgets_init');
  */
 function wp_underscore_scripts() {
   
-      wp_register_style( 'Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
-wp_enqueue_style('Font_Awesome');
+  wp_register_style( 'Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+  wp_enqueue_style('Font_Awesome');
   
   wp_enqueue_style('wp_underscore-style', get_stylesheet_uri());
   
@@ -123,7 +123,14 @@ wp_enqueue_style('Font_Awesome');
 
   wp_enqueue_script('wp_underscore-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
+  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), 1.1, true);
+  
+//  wp_enqueue_script('isotope', get_template_directory_uri() . '/js/jquery.isotope.js', array('jquery'), 1.1, true);
+  
   wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), 1.1, true);
+
+  wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array('jquery'), 1.1, true);
+  
 
   
   if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -193,6 +200,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load metabox file.
+ */
+require get_template_directory() . '/inc/metaboxes.php';
+
 
 // hide description and reviews tabs for woocommerce
 add_filter('woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98);
@@ -307,94 +320,4 @@ function change_post_object() {
  
 add_action( 'admin_menu', 'change_post_label' );
 add_action( 'init', 'change_post_object' );
-
-
-
-add_filter( 'rwmb_meta_boxes', 'register_meta_boxes' );
-function register_meta_boxes( $meta_boxes ) {
-  
-  $prefix = 'prefix_';
-  
-  //add metabox to Gallery Posts for hover image
-    $meta_boxes[] = array(
-      'title' => esc_html__('Hover Label Image', 'textdomain'),
-      'fields' => array(
-          array(
-              'id' => 'hover-image',
-              'name' => esc_html__('Image', 'textdomain'),
-              'type' => 'image_upload',
-              'force_delete' => false,
-              'max_file_uploads' => 1,
-          ),
-      ),
-  );
-    //add metaboxes to Contact Page
-    $meta_boxes[] = array(
-        'title'      => __( 'Contact Details', 'textdomain' ),
-        'post_types' => 'contact',
-        'fields'     => array(
-            array(
-                'id'   => 'email',
-                'name' => __( 'Email', 'textdomain' ),
-                'type' => 'email',
-            ),
-            array(
-                'id'   => 'phone',
-                'name' => __( 'Phone Number', 'textdomain' ),
-                'type' => 'text',
-            ),
-        )
-    );
-        //add metaboxes to About Page
-    $meta_boxes[] = array(
-        'title'      => __( 'About Me Details', 'textdomain' ),
-        'post_types' => 'about',
-        'fields'     => array(
-            array(
-                'id'   => 'about-title',
-                'name' => __( 'About Title', 'textdomain' ),
-                'type' => 'text',
-            ),
-            array(
-              'id' => 'about-image',
-              'name' => esc_html__('About Me Image', 'textdomain'),
-              'type' => 'image_upload',
-              'force_delete' => false,
-              'max_file_uploads' => 1,
-          ),
-        )
-          
-    );
-    
- 
-
-  $meta_boxes[] = array(
-        'title'      => __( 'Gear Details', 'textdomain' ),
-        'post_types' => 'about',
-        'fields'     => array(
-            array(
-                'id'   => 'gear-title',
-                'name' => __( 'Gear Title', 'textdomain' ),
-                'type' => 'text',
-            ),
-            array(
-              'id' => 'gear-image',
-              'name' => esc_html__('Gear Background Image', 'textdomain'),
-              'type' => 'image_upload',
-              'force_delete' => false,
-              'max_file_uploads' => 1,
-          ),
-          array(
-                'id'   => 'gear-list',
-                'name' => __( 'Gear List', 'textdomain' ),
-                'type' => 'wysiwyg',
-            ),
-        )
-    );
-    
-    return $meta_boxes;
-}
-
-
-
 

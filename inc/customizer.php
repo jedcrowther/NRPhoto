@@ -46,11 +46,6 @@ add_action( 'customize_preview_init', 'wp_underscore_customize_preview_js' );
 
 
 
-
-
-
-
-
 function ct_nrphoto_social_array() {
 
 	$social_sites = array(
