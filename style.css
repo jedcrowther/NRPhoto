@@ -1127,10 +1127,10 @@ section {
     text-transform: capitalize;
     letter-spacing: 2px;
     font-weight: 200;
-    font-size: 60px;
+    font-size: 2em;
     text-align: center;
     line-height: 65px;
-    width: 900px; }
+    width: 60%; }
   .stars__section .stars__quote-mark {
     font-size: 200px;
     font-weight: 800;
@@ -1153,7 +1153,10 @@ section {
 
   .stars__section .stars__quote-mark {
     line-height: 280px;
-    padding-bottom: 0px; } }
+    padding-bottom: 0px; }
+  .stars__section .stars__quote {
+    font-size: 4em;
+    width: 900px; } }
 .about__section {
   padding: 0 20px; }
   .about__section::after {

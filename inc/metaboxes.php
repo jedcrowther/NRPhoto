@@ -1,5 +1,16 @@
 <?php
 
+
+//global $pagenow;
+//
+//vvar_dump( $_GET['post'] );
+//    die();
+//
+//    if ( '232' == get_post_meta( $post->ID) ) 
+//      
+
+
+      {
 function register_meta_boxes( $meta_boxes ) {
   
   $prefix = 'prefix_';
@@ -17,10 +28,12 @@ function register_meta_boxes( $meta_boxes ) {
           ),
       ),
   );
+    
+if ($_GET['post'] === '259') {    
     //add metaboxes to Contact Page
     $meta_boxes[] = array(
         'title'      => __( 'Contact Details', 'textdomain' ),
-        'post_types' => 'contact',
+        'post_types' => 'page',
         'fields'     => array(
             array(
                 'id'   => 'email',
@@ -34,11 +47,17 @@ function register_meta_boxes( $meta_boxes ) {
             ),
         )
     );
+    
+}    
         //add metaboxes to About Page
+    
+if ($_GET['post'] === '232') {
+
     $meta_boxes[] = array(
         'title'      => __( 'About Me Details', 'textdomain' ),
-        'post_types' => 'about',
+        'post_types' => array( 'page' ),
         'fields'     => array(
+            
             array(
                 'id'   => 'about-title',
                 'name' => __( 'About Title', 'textdomain' ),
@@ -51,15 +70,15 @@ function register_meta_boxes( $meta_boxes ) {
               'force_delete' => false,
               'max_file_uploads' => 1,
           ),
+            
+            
         )
           
     );
-    
- 
 
   $meta_boxes[] = array(
         'title'      => __( 'Gear Details', 'textdomain' ),
-        'post_types' => 'about',
+        'post_types' => array( 'page' ),
         'fields'     => array(
             array(
                 'id'   => 'gear-title',
@@ -80,8 +99,14 @@ function register_meta_boxes( $meta_boxes ) {
             ),
         )
     );
-    
-    return $meta_boxes;
 }
 
+    return $meta_boxes;
+
+}
+    
+    
 add_filter( 'rwmb_meta_boxes', 'register_meta_boxes' );
+
+
+}

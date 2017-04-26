@@ -25,11 +25,18 @@ get_header();
                 <div class="image__thumb--overlay">
                   <div class="image__thumb--text"><?php the_title(); ?></div>
                   <div class="image__thumb--icon"><?php
-                    $img = rwmb_meta('hover-image', 'type=plupload_image&size=round-feature-image');
-                    foreach ($img as $image) {
-                      echo "<img src='" . "{$image['url']}" . "' alt='" . "{$image['title']}" . "'>";
-                    }
-                    ?></div>
+                        
+                  $hover = get_post_meta($post->ID, '_nrphoto_attached_image', true);
+                  foreach ($img as $image) {   
+                  echo wp_get_attachment_image($image);
+                  }
+                  
+//                    $img = rwmb_meta('hover-image', 'type=plupload_image&size=round-feature-image');
+//                    foreach ($img as $image) {
+//                      echo "<img src='" . "{$image['url']}" . "' alt='" . "{$image['title']}" . "'>";
+//                    }
+//                    ?>
+                  </div>
                 </div>
               </a>
 
