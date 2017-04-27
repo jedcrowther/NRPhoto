@@ -31,7 +31,7 @@ get_header();
 </section>
 
 
-      <div class="flatlay__section" style="background-image: url('<?php echo esc_url( get_theme_mod( 'nrphoto_bio_image') ) ?>')">
+      <div class="flatlay__section" style="background-image: url('<?php echo esc_url( get_theme_mod( 'nrphoto_gear_image') ) ?>')">
     
 
       </div>

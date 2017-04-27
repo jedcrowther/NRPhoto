@@ -31,11 +31,7 @@ get_header();
                   echo wp_get_attachment_image($image);
                   }
                   
-//                    $img = rwmb_meta('hover-image', 'type=plupload_image&size=round-feature-image');
-//                    foreach ($img as $image) {
-//                      echo "<img src='" . "{$image['url']}" . "' alt='" . "{$image['title']}" . "'>";
-//                    }
-//                    ?>
+                 ?>
                   </div>
                 </div>
               </a>
@@ -81,7 +77,7 @@ get_header();
           <div class="about__text">
             <h2><?php echo $about_meta['about_head'][0] ?></h2>
             <p><?php echo $about_meta['about_bio'][0] ?></p>
-            <a href="about">Read More</a>
+            <button href="about">Read More</button>
             <?php
           endwhile;
           wp_reset_postdata();
@@ -91,20 +87,20 @@ get_header();
     </section>
 
 
-    <?php $contact_meta = get_post_meta(170);
+    <?php $contact_meta = get_post_meta(259);
     ?>
 
     <section class="contact__section">
       <div class="reveal contact__container">
         <h2>Contact</h2>
-        <p><?php echo $contact_meta['phone'][0]; ?></p>
-        <p class="contact-email"><?php echo $contact_meta['email'][0]; ?></p>
+        <p><?php echo $contact_meta['contact_number'][0];  ?></p>
+        <p class="contact-email"><?php echo $contact_meta['contact_email'][0]; ?></p>
       </div>
     </section> 
 
 
-  </main><!-- #main -->
-</div><!-- #primary -->
+  </main>
+</div>
 
 <?php
 get_sidebar();

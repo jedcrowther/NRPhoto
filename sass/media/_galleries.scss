@@ -4,15 +4,15 @@
   margin: 0 auto;
   justify-content: center;
   max-width: 1200px;
+  height: 500px;
 }
+
+
 
 .image__container {
   flex-basis: 31%;
   position: relative;
   margin: 5px;
-  background: pink;
-  width: 100px;
-  height: 100px;
 
 }
 
@@ -20,7 +20,9 @@
   display: block;
   width: 100%;
   height: auto;
+  
 }
+
 
 .image__thumb--overlay {
   position: absolute;
@@ -101,30 +103,5 @@
     display: block;
     width: 100%;
     height: auto;
-  }
-}
-
-.portfolio-carousel {
-  height: 800px;
-  background-color: grey;
-}
-
-.your-class {
-  height:600px;
-  width: 80%;  
-  .blue {
-    background-color: blue;
-    height:600px;
-  width: 80%; 
-  }
-  .green {
-    background-color: green;
-    height:600px;
-  width: 80%; 
-  }
-  .purple {
-    background-color: purple;
-    height:600px;
-  width: 80%; 
   }
 }

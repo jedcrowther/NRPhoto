@@ -116,8 +116,7 @@ function wp_underscore_scripts() {
   wp_enqueue_style('Font_Awesome');
   
   wp_enqueue_style('wp_underscore-style', get_stylesheet_uri());
-  
-  
+ 
 
   wp_enqueue_script('wp_underscore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
@@ -200,7 +199,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load metabox file.
+ * Load metabox files.
  */
 
 require get_template_directory() . '/inc/hover-image-metabox.php';
@@ -250,13 +249,14 @@ function change_post_object() {
 add_action( 'admin_menu', 'change_post_label' );
 add_action( 'init', 'change_post_object' );
 
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////     add metabox         ///////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
 
+// add category nicenames in body and post class
+function category_id_class( $classes ) {
+	global $post;
+	foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+		$classes[] = $category->category_nicename;
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'category_id_class' );
+add_filter( 'body_class', 'category_id_class' );

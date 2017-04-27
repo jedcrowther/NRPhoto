@@ -90,6 +90,9 @@ $about-layout: (
 
  
 .about__text {
+  p {
+     white-space: pre-wrap;
+  }
 @include grid-column(1, $about-layout-mobile);
 @include grid-media($about-layout) {
     @include grid-column(1);

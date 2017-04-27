@@ -17,7 +17,7 @@ function wp_underscore_customize_register($wp_customize) {
 
   $wp_customize->add_setting('nrphoto_footer_logo', array('default' => ''));
   $wp_customize->add_setting('nrphoto_bio_image', array('default' => ''));
-
+$wp_customize->add_setting('nrphoto_gear_image', array('default' => ''));
 
   $wp_customize->add_control(
           new WP_Customize_Image_Control($wp_customize, 'footer_logo', array(
@@ -38,6 +38,16 @@ function wp_underscore_customize_register($wp_customize) {
           )
           )
   );
+  
+  $wp_customize->add_control(
+          new WP_Customize_Image_Control($wp_customize, 'gear_image', array(
+      'label' => __('Gear Image', 'nrphoto'),
+      'section' => 'background_image',
+      'priority' => '10',
+      'settings' => 'nrphoto_gear_image'
+          )
+          )
+  );
 }
 
 add_action( 'customize_register', 'wp_underscore_customize_register' );
@@ -52,7 +62,7 @@ add_action( 'customize_preview_init', 'wp_underscore_customize_preview_js' );
 
 
 
-function ct_nrphoto_social_array() {
+function nrphoto_social_array() {
 
 	$social_sites = array(
 		'twitter'       => 'nrphoto_twitter_profile',
@@ -64,18 +74,18 @@ function ct_nrphoto_social_array() {
 		'flickr'        => 'nrphoto_flickr_profile'
 	);
 
-	return apply_filters( 'ct_nrphoto_social_array_filter', $social_sites );
+	return apply_filters( 'nrphoto_social_array_filter', $social_sites );
 }
 
 function my_add_customizer_sections( $wp_customize ) {
 
-	$social_sites = ct_nrphoto_social_array();
+	$social_sites = nrphoto_social_array();
 
 	// set a priority used to order the social sites
 	$priority = 5;
 
 	// section
-	$wp_customize->add_section( 'ct_nrphoto_social_media_icons', array(
+	$wp_customize->add_section( 'nrphoto_social_media_icons', array(
 		'title'       => __( 'Social Media Icons', 'nrphoto' ),
 		'priority'    => 25,
 		'description' => __( 'Add the URL for each of your social profiles.', 'nrphoto' )
@@ -93,7 +103,7 @@ function my_add_customizer_sections( $wp_customize ) {
 		$wp_customize->add_control( $social_site, array(
 			'type'     => 'url',
 			'label'    => $label,
-			'section'  => 'ct_nrphoto_social_media_icons',
+			'section'  => 'nrphoto_social_media_icons',
 			'priority' => $priority
 		) );
 		// increment the priority for next site
@@ -105,7 +115,7 @@ add_action( 'customize_register', 'my_add_customizer_sections' );
 
 function my_social_icons_output() {
 
-	$social_sites = ct_nrphoto_social_array();
+	$social_sites = nrphoto_social_array();
 
 	foreach ( $social_sites as $social_site => $profile ) {
 

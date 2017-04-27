@@ -23,9 +23,10 @@ $toggles.on('click', function () {
 
 $toggleLink.on('click', function () {
     $(this).closest('.menu').toggleClass('open');
+
 });
          
-         
+        
          
 function createStars(i) {
   for (var i; i; i--) {
@@ -41,22 +42,17 @@ function drawStars(){
   document.getElementById('site-navigation').appendChild(tmpStar);
 }
 
-function selectStars() {
-    stars = document.querySelectorAll(".star");
-  console.log(stars);
-}
-
 function animateStars() {
       Array.prototype.forEach.call(stars, function(el, i){
       TweenMax.to(el, Math.random() * 0.5 + 0.5, {opacity: Math.random(), onComplete: animateStars});
     });
 }
 
-createStars(200);
-selectStars();
-animateStars(); 
+
+    createStars(75);
+    animateStars(); 
          
-         
+   
          
 // scroll reveal on homepage         
 window.sr = ScrollReveal();
@@ -64,34 +60,26 @@ sr.reveal('.reveal', { delay: 0.2, scale: 0.98, duration: 1000 });
          
          
 
+jQuery( document ).ready( function( $ ) {  
+  $('.filter a').click(function(e) {
+    e.preventDefault();
+    var a = $(this).attr('href');
+    a = a.substr(1);
+    $('.sets a').each(function() {
+      if (!$(this).hasClass(a) && a !== 'all')
+        $(this).addClass('hide');
+      else
+        $(this).removeClass('hide');
+    });
 
-//$(window).on('load', function() {
-//    var $container = $('.gallery__container');
-//    $container.isotope({
-//        filter: '*',
-//        animationOptions: {
-//            duration: 750,
-//            easing: 'linear',
-//            queue: false
-//        }
-//    });
-// 
-//    $('.portfolioFilter a').click(function(){
-//        $('.portfolioFilter .current').removeClass('current');
-//        $(this).addClass('current');
-// 
-//        var selector = $(this).attr('data-filter');
-//        $container.isotope({
-//            filter: selector,
-//            animationOptions: {
-//                duration: 750,
-//                easing: 'linear',
-//                queue: false
-//            }
-//         });
-//         return false;
-//    }); 
-//});
+  });
 
+  $('.sets a').click(function(e) {
+    e.preventDefault();
+    var $i = $(this);
+    $('.sets a').not($i).toggleClass('pophide');
+    $i.toggleClass('pop');
+  });
+}); 
 
 });

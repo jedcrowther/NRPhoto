@@ -473,6 +473,15 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
 
+.about__text button {
+  font-weight: normal;
+  width: 214px;
+  min-height: 40px;
+  padding: px px;
+  border: none;
+  background: #1b2c4a;
+  color: #f9f9f9; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -900,15 +909,13 @@ object {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
-  max-width: 1200px; }
+  max-width: 1200px;
+  height: 500px; }
 
 .image__container {
   flex-basis: 31%;
   position: relative;
-  margin: 5px;
-  background: pink;
-  width: 100px;
-  height: 100px; }
+  margin: 5px; }
 
 .image__thumb {
   display: block;
@@ -982,26 +989,6 @@ object {
     display: block;
     width: 100%;
     height: auto; } }
-.portfolio-carousel {
-  height: 800px;
-  background-color: grey; }
-
-.your-class {
-  height: 600px;
-  width: 80%; }
-  .your-class .blue {
-    background-color: blue;
-    height: 600px;
-    width: 80%; }
-  .your-class .green {
-    background-color: green;
-    height: 600px;
-    width: 80%; }
-  .your-class .purple {
-    background-color: purple;
-    height: 600px;
-    width: 80%; }
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -1184,6 +1171,8 @@ section {
   width: calc(100%);
   float: left;
   margin-left: 0; }
+  .about__text p {
+    white-space: pre-wrap; }
   @media only screen and (min-width: 50em) {
     .about__text {
       width: calc(50% - 75px);
