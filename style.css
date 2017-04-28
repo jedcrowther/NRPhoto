@@ -41,14 +41,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/*// Rem output with px fallback
-@mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
-	font-size: $sizeValue * 1rem;
-}*/
 /*********************
 BREAKPOINTS
 *********************/
+/********************
+TYPOGRAPHY
+*********************/
+/* ------ The Mixin ------ */
 .woocommerce-page main#main.site-main,
 .woocommerce main#main.site-main {
   margin: 6em; }
@@ -88,14 +87,29 @@ a.checkout-button.button.alt.wc-forward {
 select.orderby {
   display: none !important; }
 
+h1.product_title {
+  text-align: left !important;
+  margin-bottom: 1em !important; }
+
 .woocommerce-products-header__title.page-title {
   text-align: center !important; }
 
 .button,
 .woocommerce a.button {
-  border: 2px solid #0f0f0f !important;
-  background: none !important;
-  color: #0f0f0f !important; }
+  font-weight: normal !important;
+  min-height: 40px !important;
+  padding: 15px 15px !important;
+  border: none !important;
+  background: #1b2c4a !important;
+  color: #f9f9f9 !important;
+  border-radius: 0 !important; }
+  .button:hover,
+  .woocommerce a.button:hover {
+    background: #29426f !important; }
+  .button:active, .button:focus,
+  .woocommerce a.button:active,
+  .woocommerce a.button:focus {
+    background: #29426f !important; }
 
 .single_add_to_cart_button {
   width: 50% !important; }
@@ -327,11 +341,181 @@ input,
 select,
 textarea {
   color: #0f0f0f;
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.5; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 .social__icons {
   font-family: 'Font Awesome'; }
+
+@media (max-width: 37.5em) {
+  body {
+    font-size: 14px;
+    line-height: 22.652px; }
+
+  h1 {
+    font-size: 59.30121px;
+    line-height: 67.956px;
+    margin-top: 45.304px;
+    margin-bottom: 22.652px; }
+
+  h2 {
+    font-size: 36.65094px;
+    line-height: 45.304px;
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; }
+
+  h3 {
+    font-size: 22.652px;
+    line-height: 22.652px;
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; }
+
+  h4 {
+    font-size: 14px;
+    line-height: 22.652px;
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; } }
+@media (min-width: 37.5em) {
+  body {
+    font-size: 15px;
+    line-height: 24.27px; }
+
+  h1 {
+    font-size: 63.53702px;
+    line-height: 72.81px;
+    margin-top: 48.54px;
+    margin-bottom: 24.27px; }
+
+  h2 {
+    font-size: 39.26886px;
+    line-height: 48.54px;
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; }
+
+  h3 {
+    font-size: 24.27px;
+    line-height: 24.27px;
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; }
+
+  h4 {
+    font-size: 15px;
+    line-height: 24.27px;
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; } }
+@media (min-width: 50em) {
+  body {
+    font-size: 16px;
+    line-height: 25.888px; }
+
+  h1 {
+    font-size: 67.77282px;
+    line-height: 77.664px;
+    margin-top: 51.776px;
+    margin-bottom: 25.888px; }
+
+  h2 {
+    font-size: 41.88678px;
+    line-height: 51.776px;
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; }
+
+  h3 {
+    font-size: 25.888px;
+    line-height: 25.888px;
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; }
+
+  h4 {
+    font-size: 16px;
+    line-height: 25.888px;
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; } }
+@media (min-width: 64em) {
+  body {
+    font-size: 17px;
+    line-height: 27.506px; }
+
+  h1 {
+    font-size: 72.00862px;
+    line-height: 82.518px;
+    margin-top: 55.012px;
+    margin-bottom: 27.506px; }
+
+  h2 {
+    font-size: 44.50471px;
+    line-height: 55.012px;
+    margin-top: 27.506px;
+    margin-bottom: 27.506px; }
+
+  h3 {
+    font-size: 27.506px;
+    line-height: 27.506px;
+    margin-top: 27.506px;
+    margin-bottom: 27.506px; }
+
+  h4 {
+    font-size: 17px;
+    line-height: 27.506px;
+    margin-top: 27.506px;
+    margin-bottom: 27.506px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 27.506px;
+    margin-bottom: 27.506px; } }
+@media (min-width: 70em) {
+  body {
+    font-size: 18px;
+    line-height: 29.124px; }
+
+  h1 {
+    font-size: 76.24442px;
+    line-height: 87.372px;
+    margin-top: 58.248px;
+    margin-bottom: 29.124px; }
+
+  h2 {
+    font-size: 47.12263px;
+    line-height: 58.248px;
+    margin-top: 29.124px;
+    margin-bottom: 29.124px; }
+
+  h3 {
+    font-size: 29.124px;
+    line-height: 29.124px;
+    margin-top: 29.124px;
+    margin-bottom: 29.124px; }
+
+  h4 {
+    font-size: 18px;
+    line-height: 29.124px;
+    margin-top: 29.124px;
+    margin-bottom: 29.124px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 29.124px;
+    margin-bottom: 29.124px; } }
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale; }
+
+p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
+  transition: all 200ms ease-in-out; }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
@@ -382,13 +566,7 @@ html {
   box-sizing: border-box; }
   html html {
     font-size: 100%;
-    line-height: 1.4; }
-    @media all and (min-width: 37.5em) {
-      html html {
-        font-size: 112.5%; } }
-    @media all and (min-width: 70em) {
-      html html {
-        font-size: 125%; } }
+    line-height: 1.5; }
 
 *,
 *:before,
@@ -448,39 +626,52 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
+/*button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 0;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 1;
-  padding: .6em 1em .4em; }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb; }
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 0;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, .8);
+	//@include font-size(0.75);
+	line-height: 1;
+	padding: .6em 1em .4em;
 
-.about__text button {
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}*/
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
   font-weight: normal;
   width: 214px;
   min-height: 40px;
-  padding: px px;
+  padding: 10px 10px;
   border: none;
   background: #1b2c4a;
   color: #f9f9f9; }
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover,
+  button:hover {
+    background: #29426f; }
+  input[type="button"]:active, input[type="button"]:focus,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:active,
+  input[type="submit"]:focus,
+  button:active,
+  button:focus {
+    background: #29426f; }
 
 input[type="text"],
 input[type="email"],
@@ -500,7 +691,6 @@ input[type="color"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px;
   padding: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -633,7 +823,8 @@ a {
       z-index: 9999;
       overflow: visible; }
       .menu .menu__icon path {
-        stroke: #f9f9f9; }
+        stroke: #f9f9f9;
+        box-shadow: 10px 10px 10px black; }
         .menu .menu__icon path.icon-top, .menu .menu__icon path.icon-bottom {
           transform: rotate(0);
           transform-origin: left; }
@@ -910,7 +1101,7 @@ object {
   margin: 0 auto;
   justify-content: center;
   max-width: 1200px;
-  height: 500px; }
+  /*  height: 500px;*/ }
 
 .image__container {
   flex-basis: 31%;
@@ -989,6 +1180,12 @@ object {
     display: block;
     width: 100%;
     height: auto; } }
+.type-post .entry-content p {
+  margin-bottom: 0; }
+.type-post .entry-content img {
+  max-width: 96%;
+  margin: 0 2%; }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/

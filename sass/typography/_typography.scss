@@ -5,27 +5,48 @@ select,
 textarea {
 	color: $black;
 	font-family: $font__main;
-	//@include font-size(1);
-	line-height: $font__line-height-body;
+
 }
 
 .social__icons {
   font-family: 'Font Awesome';
 }
+
+
+$ratio: 1.618;
+
+@include breakpoint(mobileonly){
+  @include typography(14px);
+}
+@include breakpoint(phablet){
+  @include typography(15px);
+}
+@include breakpoint(tablet){
+  @include typography(16px);
+}
+@include breakpoint(laptop){
+  @include typography(17px);
+}
+@include breakpoint(desktop){
+  @include typography(18px);
+}
+
+
+html{
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased !important;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
+  transition: all 200ms ease-in-out;
+}
+
 @import "headings";
 @import "copy";
 
 
-$breakpoints: (
-  small: 37.5em,
-  large: 70em
-);
 
-$typi: (
-  base: (
-    null: (16px, 1.4),
-    small: (18px),
-    large: (20px)
-  )
-  // Other font maps here
-);

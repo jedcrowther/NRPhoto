@@ -116,6 +116,7 @@
       overflow: visible;
       path {
         stroke: $white;
+        box-shadow: 10px 10px 10px black;
         &.icon-top,
         &.icon-bottom {
           transform: rotate(0);
@@ -178,6 +179,7 @@
       top: 100px;
       path {
         stroke: $white;
+        
         &.icon-top {
           transform: (rotate(45deg) translate(1px, 0));
         }

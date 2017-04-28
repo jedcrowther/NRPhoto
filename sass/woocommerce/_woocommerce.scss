@@ -49,12 +49,15 @@ display: none !important;
 }
 
 
-
 .woocommerce-result-count,
 select.orderby {
   display: none !important;
 }
 
+h1.product_title {
+  text-align: left !important;
+  margin-bottom: 1em !important;
+}
 
 .woocommerce-products-header__title.page-title {
     text-align: center !important;
@@ -62,9 +65,23 @@ select.orderby {
 
 .button,
 .woocommerce a.button {
-   border: 2px solid $black !important;
-   background: none !important;
-   color: $black !important;
+    font-weight: normal !important;
+    min-height: 40px !important;
+    padding: 15px 15px !important;
+    border: none !important;
+    background: $navy !important;
+    color: $white !important;
+    border-radius: 0 !important;
+    
+    &:hover {
+		background: lighten($navy, 10% ) !important;
+	}
+
+	&:active,
+	&:focus {
+		background: lighten($navy, 10% ) !important;
+	}
+
 }
 .single_add_to_cart_button {
   width: 50% !important;

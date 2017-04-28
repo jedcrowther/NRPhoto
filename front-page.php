@@ -42,6 +42,8 @@ get_header();
           wp_reset_postdata();
         }
         ?>
+        
+        <a href="portfolio"><button>View My Portfolio</button></a>
       </div>
     </section>
 
@@ -77,7 +79,7 @@ get_header();
           <div class="about__text">
             <h2><?php echo $about_meta['about_head'][0] ?></h2>
             <p><?php echo $about_meta['about_bio'][0] ?></p>
-            <button href="about">Read More</button>
+            <a href="about"><button >Read More</button></a>
             <?php
           endwhile;
           wp_reset_postdata();

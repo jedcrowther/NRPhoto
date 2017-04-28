@@ -4,7 +4,7 @@
   margin: 0 auto;
   justify-content: center;
   max-width: 1200px;
-  height: 500px;
+/*  height: 500px;*/ 
 }
 
 
@@ -103,5 +103,15 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+}
+
+.type-post .entry-content {
+p {
+  margin-bottom: 0;
+}
+img {
+      max-width: 96%;
+    margin: 0 2%;
   }
 }

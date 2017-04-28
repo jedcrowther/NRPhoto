@@ -42,14 +42,19 @@ function drawStars(){
   document.getElementById('site-navigation').appendChild(tmpStar);
 }
 
+
+
+
+
 function animateStars() {
+      stars = document.querySelectorAll(".star");
       Array.prototype.forEach.call(stars, function(el, i){
       TweenMax.to(el, Math.random() * 0.5 + 0.5, {opacity: Math.random(), onComplete: animateStars});
     });
 }
 
 
-    createStars(75);
+    createStars(50);
     animateStars(); 
          
    
