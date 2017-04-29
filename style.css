@@ -42,12 +42,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*********************
-BREAKPOINTS
+  BREAKPOINTS MIXIN
 *********************/
 /********************
-TYPOGRAPHY
+  TYPOGRAPHY MIXIN
 *********************/
-/* ------ The Mixin ------ */
+/*@import "bourbon/bourbon";*/
 .woocommerce-page main#main.site-main,
 .woocommerce main#main.site-main {
   margin: 6em; }
@@ -524,49 +524,56 @@ h1.entry-title {
   text-align: center;
   margin-bottom: 3em; }
 
-p {
-  margin-bottom: 1.5em; }
+/*p {
+	margin-bottom: 1.5em;
+}
 
 dfn, cite, em, i {
-  font-style: italic; }
+	font-style: italic;
+}
 
 blockquote {
-  margin: 0 1.5em; }
+	margin: 0 1.5em;
+}
 
 address {
-  margin: 0 0 1.5em; }
+	margin: 0 0 1.5em;
+}
 
 pre {
-  background: #eee;
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.6em; }
+	background: $color__background-pre;
+	font-family: $font__pre;
+	//@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
 
 code, kbd, tt, var {
-  font-family: "Source Sans Pro", sans-serif; }
+	font-family: $font__code;
+	//@include font-size(0.9375);
+}
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help; }
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
 
 mark, ins {
-  background: #fff9c0;
-  text-decoration: none; }
+	background: $color__background-ins;
+	text-decoration: none;
+}
 
 big {
-  font-size: 125%; }
-
+	font-size: 125%;
+}*/
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box; }
-  html html {
-    font-size: 100%;
-    line-height: 1.5; }
 
 *,
 *:before,
@@ -672,6 +679,9 @@ button {
   button:active,
   button:focus {
     background: #29426f; }
+
+.gallery__container button {
+  margin-top: 50px; }
 
 input[type="text"],
 input[type="email"],
@@ -908,14 +918,15 @@ a {
   margin: 50px 0;
   display: block; }
   .gallery_menu_class ul {
+    padding: 0;
     margin: 0 auto;
-    width: 340px;
+    width: 325px;
     list-style: none; }
     .gallery_menu_class ul li {
       padding: 10px;
       display: inline; }
   .gallery_menu_class a {
-    color: #333;
+    color: #444545;
     text-decoration: none; }
 
 @media (max-width: 37.5em) {
@@ -975,21 +986,21 @@ a {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before::after,
-.clear:after::after,
-.entry-content:before::after,
-.entry-content:after::after,
-.comment-content:before::after,
-.comment-content:after::after,
-.site__header:before::after,
-.site__header:after::after,
-.site-content:before::after,
-.site-content:after::after,
-.site-footer:before::after,
-.site-footer:after::after {
-  clear: both;
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site__header:before,
+.site__header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
   content: "";
-  display: table; }
+  display: table;
+  table-layout: fixed; }
 
 .clear:after,
 .entry-content:after,
@@ -1269,18 +1280,17 @@ object {
   padding: 0;
   list-style: none;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap; }
   .instagram-pics li {
+    margin: 10px;
     flex-basis: 30%; }
     .instagram-pics li:last-child {
-      margin-right: 0; }
+      /*     margin-right: 0; */ }
 
 @media (min-width: 50em) {
   .instagram-pics {
-    flex-wrap: nowrap; }
-    .instagram-pics li {
-      margin-right: 20px; } }
+    flex-wrap: nowrap; } }
 .social-media-icons {
   margin: 0;
   padding: 20px 0;

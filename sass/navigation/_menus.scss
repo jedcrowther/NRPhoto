@@ -234,8 +234,9 @@
   margin: 50px 0;
   display: block;
   ul {
+    padding: 0;
     margin: 0 auto;
-    width: 340px;
+    width: 325px;
     list-style: none;
     li {
       padding: 10px;
@@ -243,7 +244,7 @@
     }
   }
   a {
-    color: #333;
+    color: $grey;
     text-decoration: none;
   }
 }

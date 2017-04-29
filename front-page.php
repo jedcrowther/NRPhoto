@@ -75,10 +75,12 @@ get_header();
         <?php
         while ($about->have_posts()) :
           $about->the_post();
+        $bio = $about_meta['about_bio'][0];
+        
           ?>
           <div class="about__text">
             <h2><?php echo $about_meta['about_head'][0] ?></h2>
-            <p><?php echo $about_meta['about_bio'][0] ?></p>
+            <p><?php echo substr($bio, 0, 350) ;  ?> ...</p>
             <a href="about"><button >Read More</button></a>
             <?php
           endwhile;

@@ -260,3 +260,7 @@ function category_id_class( $classes ) {
 }
 add_filter( 'post_class', 'category_id_class' );
 add_filter( 'body_class', 'category_id_class' );
+
+
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');

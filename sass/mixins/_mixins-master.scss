@@ -19,7 +19,7 @@
 
 
 /*********************
-BREAKPOINTS
+  BREAKPOINTS MIXIN
 *********************/
 
  @mixin breakpoint($point) {
@@ -43,13 +43,9 @@ BREAKPOINTS
 
 
 /********************
-TYPOGRAPHY
+  TYPOGRAPHY MIXIN
 *********************/
 
-
-
-
-/* ------ The Mixin ------ */
 @mixin typography($font-size){
   $base-line-height: $font-size * $ratio;
   $margin: $base-line-height;
