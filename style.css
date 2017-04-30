@@ -47,7 +47,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /********************
   TYPOGRAPHY MIXIN
 *********************/
-/*@import "bourbon/bourbon";*/
 .woocommerce-page main#main.site-main,
 .woocommerce main#main.site-main {
   margin: 6em; }
@@ -92,7 +91,7 @@ h1.product_title {
   margin-bottom: 1em !important; }
 
 .woocommerce-products-header__title.page-title {
-  text-align: center !important; }
+  display: none !important; }
 
 .button,
 .woocommerce a.button {
@@ -102,7 +101,10 @@ h1.product_title {
   border: none !important;
   background: #1b2c4a !important;
   color: #f9f9f9 !important;
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2.5px !important; }
   .button:hover,
   .woocommerce a.button:hover {
     background: #29426f !important; }
@@ -518,11 +520,18 @@ p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
   transition: all 200ms ease-in-out; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
 
 h1.entry-title {
   text-align: center;
   margin-bottom: 3em; }
+
+.single-post h3.entry-title {
+  text-align: center;
+  margin: 2em 0 3em; }
 
 /*p {
 	margin-bottom: 1.5em;
@@ -659,13 +668,15 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
+  font-size: 16px;
   font-weight: normal;
-  width: 214px;
   min-height: 40px;
-  padding: 10px 10px;
+  padding: 10px 50px;
   border: none;
   background: #1b2c4a;
-  color: #f9f9f9; }
+  color: #f9f9f9;
+  text-transform: uppercase;
+  letter-spacing: 2.5px; }
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover,
@@ -731,6 +742,12 @@ textarea {
   width: 50%;
   padding-top: 50px;
   margin: 0 auto; }
+
+.nf-form-title h3 {
+  text-align: center; }
+
+.nf-form-fields-required {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -801,12 +818,29 @@ a {
 .sub-menu li {
   margin: 20px 0; }
 
+.shadow {
+  background-color: #777878;
+  opacity: 0.5;
+  filter: blur(6px);
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  z-index: 9998;
+  overflow: visible; }
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
 
 @media (min-width: 37.5em) {
+  .shadow {
+    cursor: default;
+    opacity: 0; }
+
   .menu-toggle {
     display: none; }
 
@@ -1144,15 +1178,20 @@ object {
   color: #0f0f0f;
   font-size: 20px;
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
+  -ms-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1.5px; }
 
 .image__thumb--icon img {
   display: block;
   margin: 0 auto;
-  padding-top: 20px; }
+  padding-top: 50px;
+  width: 120px; }
 
 .single-post .image__thumb--icon img {
   margin: 40px auto;
@@ -1302,10 +1341,10 @@ object {
 .water-color-logo img {
   display: block;
   width: 50%;
-  margin: 0 auto; }
+  margin: 50px auto; }
 @media (min-width: 50em) {
   .water-color-logo img {
-    width: 25%; } }
+    width: 15%; } }
 
 section {
   margin: 100px 0; }

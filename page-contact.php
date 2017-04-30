@@ -16,7 +16,7 @@ get_header();
     while ($contact->have_posts()) :
       $contact->the_post();
       ?>
-      <h1 class="contact__title"><?php echo get_the_title(); ?></h1>
+      <h3 class="contact__title"><?php echo $contact_meta['contact_head'][0] ?></h3>
       <div class="contact__blurb"><?php echo get_the_content() ?></div>
       <p><?php echo $contact_meta['contact_email'][0] ?></p>
       <p><?php echo $contact_meta['contact_number'][0]; ?></p>
@@ -35,6 +35,5 @@ get_header();
 </div>
 
 <?php
-get_sidebar();
 get_footer();
 

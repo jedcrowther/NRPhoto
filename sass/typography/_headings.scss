@@ -1,5 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+     clear: both;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 
@@ -7,3 +10,14 @@ h1.entry-title {
       text-align: center;
       margin-bottom: 3em;
 }
+
+.single-post {
+h3.entry-title {
+    
+    text-align: center;
+    margin: 2em 0 3em;
+  }
+}
+
+
+   

@@ -8,6 +8,7 @@
  *
  * @package wp_underscore
  */
+get_sidebar();
 ?>
 
 </div><!-- #content -->

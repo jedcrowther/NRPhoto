@@ -41,11 +41,12 @@
   img {
     display: block;
     width: 50%;
-    margin: 0 auto;
+    margin: 50px auto;
   }
   @include breakpoint(tablet) {
   img {
-    width: 25%;
+    width: 15%;
+    
   }
 }
 }

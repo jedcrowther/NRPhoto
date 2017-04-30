@@ -27,9 +27,8 @@ get_header();
                   <div class="image__thumb--icon"><?php
                         
                   $hover = get_post_meta($post->ID, '_nrphoto_attached_image', true);
-                  foreach ($img as $image) {   
-                  echo wp_get_attachment_image($image);
-                  }
+                  echo wp_get_attachment_image($hover);
+                  
                    ?>
                   </div>
                 </div>
@@ -48,5 +47,4 @@ get_header();
 
 
 <?php
-get_sidebar();
 get_footer();

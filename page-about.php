@@ -23,7 +23,7 @@ get_header();
   
 
     <div class="about__text"> 
-      <h2><?php echo $about_meta['about_head'][0] ?></h2>
+      <h3><?php echo $about_meta['about_head'][0] ?></h3>
       <p><?php echo $about_meta['about_bio'][0] ?></p>
       
     </div>
@@ -42,7 +42,7 @@ get_header();
   while ($about->have_posts()) :
     $about->the_post();
     ?>
-  <h2><?php echo $about_meta['gear_head'][0] ?></h2>
+  <h3><?php echo $about_meta['gear_head'][0] ?></h3>
 <p><?php echo get_the_content() ?></p>
   
    <?php
@@ -56,5 +56,4 @@ get_header();
   <?php edit_post_link(); ?>
 
 <?php
-get_sidebar();
 get_footer();

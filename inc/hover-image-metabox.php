@@ -16,7 +16,7 @@ add_action('post_edit_form_tag', 'nrphoto_add_edit_form_multipart_encoding');
     if(is_numeric($existing_image_id)) {
 
         echo '<div>';
-            $arr_existing_image = wp_get_attachment_image_src($existing_image_id, 'large');
+            $arr_existing_image = wp_get_attachment_image_src($existing_image_id, 'thumbnail');
             $existing_image_url = $arr_existing_image[0];
             echo '<img src="' . $existing_image_url . '" />';
         echo '</div>';

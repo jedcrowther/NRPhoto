@@ -12,18 +12,17 @@ window.addEventListener('scroll', function windowScroll() {
   parallaxContent.style.transform = 'translate3d(0, ' + windowScrolled / 6 + 'px, 0)';
 });
 
-
-
 var $toggles = $('.menu__icon');
 var $toggleLink = $('.link');
 
 $toggles.on('click', function () {
     $(this).closest('.menu').toggleClass('open');
+    $('.shadow').toggle();
 });
-
+  
 $toggleLink.on('click', function () {
     $(this).closest('.menu').toggleClass('open');
-
+  
 });
          
         

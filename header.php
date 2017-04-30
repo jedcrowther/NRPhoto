@@ -51,14 +51,17 @@
             <?php } ?>
         </div>
 
-
-        <svg class="menu__icon menu-toggle" aria-controls="primary-menu" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="30" height="16">
+        <div class="shadow"></div>      
+ <svg class="menu__icon menu-toggle" aria-controls="primary-menu" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="30" height="16">
         <path class="icon-top" fill="none" stroke="#999" stroke-width="2" d="M0 1h30" stroke-linecap="butt"/>
         <path class="icon-middle" fill="none" stroke="#999" stroke-width="2" d="M0 8h30" stroke-linecap="butt"/>
         <path class="icon-bottom" fill="none" stroke="#999" stroke-width="2" d="M0 15h30" stroke-linecap="butt"/>
         
         
         </svg>
+        
+        
+        
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu')); ?>

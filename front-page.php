@@ -7,7 +7,7 @@ get_header();
 
     <section class="home__galleries">
       <?php
-      wp_nav_menu(array('theme_location' => 'gallery-menu', 'container_class' => 'gallery_menu_class'));
+      //wp_nav_menu(array('theme_location' => 'gallery-menu', 'container_class' => 'gallery_menu_class'));
       $latest_posts = get_posts(array(
           'numberposts' => 6
       ));
@@ -27,9 +27,8 @@ get_header();
                   <div class="image__thumb--icon"><?php
                         
                   $hover = get_post_meta($post->ID, '_nrphoto_attached_image', true);
-                  foreach ($img as $image) {   
-                  echo wp_get_attachment_image($image);
-                  }
+                  echo wp_get_attachment_image($hover);
+                 
                   
                  ?>
                   </div>
@@ -107,5 +106,5 @@ get_header();
 </div>
 
 <?php
-get_sidebar();
+
 get_footer();

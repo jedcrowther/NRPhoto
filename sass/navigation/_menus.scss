@@ -77,6 +77,21 @@
   margin: 20px 0;
 }
 
+.shadow {
+     background-color: lighten($grey, 20%);
+    opacity: 0.5;
+    filter: blur(6px);
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    z-index: 9998;
+    overflow: visible;
+    
+  
+}
 
 /* Small menu. */
 .menu-toggle,
@@ -85,6 +100,10 @@
 }
 
 @include breakpoint(phablet) {
+  .shadow {
+    cursor: default;
+    opacity: 0;
+  }
   .menu-toggle {
     display: none;
   }

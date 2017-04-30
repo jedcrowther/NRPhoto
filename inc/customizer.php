@@ -69,8 +69,8 @@ function nrphoto_social_array() {
 		'facebook'      => 'nrphoto_facebook_profile',
 		'pinterest'     => 'nrphoto_pinterest_profile',
 		'youtube'       => 'nrphoto_youtube_profile',
+                'instagram'     => 'nrphoto_instagram_profile',
 		'tumblr'        => 'nrphoto_tumblr_profile',
-		'instagram'     => 'nrphoto_instagram_profile',
 		'flickr'        => 'nrphoto_flickr_profile'
 	);
 

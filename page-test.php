@@ -191,5 +191,5 @@ jQuery( document ).ready( function( $ ) {
 
 
 <?php
-get_sidebar();
+
 get_footer();
