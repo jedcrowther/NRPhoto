@@ -60,7 +60,7 @@ function animateStars() {
          
 // scroll reveal on homepage         
 window.sr = ScrollReveal();
-sr.reveal('.reveal', { delay: 0.2, scale: 0.98, duration: 1000 });         
+sr.reveal('.reveal', { delay: 0.2, scale: 0.98, duration: 1000 });   
          
          
 

@@ -56,11 +56,13 @@
     &:hover,
     &:focus,
     &:active {
+      transition: all 0.3s ease 0s;
       color: $color__nav-text;
       opacity: 0.5;
     }
     &:focus {
-      outline: thin dotted;
+      transition: all 0.3s ease 0s;
+      color: $color__link-hover;;
     }
     &:hover,
     &:active {
@@ -144,6 +146,7 @@
       }
     }
     nav {
+      display: none;
       position: fixed;
       width: 100%;
       height: 100%;
@@ -171,20 +174,19 @@
           a {
             &:visited {
               color: $color__nav-text-mobile;
+              transition: all 0.3s ease 0s;
             }
             &:hover,
             &:focus,
             &:active {
               color: $color__nav-text-mobile;
-              /*            text-decoration: underline;*/
               opacity: 0.5;
+              transition: all 0.3s ease 0s;
             }
             &:focus {
-              outline: thin dotted;
-            }
-            &:hover,
-            &:active {
-              outline: 0;
+              color: $white;
+              transition: all 0.3s ease 0s;
+            
             }
           }
         }
@@ -212,6 +214,7 @@
     }
     nav {
       opacity: 1;
+      display: block;
     }
   }
 }

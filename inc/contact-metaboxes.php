@@ -2,7 +2,7 @@
 
 
 //adding the meta box when the admin panel initialises
-add_action('admin_init', "add_contact_boxes");
+add_action('admin_init', 'add_contact_boxes');
 // this adds the save meta box function on save post
 add_action('save_post', 'save_contact_box');
 
@@ -23,9 +23,9 @@ function contact_meta($post, $args) {
   $contact_number = get_post_meta($post->ID, 'contact_number', true);
 
   ?>
-<label>Heading: </label><input class="widefat" type="text" name="contact_head" value="<?php echo $contact_head; ?>" /><br/><br>
-<label>Email: </label><input class="widefat" type="email" name="contact_email" value="<?php echo $contact_email; ?>" /><br/><br>
-<label>Phone Number: </label><input class="widefat" type="number" name="contact_number" value="<?php echo $contact_number; ?>"/><br/>
+<label>Heading: </label><input class="widefat" type="text" name="contact_head" value="<?php echo $contact_head; ?>" /><br><br>
+<label>Email: </label><input class="widefat" type="email" name="contact_email" value="<?php echo $contact_email; ?>" /><br><br>
+<label>Phone Number: </label><input class="widefat" type="number" name="contact_number" value="<?php echo $contact_number; ?>"/><br>
   <?php
 }
 

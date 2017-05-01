@@ -53,7 +53,7 @@
     font-size: $font-size;
     line-height: ($font-size * $ratio);
   }
-  h1{
+/*  h1{
     font-size: ((($font-size * $ratio) * $ratio) * $ratio);
     line-height: ($font-size * $ratio) * 3;
     margin-top: $margin * 2;
@@ -78,7 +78,30 @@
     line-height: ($font-size * $ratio);
     margin-top: $margin;
     margin-bottom: $margin;
+  }*/
+
+
+
+  h1{
+    font-size: (($font-size * $ratio) * $ratio);
+    line-height: ($font-size * $ratio) * 2;
+    margin-top: $margin;
+    margin-bottom: $margin;
   }
+
+  h2{
+    font-size: $font-size * $ratio;
+    line-height: ($font-size * $ratio);
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+  h3{
+    font-size: $font-size;
+    line-height: ($font-size * $ratio);
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
   p, ul, ol, pre, table, blockquote{
     margin-top: $margin;
     margin-bottom: $margin;

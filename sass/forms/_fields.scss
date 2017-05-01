@@ -14,10 +14,18 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+  
+  
+    border: 1px solid #ccc;
+    font-size: 14px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	
-	padding: 3px;
+	padding: 12px;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -33,14 +41,34 @@ textarea {
 }
 
 
-
+.nf-field {
+  padding: 0 10px;
+}
 
 #ninja_forms_widget-3 {
     list-style: none;
-    width: 50%;
-    padding-top: 50px;
+    width: 80%;
+    padding: 50px 0;
     margin: 0 auto;
   
+}
+
+@include breakpoint(phablet){
+  #ninja_forms_widget-3 {
+    width: 70%;
+  }
+}
+
+@include breakpoint(tablet){
+  #ninja_forms_widget-3 {
+    width: 60%;
+  }
+}
+
+@include breakpoint(laptop){
+  #ninja_forms_widget-3 {
+    width: 50%;
+  }
 }
 
 .nf-form-title {
@@ -53,3 +81,19 @@ textarea {
 .nf-form-fields-required {
   text-align: center;
 }
+
+
+label {
+  font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  
+}
+
+.nf-field-element input[type="button"]{
+      margin: 0 auto;
+    display: block;
+}
+
+

@@ -5,7 +5,7 @@ section {
 .stars__section {
   color: white;
   font-family: "Source Sans Pro";
-  background-image: url('images/stars.jpg');
+  background-image: url('images/stars-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
   height:600px;
@@ -90,14 +90,19 @@ $about-layout: (
 
  
 .about__text {
+      text-align: center;
   p {
      white-space: pre-wrap;
   }
 @include grid-column(1, $about-layout-mobile);
 @include grid-media($about-layout) {
     @include grid-column(1);
+    text-align: left;
   }
 }
+
+
+
 
 .gear__list {
   max-width: 1000px;
@@ -113,7 +118,7 @@ $about-layout: (
 }
 
 .contact__section {
-  background-image: url('images/contact.jpg');
+  background-image: url('images/contact-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
   height:600px;
@@ -138,6 +143,17 @@ $about-layout: (
   }
 }
 
+
+.contact__page {
+  h3 {
+    border-bottom: 1px solid;
+    width: 60%;
+    text-align: center;
+    padding: 5px;
+    margin: 50px auto;
+    font-weight: 100;
+  }
+}
 
 @include breakpoint(tablet){
   .contact__container {

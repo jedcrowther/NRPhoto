@@ -49,7 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 *********************/
 .woocommerce-page main#main.site-main,
 .woocommerce main#main.site-main {
-  margin: 6em; }
+  margin: 2em 6em; }
 
 .woocommerce div #container {
   margin: 2em; }
@@ -63,10 +63,6 @@ span.woocommerce-Price-amount.amount {
 
 .woocommerce ul.products li.product .price {
   color: #485665 !important; }
-
-a.checkout-button.button.alt.wc-forward {
-  background-color: #0f0f0f !important;
-  color: #f9f9f9 !important; }
 
 .woocommerce-message {
   border-top-color: #0f0f0f !important; }
@@ -82,19 +78,30 @@ a.checkout-button.button.alt.wc-forward {
 .quantity {
   display: none !important; }
 
+.post-type-archive .woocommerce-breadcrumb {
+  padding: 0 !important; }
+
 .woocommerce-result-count,
 select.orderby {
   display: none !important; }
 
-h1.product_title {
+.woocommerce h1.product_title {
   text-align: left !important;
-  margin-bottom: 1em !important; }
+  margin-bottom: 0em !important; }
+
+.woocommerce-cart h1.entry-title,
+.woocommerce-checkout h1.entry-title {
+  margin: 0em !important; }
 
 .woocommerce-products-header__title.page-title {
   display: none !important; }
 
+.woocommerce-thankyou-order-received {
+  text-align: center !important; }
+
 .button,
 .woocommerce a.button {
+  transition: all 0.3s ease 0s !important;
   font-weight: normal !important;
   min-height: 40px !important;
   padding: 15px 15px !important;
@@ -148,7 +155,10 @@ h1.product_title {
 
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     margin: 0 20px 70px 20px !important;
-    width: 40% !important; } }
+    width: 40% !important; }
+
+  .post-type-archive .woocommerce-breadcrumb {
+    padding: 0 8% !important; } }
 @media (min-width: 64em) {
   .woocommerce ul.products {
     justify-content: flex-start !important;
@@ -157,7 +167,10 @@ h1.product_title {
 
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     margin: 0 20px 70px 20px !important;
-    width: 29% !important; } }
+    width: 29% !important; }
+
+  .post-type-archive .woocommerce-breadcrumb {
+    padding: 0 5% !important; } }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -353,25 +366,45 @@ textarea {
     font-size: 14px;
     line-height: 22.652px; }
 
+  /*  h1{
+      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 3;
+      margin-top: $margin * 2;
+      margin-bottom: $margin;
+    }
+  
+    h2{
+      font-size: (($font-size * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 2;
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  
+    h3{
+      font-size: $font-size * $ratio;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    h4{
+      font-size: $font-size;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }*/
   h1 {
-    font-size: 59.30121px;
-    line-height: 67.956px;
-    margin-top: 45.304px;
-    margin-bottom: 22.652px; }
-
-  h2 {
     font-size: 36.65094px;
     line-height: 45.304px;
     margin-top: 22.652px;
     margin-bottom: 22.652px; }
 
-  h3 {
+  h2 {
     font-size: 22.652px;
     line-height: 22.652px;
     margin-top: 22.652px;
     margin-bottom: 22.652px; }
 
-  h4 {
+  h3 {
     font-size: 14px;
     line-height: 22.652px;
     margin-top: 22.652px;
@@ -385,25 +418,45 @@ textarea {
     font-size: 15px;
     line-height: 24.27px; }
 
+  /*  h1{
+      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 3;
+      margin-top: $margin * 2;
+      margin-bottom: $margin;
+    }
+  
+    h2{
+      font-size: (($font-size * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 2;
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  
+    h3{
+      font-size: $font-size * $ratio;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    h4{
+      font-size: $font-size;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }*/
   h1 {
-    font-size: 63.53702px;
-    line-height: 72.81px;
-    margin-top: 48.54px;
-    margin-bottom: 24.27px; }
-
-  h2 {
     font-size: 39.26886px;
     line-height: 48.54px;
     margin-top: 24.27px;
     margin-bottom: 24.27px; }
 
-  h3 {
+  h2 {
     font-size: 24.27px;
     line-height: 24.27px;
     margin-top: 24.27px;
     margin-bottom: 24.27px; }
 
-  h4 {
+  h3 {
     font-size: 15px;
     line-height: 24.27px;
     margin-top: 24.27px;
@@ -417,25 +470,45 @@ textarea {
     font-size: 16px;
     line-height: 25.888px; }
 
+  /*  h1{
+      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 3;
+      margin-top: $margin * 2;
+      margin-bottom: $margin;
+    }
+  
+    h2{
+      font-size: (($font-size * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 2;
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  
+    h3{
+      font-size: $font-size * $ratio;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    h4{
+      font-size: $font-size;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }*/
   h1 {
-    font-size: 67.77282px;
-    line-height: 77.664px;
-    margin-top: 51.776px;
-    margin-bottom: 25.888px; }
-
-  h2 {
     font-size: 41.88678px;
     line-height: 51.776px;
     margin-top: 25.888px;
     margin-bottom: 25.888px; }
 
-  h3 {
+  h2 {
     font-size: 25.888px;
     line-height: 25.888px;
     margin-top: 25.888px;
     margin-bottom: 25.888px; }
 
-  h4 {
+  h3 {
     font-size: 16px;
     line-height: 25.888px;
     margin-top: 25.888px;
@@ -449,25 +522,45 @@ textarea {
     font-size: 17px;
     line-height: 27.506px; }
 
+  /*  h1{
+      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 3;
+      margin-top: $margin * 2;
+      margin-bottom: $margin;
+    }
+  
+    h2{
+      font-size: (($font-size * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 2;
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  
+    h3{
+      font-size: $font-size * $ratio;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    h4{
+      font-size: $font-size;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }*/
   h1 {
-    font-size: 72.00862px;
-    line-height: 82.518px;
-    margin-top: 55.012px;
-    margin-bottom: 27.506px; }
-
-  h2 {
     font-size: 44.50471px;
     line-height: 55.012px;
     margin-top: 27.506px;
     margin-bottom: 27.506px; }
 
-  h3 {
+  h2 {
     font-size: 27.506px;
     line-height: 27.506px;
     margin-top: 27.506px;
     margin-bottom: 27.506px; }
 
-  h4 {
+  h3 {
     font-size: 17px;
     line-height: 27.506px;
     margin-top: 27.506px;
@@ -481,25 +574,45 @@ textarea {
     font-size: 18px;
     line-height: 29.124px; }
 
+  /*  h1{
+      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 3;
+      margin-top: $margin * 2;
+      margin-bottom: $margin;
+    }
+  
+    h2{
+      font-size: (($font-size * $ratio) * $ratio);
+      line-height: ($font-size * $ratio) * 2;
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+  
+    h3{
+      font-size: $font-size * $ratio;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    h4{
+      font-size: $font-size;
+      line-height: ($font-size * $ratio);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }*/
   h1 {
-    font-size: 76.24442px;
-    line-height: 87.372px;
-    margin-top: 58.248px;
-    margin-bottom: 29.124px; }
-
-  h2 {
     font-size: 47.12263px;
     line-height: 58.248px;
     margin-top: 29.124px;
     margin-bottom: 29.124px; }
 
-  h3 {
+  h2 {
     font-size: 29.124px;
     line-height: 29.124px;
     margin-top: 29.124px;
     margin-bottom: 29.124px; }
 
-  h4 {
+  h3 {
     font-size: 18px;
     line-height: 29.124px;
     margin-top: 29.124px;
@@ -529,7 +642,7 @@ h1.entry-title {
   text-align: center;
   margin-bottom: 3em; }
 
-.single-post h3.entry-title {
+.single-post .entry-title {
   text-align: center;
   margin: 2em 0 3em; }
 
@@ -676,7 +789,8 @@ button {
   background: #1b2c4a;
   color: #f9f9f9;
   text-transform: uppercase;
-  letter-spacing: 2.5px; }
+  letter-spacing: 2.5px;
+  transition: all 0.3s ease 0s; }
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover,
@@ -710,9 +824,14 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: normal;
+  box-sizing: border-box;
+  border-radius: 2px;
   color: #666;
   border: 1px solid #ccc;
-  padding: 3px; }
+  padding: 12px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -737,17 +856,39 @@ select {
 textarea {
   width: 100%; }
 
+.nf-field {
+  padding: 0 10px; }
+
 #ninja_forms_widget-3 {
   list-style: none;
-  width: 50%;
-  padding-top: 50px;
+  width: 80%;
+  padding: 50px 0;
   margin: 0 auto; }
 
+@media (min-width: 37.5em) {
+  #ninja_forms_widget-3 {
+    width: 70%; } }
+@media (min-width: 50em) {
+  #ninja_forms_widget-3 {
+    width: 60%; } }
+@media (min-width: 64em) {
+  #ninja_forms_widget-3 {
+    width: 50%; } }
 .nf-form-title h3 {
   text-align: center; }
 
 .nf-form-fields-required {
   text-align: center; }
+
+label {
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px; }
+
+.nf-field-element input[type="button"] {
+  margin: 0 auto;
+  display: block; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -762,7 +903,7 @@ a {
   a:hover, a:focus, a:active {
     color: #0f0f0f; }
   a:focus {
-    outline: thin dotted; }
+    color: #0f0f0f; }
   a:hover, a:active {
     outline: 0; }
 
@@ -808,10 +949,12 @@ a {
     .main-navigation a:visited {
       color: #0f0f0f; }
     .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+      transition: all 0.3s ease 0s;
       color: #0f0f0f;
       opacity: 0.5; }
     .main-navigation a:focus {
-      outline: thin dotted; }
+      transition: all 0.3s ease 0s;
+      color: #0f0f0f; }
     .main-navigation a:hover, .main-navigation a:active {
       outline: 0; }
 
@@ -873,6 +1016,7 @@ a {
           transform: rotate(0);
           transform-origin: left; }
     .menu nav {
+      display: none;
       position: fixed;
       width: 100%;
       height: 100%;
@@ -897,15 +1041,15 @@ a {
             color: #f9f9f9;
             text-decoration: none; }
           .menu nav ul li a:visited {
-            color: #f9f9f9; }
+            color: #f9f9f9;
+            transition: all 0.3s ease 0s; }
           .menu nav ul li a:hover, .menu nav ul li a:focus, .menu nav ul li a:active {
             color: #f9f9f9;
-            /*            text-decoration: underline;*/
-            opacity: 0.5; }
+            opacity: 0.5;
+            transition: all 0.3s ease 0s; }
           .menu nav ul li a:focus {
-            outline: thin dotted; }
-          .menu nav ul li a:hover, .menu nav ul li a:active {
-            outline: 0; }
+            color: #f9f9f9;
+            transition: all 0.3s ease 0s; }
 
   .menu.open .menu__icon {
     position: fixed;
@@ -919,7 +1063,8 @@ a {
       .menu.open .menu__icon path.icon-bottom {
         transform: rotate(-45deg) translate(-5px, 6px); }
   .menu.open nav {
-    opacity: 1; } }
+    opacity: 1;
+    display: block; } }
 #sky {
   height: 100%; }
 
@@ -1178,34 +1323,54 @@ object {
   color: #0f0f0f;
   font-size: 20px;
   position: absolute;
-  top: 75%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
   font-weight: 300;
   letter-spacing: 1.5px; }
 
 .image__thumb--icon img {
   display: block;
   margin: 0 auto;
-  padding-top: 50px;
-  width: 120px; }
+  padding: 13% 0;
+  width: 40%; }
 
 .single-post .image__thumb--icon img {
   margin: 40px auto;
   display: block;
-  padding-top: 20px; }
+  padding: 20px;
+  width: 15%; }
 
-@media screen and (min-width: 450px) and (max-width: 910px) {
+@media screen and (min-width: 800px) and (max-width: 910px) {
   .image__container {
     flex-basis: 47%;
-    margin: 5px; } }
+    margin: 5px; }
+
+  .image__thumb--icon img {
+    margin-top: 8%;
+    width: 40%; }
+
+  .image__thumb--text {
+    top: 80%; } }
+@media screen and (min-width: 450px) and (max-width: 800px) {
+  .image__container {
+    flex-basis: 47%;
+    margin: 5px; }
+
+  .image__thumb--icon img {
+    padding-top: 10%;
+    width: 40%; }
+
+  .image__thumb--text {
+    top: 80%; } }
 @media screen and (max-width: 800px) {
   .image__thumb--overlay {
     position: relative;
-    padding: 100px 10px;
+    padding: 10px 0 60px;
     opacity: 1;
     background-color: #f9f9f9;
     top: 5%;
@@ -1352,7 +1517,7 @@ section {
 .stars__section {
   color: white;
   font-family: "Source Sans Pro";
-  background-image: url("images/stars.jpg");
+  background-image: url("images/stars-resize.jpg");
   background-attachment: fixed;
   background-size: cover;
   height: 600px; }
@@ -1414,6 +1579,7 @@ section {
       margin-left: 50px; } }
 
 .about__text {
+  text-align: center;
   width: calc(100%);
   float: left;
   margin-left: 0; }
@@ -1423,7 +1589,8 @@ section {
     .about__text {
       width: calc(50% - 75px);
       float: left;
-      margin-left: 50px; } }
+      margin-left: 50px;
+      text-align: left; } }
 
 .gear__list {
   max-width: 1000px;
@@ -1437,7 +1604,7 @@ section {
   height: 600px; }
 
 .contact__section {
-  background-image: url("images/contact.jpg");
+  background-image: url("images/contact-resize.jpg");
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
@@ -1458,6 +1625,14 @@ section {
   .contact__container .contact-email {
     word-wrap: break-word;
     line-height: 20px; }
+
+.contact__page h3 {
+  border-bottom: 1px solid;
+  width: 60%;
+  text-align: center;
+  padding: 5px;
+  margin: 50px auto;
+  font-weight: 100; }
 
 @media (min-width: 50em) {
   .contact__container {

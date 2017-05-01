@@ -36,6 +36,7 @@ input[type="submit"],
     color: $white;
     text-transform: uppercase;
     letter-spacing: 2.5px;
+    transition: all 0.3s ease 0s;
     
     &:hover {
 		background: lighten($navy, 10% );
