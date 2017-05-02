@@ -17,7 +17,7 @@ function wp_underscore_customize_register($wp_customize) {
 
   $wp_customize->add_setting('nrphoto_footer_logo', array('default' => ''));
   $wp_customize->add_setting('nrphoto_bio_image', array('default' => ''));
-$wp_customize->add_setting('nrphoto_gear_image', array('default' => ''));
+  $wp_customize->add_setting('nrphoto_gear_image', array('default' => ''));
 
   $wp_customize->add_control(
           new WP_Customize_Image_Control($wp_customize, 'footer_logo', array(

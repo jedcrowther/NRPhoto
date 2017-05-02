@@ -1,5 +1,6 @@
 a {
 	color: $color__link;
+        text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;
@@ -7,7 +8,8 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: lighten($color__link-hover, 50%);
+                
 	}
 	&:focus {
 		color: $color__link-hover;

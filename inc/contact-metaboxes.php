@@ -25,7 +25,7 @@ function contact_meta($post, $args) {
   ?>
 <label>Heading: </label><input class="widefat" type="text" name="contact_head" value="<?php echo $contact_head; ?>" /><br><br>
 <label>Email: </label><input class="widefat" type="email" name="contact_email" value="<?php echo $contact_email; ?>" /><br><br>
-<label>Phone Number: </label><input class="widefat" type="number" name="contact_number" value="<?php echo $contact_number; ?>"/><br>
+<label>Phone Number: </label><input class="widefat" type="text" name="contact_number" value="<?php echo $contact_number; ?>"/><br>
   <?php
 }
 

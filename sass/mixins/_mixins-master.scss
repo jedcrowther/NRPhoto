@@ -50,6 +50,7 @@
   $base-line-height: $font-size * $ratio;
   $margin: $base-line-height;
   body{
+    font-weight: 300;
     font-size: $font-size;
     line-height: ($font-size * $ratio);
   }

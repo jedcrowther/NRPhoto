@@ -23,7 +23,7 @@ get_header();
   
 
     <div class="about__text"> 
-      <h3><?php echo $about_meta['about_head'][0] ?></h3>
+      <h2><?php echo $about_meta['about_head'][0] ?></h2>
       <p><?php echo $about_meta['about_bio'][0] ?></p>
       
     </div>

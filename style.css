@@ -85,8 +85,12 @@ span.woocommerce-Price-amount.amount {
 select.orderby {
   display: none !important; }
 
+.woocommerce-loop-product__title {
+  letter-spacing: 2px !important; }
+
 .woocommerce h1.product_title {
   text-align: left !important;
+  font-size: 35px !important;
   margin-bottom: 0em !important; }
 
 .woocommerce-cart h1.entry-title,
@@ -363,6 +367,7 @@ textarea {
 
 @media (max-width: 37.5em) {
   body {
+    font-weight: 300;
     font-size: 14px;
     line-height: 22.652px; }
 
@@ -415,6 +420,7 @@ textarea {
     margin-bottom: 22.652px; } }
 @media (min-width: 37.5em) {
   body {
+    font-weight: 300;
     font-size: 15px;
     line-height: 24.27px; }
 
@@ -467,6 +473,7 @@ textarea {
     margin-bottom: 24.27px; } }
 @media (min-width: 50em) {
   body {
+    font-weight: 300;
     font-size: 16px;
     line-height: 25.888px; }
 
@@ -519,6 +526,7 @@ textarea {
     margin-bottom: 25.888px; } }
 @media (min-width: 64em) {
   body {
+    font-weight: 300;
     font-size: 17px;
     line-height: 27.506px; }
 
@@ -571,6 +579,7 @@ textarea {
     margin-bottom: 27.506px; } }
 @media (min-width: 70em) {
   body {
+    font-weight: 300;
     font-size: 18px;
     line-height: 29.124px; }
 
@@ -636,7 +645,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 4px; }
+  letter-spacing: 3.5px; }
 
 h1.entry-title {
   text-align: center;
@@ -644,7 +653,7 @@ h1.entry-title {
 
 .single-post .entry-title {
   text-align: center;
-  margin: 2em 0 3em; }
+  margin: 0; }
 
 /*p {
 	margin-bottom: 1.5em;
@@ -824,7 +833,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  border: 1px solid #ccc;
   font-size: 14px;
   line-height: normal;
   box-sizing: border-box;
@@ -890,6 +898,9 @@ label {
   margin: 0 auto;
   display: block; }
 
+.nf-after-field .nf-error-msg {
+  margin: 10px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -897,11 +908,12 @@ label {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #1b2c4a; }
+  color: #1b2c4a;
+  text-decoration: none; }
   a:visited {
     color: #0f0f0f; }
   a:hover, a:focus, a:active {
-    color: #0f0f0f; }
+    color: #8f8f8f; }
   a:focus {
     color: #0f0f0f; }
   a:hover, a:active {
@@ -1221,7 +1233,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0; }
 
 .page-links {
   clear: both;
@@ -1400,6 +1412,8 @@ object {
 .type-post .entry-content img {
   max-width: 96%;
   margin: 0 2%; }
+  .type-post .entry-content img:first-child {
+    margin-top: 60px; }
 
 /*--------------------------------------------------------------
 # Header
@@ -1495,6 +1509,9 @@ object {
 @media (min-width: 50em) {
   .instagram-pics {
     flex-wrap: nowrap; } }
+@media (max-width: 37.5em) {
+  .instagram-pics li {
+    flex-basis: 40%; } }
 .social-media-icons {
   margin: 0;
   padding: 20px 0;
@@ -1514,9 +1531,12 @@ object {
 section {
   margin: 100px 0; }
 
+.home__galleries {
+  margin-top: 20px;
+  text-align: center; }
+
 .stars__section {
   color: white;
-  font-family: "Source Sans Pro";
   background-image: url("images/stars-resize.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -1530,6 +1550,7 @@ section {
     line-height: 65px;
     width: 60%; }
   .stars__section .stars__quote-mark {
+    opacity: 0.6;
     font-size: 200px;
     font-weight: 800;
     padding-right: 10px;
@@ -1555,6 +1576,12 @@ section {
   .stars__section .stars__quote {
     font-size: 4em;
     width: 900px; } }
+@media (max-width: 37.5em) {
+  .quote-block {
+    padding-top: 150px; } }
+@media (min-width: 37.5em) {
+  .quote-block {
+    padding-top: 150px; } }
 .about__section {
   padding: 0 20px; }
   .about__section::after {
@@ -1603,15 +1630,16 @@ section {
   background-position: center;
   height: 600px; }
 
+/*
 .contact__section {
-  background-image: url("images/contact-resize.jpg");
+  background-image: url('images/contact-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
-  height: 600px;
-  padding: 50px 0; }
-
+  height:600px;
+  padding: 50px 0;
+}
 .contact__container {
-  background-color: #f9f9f9;
+  background-color: $white;
   width: 80%;
   height: 450px;
   margin: 0 auto;
@@ -1619,24 +1647,54 @@ section {
   text-align: center;
   padding: 80px 20px;
   letter-spacing: 1.5px;
-  text-transform: uppercase; }
-  .contact__container h2, .contact__container p {
-    margin-bottom: 60px; }
-  .contact__container .contact-email {
+  text-transform: uppercase;
+  h2, p {
+    margin-bottom: 60px;
+  }
+  .contact-email{
     word-wrap: break-word;
-    line-height: 20px; }
+    line-height: 20px;
+  }
+}*/
+.contact__section {
+  background-image: url("images/contact-resize.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+  padding: 160px 100px 0 100px; }
+  .contact__section h3 {
+    letter-spacing: 3px;
+    font-size: 1.4em; }
+  .contact__section p {
+    font-size: 1em; }
+
+.contact__container {
+  background-color: white;
+  /*height: 200px;*/
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
+  .contact__container .contact-email {
+    word-wrap: break-word; }
 
 .contact__page h3 {
-  border-bottom: 1px solid;
+  /*    border-bottom: 1px solid;*/
   width: 60%;
   text-align: center;
   padding: 5px;
   margin: 50px auto;
   font-weight: 100; }
 
-@media (min-width: 50em) {
+@media (max-width: 37.5em) {
   .contact__container {
-    width: 50%; } }
+    width: 100%; } }
+@media (min-width: 64em) {
+  .contact__container {
+    width: 40%; } }
 .contact__page {
   text-align: center;
   max-width: 500px;
@@ -1644,10 +1702,12 @@ section {
   .contact__page .contact__title {
     padding: 50px 0 20px; }
   .contact__page .contact__blurb {
-    margin: 0 10%; }
+    margin: 0 10%;
+    padding-bottom: 20px; }
   @media (min-width: 50em) {
     .contact__page .contact__blurb {
-      margin: 0; } }
+      margin: 0;
+      padding-bottom: 40px; } }
 
 .portfolio__text {
   text-align: center;

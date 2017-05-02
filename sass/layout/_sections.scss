@@ -2,9 +2,13 @@ section {
   margin: 100px 0;
 }
 
+.home__galleries {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .stars__section {
   color: white;
-  font-family: "Source Sans Pro";
   background-image: url('images/stars-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -21,6 +25,7 @@ section {
     width: 60%;
   }
   .stars__quote-mark {
+    opacity: 0.6;
     font-size: 200px;
     font-weight: 800;
     padding-right: 10px;
@@ -53,6 +58,19 @@ section {
       font-size: 4em;
       width: 900px;
     } 
+  }
+}
+
+
+@include breakpoint(mobileonly){
+  .quote-block {  
+  padding-top: 150px;
+  }
+}
+
+@include breakpoint(phablet){
+  .quote-block {  
+  padding-top: 150px;
   }
 }
 
@@ -116,7 +134,7 @@ $about-layout: (
   background-position: center;
   height:600px;
 }
-
+/*
 .contact__section {
   background-image: url('images/contact-resize.jpg');
   background-attachment: fixed;
@@ -141,12 +159,51 @@ $about-layout: (
     word-wrap: break-word;
     line-height: 20px;
   }
+}*/
+
+
+
+
+
+.contact__section {
+  background-image: url('images/contact-resize.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+  padding: 160px 100px 0 100px;
+    
+  h3 {
+  letter-spacing: 3px;
+  font-size: 1.4em;
 }
+p {
+    font-size: 1em;
+  }
+}
+.contact__container {
+  background-color: white;
+  /*height: 200px;*/
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  
+  .contact-email{
+    word-wrap: break-word;
+  }
+}
+
+
+
+
 
 
 .contact__page {
   h3 {
-    border-bottom: 1px solid;
+/*    border-bottom: 1px solid;*/
     width: 60%;
     text-align: center;
     padding: 5px;
@@ -155,9 +212,15 @@ $about-layout: (
   }
 }
 
-@include breakpoint(tablet){
+@include breakpoint(mobileonly){
   .contact__container {
-    width: 50%
+  width: 100%;
+  }
+}
+
+@include breakpoint(laptop){
+  .contact__container {
+    width: 40%;
   }
 }
 
@@ -170,10 +233,12 @@ $about-layout: (
   }
   .contact__blurb {
     margin: 0 10%;
+    padding-bottom: 20px;
   }
   @include breakpoint(tablet){
   .contact__blurb {
     margin: 0;
+    padding-bottom: 40px;
   }
   }
 }

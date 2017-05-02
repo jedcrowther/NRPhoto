@@ -14,30 +14,26 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  
-  
-    border: 1px solid #ccc;
-    font-size: 14px;
-    line-height: normal;
-    box-sizing: border-box;
-    border-radius: 2px;
-    
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	
-	padding: 12px;
 
-	&:focus {
-		color: $color__text-input-focus;
-	}
+  font-size: 14px;
+  line-height: normal;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: $color__text-input;
+  border: 1px solid $color__border-input;
+  padding: 12px;
+
+  &:focus {
+    color: $color__text-input-focus;
+  }
 }
 
 select {
-	border: 1px solid $color__border-input;
+  border: 1px solid $color__border-input;
 }
 
 textarea {
-	width: 100%;
+  width: 100%;
 }
 
 
@@ -46,11 +42,11 @@ textarea {
 }
 
 #ninja_forms_widget-3 {
-    list-style: none;
-    width: 80%;
-    padding: 50px 0;
-    margin: 0 auto;
-  
+  list-style: none;
+  width: 80%;
+  padding: 50px 0;
+  margin: 0 auto;
+
 }
 
 @include breakpoint(phablet){
@@ -75,7 +71,7 @@ textarea {
   h3 {
     text-align: center;
   }
-  
+
 }
 
 .nf-form-fields-required {
@@ -85,15 +81,18 @@ textarea {
 
 label {
   font-weight: 700 !important;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-  
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+
 }
 
 .nf-field-element input[type="button"]{
-      margin: 0 auto;
-    display: block;
+  margin: 0 auto;
+  display: block;
 }
 
 
+.nf-after-field .nf-error-msg {
+  margin: 10px;
+}

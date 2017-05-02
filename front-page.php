@@ -95,9 +95,9 @@ get_header();
 
     <section class="contact__section">
       <div class="reveal contact__container">
-        <h2>Contact</h2>
-        <p><?php echo $contact_meta['contact_number'][0];  ?></p>
-        <p class="contact-email"><?php echo $contact_meta['contact_email'][0]; ?></p>
+        <h3>Contact</h3>
+        <a href="tel:<?php echo $contact_meta['contact_number'][0];  ?>"><p><?php echo $contact_meta['contact_number'][0];  ?></p></a>
+        <a href="mailto:<?php echo $contact_meta['contact_email'][0]; ?>" ><p class="contact-email"><?php echo $contact_meta['contact_email'][0]; ?></p></a>
       </div>
     </section> 
 

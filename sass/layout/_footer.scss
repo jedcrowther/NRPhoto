@@ -20,12 +20,16 @@
 @include breakpoint(tablet) {
   .instagram-pics {
   flex-wrap: nowrap;
-  li {
-    
-  }
 }
 }
 
+@include breakpoint(mobileonly) {
+.instagram-pics {
+  li {
+    flex-basis: 40%;
+  }
+}
+}
 
 .social-media-icons {
   margin: 0;

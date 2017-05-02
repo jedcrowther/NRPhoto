@@ -146,5 +146,15 @@ p {
 img {
       max-width: 96%;
     margin: 0 2%;
+    
+    
+  
+  &:first-child {
+     margin-top: 60px;
+    }
+  
+    
   }
+  
+  
 }
