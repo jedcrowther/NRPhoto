@@ -18,9 +18,9 @@ get_header();
       ?>
       <h2 class="contact__title"><?php echo $contact_meta['contact_head'][0] ?></h2>
       <div class="contact__blurb"><?php echo get_the_content() ?></div>
-      <a href="tel:<?php echo $contact_meta['contact_number'][0];  ?>"><h3><?php echo $contact_meta['contact_number'][0]; ?></h3></a>
+      <a href="tel:<?php echo $contact_meta['contact_number'][0]; ?>"><h3><?php echo $contact_meta['contact_number'][0]; ?></h3></a>
       <a href="mailto:<?php echo $contact_meta['contact_email'][0]; ?>"><h3><?php echo $contact_meta['contact_email'][0] ?></h3></a>
-      
+
       <?php
     endwhile;
     wp_reset_postdata();

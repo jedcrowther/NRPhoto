@@ -2,20 +2,13 @@
 # Header
 --------------------------------------------------------------*/
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
   .header-image .site-title > a {
     float: left;
     min-height: 130px;
     width: 100%;
     background-size: 130px 65px !important;
   }
-
   .header-image .title-area,
   .header-image .site-title,
   .header-image .site-title a {
@@ -30,7 +23,7 @@ only screen and (                min-resolution: 2dppx) {
 
 .nrphoto__logo--white {
   display: block;
-/*  width: 50%;*/
+  /*  width: 50%;*/
   &.home {
     margin: 28vh auto;
     padding: 0 10%;
@@ -42,14 +35,14 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @include breakpoint(tablet) {
-      .nrphoto__logo--white {
-        &.home, &.other {
-        width: 50%;
-        padding: 0 0;
-        }
-      }
+  .nrphoto__logo--white {
+    &.home,
+    &.other {
+      width: 50%;
+      padding: 0 0;
+    }
+  }
 }
-
 
 .hero {
   display: flex;
@@ -65,8 +58,7 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
-@include breakpoint(mobileonly){
-  
+@include breakpoint(mobileonly) {
   .hero {
     &.home__hero {
       height: 65vh;
@@ -75,7 +67,6 @@ only screen and (                min-resolution: 2dppx) {
       height: 50vh;
     }
   }
-  
 }
 
 .site__header {
@@ -88,7 +79,6 @@ only screen and (                min-resolution: 2dppx) {
   bottom: 0;
   left: 0;
   z-index: 25;
-
 }
 
 .site__branding {
@@ -106,7 +96,7 @@ only screen and (                min-resolution: 2dppx) {
   word-break: break-word;
 }
 
-@media screen and (max-width: 30em){
+@media screen and (max-width: 30em) {
   .site-title {
     font-size: 2em;
   }

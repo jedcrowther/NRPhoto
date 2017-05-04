@@ -111,25 +111,25 @@ add_action('widgets_init', 'wp_underscore_widgets_init');
  * Enqueue scripts and styles.
  */
 function wp_underscore_scripts() {
-  
-  wp_register_style( 'Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+
+  wp_register_style('Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
   wp_enqueue_style('Font_Awesome');
-  
+
   wp_enqueue_style('wp_underscore-style', get_stylesheet_uri());
- 
 
   wp_enqueue_script('wp_underscore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
   wp_enqueue_script('wp_underscore-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
   wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), 1.1, true);
-  
+
   wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), 1.1, true);
 
   wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array('jquery'), 1.1, true);
-  
 
-  
+  wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array('jquery'), 1.1, true);
+// <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
@@ -137,7 +137,7 @@ function wp_underscore_scripts() {
 
 add_action('wp_enqueue_scripts', 'wp_underscore_scripts');
 
-//add support for custom logo
+//add support for custom logo in customizer
 function theme_prefix_setup() {
 
   add_theme_support('custom-logo', array(
@@ -157,16 +157,7 @@ function theme_prefix_the_custom_logo() {
   }
 }
 
-// register gallery menu
-function register_my_menu() {
-  register_nav_menu('gallery-menu', __('Gallery Menu'));
-}
-
-add_action('init', 'register_my_menu');
-
-
 // set up woocommerce support
-
 add_action('after_setup_theme', 'woocommerce_support');
 
 function woocommerce_support() {
@@ -201,7 +192,6 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load metabox files.
  */
-
 require get_template_directory() . '/inc/hover-image-metabox.php';
 require get_template_directory() . '/inc/about-metaboxes.php';
 require get_template_directory() . '/inc/contact-metaboxes.php';
@@ -214,53 +204,52 @@ function wcs_woo_remove_reviews_tab($tabs) {
   return $tabs;
 }
 
-
-
-
-
-//change labels for 'Posts' in admin dashboard to 'Galleries'
+/*
+ * change labels for 'Posts' in admin dashboard to 'Galleries'
+ */
 
 function change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Galleries';
-    $submenu['edit.php'][5][0] = 'Galleries';
-    $submenu['edit.php'][10][0] = 'Add Gallery';
-    $submenu['edit.php'][16][0] = 'Gallery Tags';
+  global $menu;
+  global $submenu;
+  $menu[5][0] = 'Galleries';
+  $submenu['edit.php'][5][0] = 'Galleries';
+  $submenu['edit.php'][10][0] = 'Add Gallery';
+  $submenu['edit.php'][16][0] = 'Gallery Tags';
 }
-function change_post_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Galleries';
-    $labels->singular_name = 'Gallery';
-    $labels->add_new = 'Add Gallery';
-    $labels->add_new_item = 'Add Gallery';
-    $labels->edit_item = 'Edit Gallery';
-    $labels->new_item = 'Gallery';
-    $labels->view_item = 'View Gallery';
-    $labels->search_items = 'Search Galleries';
-    $labels->not_found = 'No Gallery found';
-    $labels->not_found_in_trash = 'No Gallery found in Trash';
-    $labels->all_items = 'All Galleries';
-    $labels->menu_name = 'Galleries';
-    $labels->name_admin_bar = 'Galleries';
-}
- 
-add_action( 'admin_menu', 'change_post_label' );
-add_action( 'init', 'change_post_object' );
 
+function change_post_object() {
+  global $wp_post_types;
+  $labels = &$wp_post_types['post']->labels;
+  $labels->name = 'Galleries';
+  $labels->singular_name = 'Gallery';
+  $labels->add_new = 'Add Gallery';
+  $labels->add_new_item = 'Add Gallery';
+  $labels->edit_item = 'Edit Gallery';
+  $labels->new_item = 'Gallery';
+  $labels->view_item = 'View Gallery';
+  $labels->search_items = 'Search Galleries';
+  $labels->not_found = 'No Gallery found';
+  $labels->not_found_in_trash = 'No Gallery found in Trash';
+  $labels->all_items = 'All Galleries';
+  $labels->menu_name = 'Galleries';
+  $labels->name_admin_bar = 'Galleries';
+}
+
+add_action('admin_menu', 'change_post_label');
+add_action('init', 'change_post_object');
 
 // add category nicenames in body and post class
-function category_id_class( $classes ) {
-	global $post;
-	foreach ( ( get_the_category( $post->ID ) ) as $category ) {
-		$classes[] = $category->category_nicename;
-	}
-	return $classes;
+function category_id_class($classes) {
+  global $post;
+  foreach (( get_the_category($post->ID)) as $category) {
+    $classes[] = $category->category_nicename;
+  }
+  return $classes;
 }
-add_filter( 'post_class', 'category_id_class' );
-add_filter( 'body_class', 'category_id_class' );
+
+add_filter('post_class', 'category_id_class');
+add_filter('body_class', 'category_id_class');
 
 
 // Enable shortcodes in text widgets
-add_filter('widget_text','do_shortcode');
+add_filter('widget_text', 'do_shortcode');

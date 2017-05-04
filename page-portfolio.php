@@ -22,9 +22,9 @@ get_header();
             <div class="reveal image__container">
               <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('thumbnail', array('class' => 'image__thumb')); ?>
-                <div class="image__thumb--overlay">
-                  <div class="image__thumb--text"><?php the_title(); ?></div>
-                  <div class="image__thumb--icon"><?php
+                <div class="image__thumb-overlay">
+                  <div class="image__thumb-text"><?php the_title(); ?></div>
+                  <div class="image__thumb-icon"><?php
                         
                   $hover = get_post_meta($post->ID, '_nrphoto_attached_image', true);
                   echo wp_get_attachment_image($hover);

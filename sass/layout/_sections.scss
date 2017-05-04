@@ -2,24 +2,17 @@ section {
   margin: 50px 0;
 }
 
-@include breakpoint(tablet){
- section {
-  margin: 50px 0;
- }
-}
-
 .home__galleries {
   margin-top: 20px;
   text-align: center;
 }
 
 .stars__section {
-  color: white;
+  color: $white;
   background-image: url('images/stars-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
   height:600px;
-  
   
   .stars__quote {
     text-transform: capitalize;
@@ -42,7 +35,7 @@ section {
   }
 }
 
-.quote-block {
+.quote__block {
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -51,15 +44,14 @@ section {
 }
 
 @include breakpoint(tablet){
-  .quote-block {  
-  flex-direction: row;
-  padding-top: 150px;
+  .quote__block {  
+    flex-direction: row;
+    padding-top: 150px;
   }
   .stars__section {
-    
     .stars__quote-mark {
-    line-height: 280px;
-    padding-bottom: 0px;
+      line-height: 280px;
+      padding-bottom: 0px;
     }
     .stars__quote {
       font-size: 4em;
@@ -70,37 +62,36 @@ section {
 
 
 @include breakpoint(mobileonly){
-  .quote-block {  
-  padding-top: 150px;
+  .quote__block {  
+    padding-top: 150px;
   }
 }
 
 @include breakpoint(phablet){
-  .quote-block {  
-  padding-top: 150px;
+  .quote__block {  
+    padding-top: 150px;
   }
 }
 
 $about-layout: (
-  columns: 2,
-  gutter: 50px,
-  media: 64em,
-  );
-  
-  $about-layout-tablet: (
-  columns: 2,
-  gutter: 20px,
-  media: 50em,
-  );
+columns: 2,
+gutter: 50px,
+media: 64em,
+);
 
-  
-  $about-layout-mobile: (
-  columns: 1,
-  gutter: 0,
-  );
+$about-layout-tablet: (
+columns: 2,
+gutter: 20px,
+media: 50em,
+);
 
-  
-// about
+
+$about-layout-mobile: (
+columns: 1,
+gutter: 0,
+);
+
+
 .about__section {
   @include grid-container();
   padding: 0 20px;
@@ -110,50 +101,46 @@ $about-layout: (
 }
 
 .about__image {
- @include grid-column(1, $about-layout-mobile);
-    background-size: cover;
-    background-position: 0% 80%;
-    height: 300px;
-  
+  @include grid-column(1, $about-layout-mobile);
+  background-size: cover;
+  background-position: 0% 80%;
+  height: 300px;
+
   @include grid-media($about-layout-tablet) {
     @include grid-column(1);
     height: 500px;
     background-position: center;
   }
-    
+
   @include grid-media($about-layout) {
     @include grid-column(1);
     height: 500px;
     background-position: center;
   }
-  
+
   @include breakpoint(phablet) {
     background-position: 0% 80%;
     height: 400px;
-    
+
   }
 }
 
- 
 .about__text {
-      text-align: center;
+  text-align: center;
   p {
-     white-space: pre-wrap;
+    white-space: pre-wrap;
   }
-@include grid-column(1, $about-layout-mobile);
+  @include grid-column(1, $about-layout-mobile);
 
-@include grid-media($about-layout) {
+  @include grid-media($about-layout) {
     @include grid-column(1);
     text-align: left;
   }
-@include grid-media($about-layout-tablet) {
+  @include grid-media($about-layout-tablet) {
     @include grid-column(1);
     text-align: left;
   }
 }
-
-
-
 
 .gear__list {
   max-width: 1000px;
@@ -161,43 +148,12 @@ $about-layout: (
   margin: 0 auto;
 }
 
-
 .flatlay__section {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   height:600px;
 }
-/*
-.contact__section {
-  background-image: url('images/contact-resize.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  height:600px;
-  padding: 50px 0;
-}
-.contact__container {
-  background-color: $white;
-  width: 80%;
-  height: 450px;
-  margin: 0 auto;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 80px 20px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  h2, p {
-    margin-bottom: 60px;
-  }
-  .contact-email{
-    word-wrap: break-word;
-    line-height: 20px;
-  }
-}*/
-
-
-
-
 
 .contact__section {
   background-image: url('images/contact-resize.jpg');
@@ -205,17 +161,18 @@ $about-layout: (
   background-size: cover;
   height: 600px;
   padding: 160px 100px 0 100px;
-    
+
   h3 {
-  letter-spacing: 3px;
-  font-size: 1.4em;
-}
-p {
+    letter-spacing: 3px;
+    font-size: 1.4em;
+  }
+  p {
     font-size: 1em;
   }
 }
+
 .contact__container {
-  background-color: white;
+  background-color: $white;
   width: 60%;
   margin: 0 auto;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -223,16 +180,11 @@ p {
   padding: 40px 20px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  
+
   .contact-email{
     word-wrap: break-word;
   }
 }
-
-
-
-
-
 
 .contact__page {
   h3 {
@@ -270,15 +222,12 @@ p {
     padding-bottom: 20px;
   }
   @include breakpoint(tablet){
-  .contact__blurb {
-    margin: 0;
-    padding-bottom: 40px;
-  }
+    .contact__blurb {
+      margin: 0;
+      padding-bottom: 40px;
+    }
   }
 }
-
-
-
 
 .portfolio__text {
   text-align: center;

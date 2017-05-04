@@ -20,21 +20,21 @@
         top: 0;
       }
       li {
-        &:hover > ul,
-        &.focus > ul {
+        &:hover>ul,
+        &.focus>ul {
           left: 100%;
         }
       }
       a {
         width: 200px;
       }
-      :hover > a,
-      .focus > a {}
+       :hover>a,
+      .focus>a {}
       a:hover,
       a.focus {}
     }
-    li:hover > ul,
-    li.focus > ul {
+    li:hover>ul,
+    li.focus>ul {
       left: auto;
     }
   }
@@ -43,8 +43,8 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
-    &:hover > a,
-    &.focus > a {}
+    &:hover>a,
+    &.focus>a {}
   }
   a {
     display: block;
@@ -62,17 +62,18 @@
     }
     &:focus {
       transition: all 0.3s ease 0s;
-      color: $color__link-hover;;
+      color: $color__link-hover;
+      ;
     }
     &:hover,
     &:active {
       outline: 0;
     }
   }
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a,
-  .current-menu-ancestor > a {}
+  .current_page_item>a,
+  .current-menu-item>a,
+  .current_page_ancestor>a,
+  .current-menu-ancestor>a {}
 }
 
 .sub-menu li {
@@ -80,22 +81,22 @@
 }
 
 .shadow {
-     background-color: lighten($grey, 20%);
-    opacity: 0.5;
-    filter: blur(6px);
-    width: 40px;
-    height: 25px;
-    cursor: pointer;
-    position: absolute;
-    top: 45px;
-    right: 45px;
-    z-index: 9998;
-    overflow: visible;
-    
-  
+  background-color: lighten($grey, 20%);
+  opacity: 0.5;
+  filter: blur(6px);
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  z-index: 9998;
+  overflow: visible;
 }
 
+
 /* Small menu. */
+
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -187,7 +188,6 @@
             &:focus {
               color: $white;
               transition: all 0.3s ease 0s;
-            
             }
           }
         }
@@ -200,7 +200,6 @@
       position: fixed;
       path {
         stroke: $white;
-        
         &.icon-top {
           transform: (rotate(45deg) translate(1px, 0));
         }
@@ -219,7 +218,6 @@
   }
 }
 
-
 #sky {
   height: 100%;
 }
@@ -230,9 +228,8 @@
   width: 1px;
   height: 1px;
   border-radius: 2px;
-  background-color: white;
+  background-color: $white;
 }
-
 
 .comment-navigation,
 .posts-navigation,
@@ -271,9 +268,8 @@
   }
 }
 
-
-@include breakpoint(mobileonly){
-    .gallery_menu_class ul li {
+@include breakpoint(mobileonly) {
+  .gallery_menu_class ul li {
     display: none;
   }
 }

@@ -1,21 +1,19 @@
 a {
-	color: $color__link;
-        text-decoration: none;
-
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: lighten($color__link-hover, 50%);
-                
-	}
-	&:focus {
-		color: $color__link-hover;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  color: $color__link;
+  text-decoration: none;
+  &:visited {
+    color: $color__link-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: lighten($color__link-hover, 50%);
+  }
+  &:focus {
+    color: $color__link-hover;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }

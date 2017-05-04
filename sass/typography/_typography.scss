@@ -3,15 +3,14 @@ button,
 input,
 select,
 textarea {
-	color: $black;
-	font-family: $font__main;
+  color: $black;
+  font-family: $font__main;
 
 }
 
 .social__icons {
   font-family: 'Font Awesome';
 }
-
 
 $ratio: 1.618;
 
@@ -33,12 +32,12 @@ $ratio: 1.618;
 
 
 html{
-	font-size: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased !important;
-	text-rendering: optimizelegibility;
-	-moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
@@ -46,7 +45,6 @@ p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
 }
 
 @import "headings";
-@import "copy";
 
 
 

@@ -155,7 +155,8 @@ div.thumbnails {
   #wooswipe .thumbnails {
     height: auto !important; } }
 
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
   float: left !important;
   margin: 0 !important;
   padding-bottom: 50px !important;
@@ -177,7 +178,8 @@ div.thumbnails {
     flex-direction: row !important;
     justify-content: center !important; }
 
-  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  .woocommerce ul.products li.product,
+  .woocommerce-page ul.products li.product {
     margin: 0 20px 70px 20px !important;
     width: 40% !important; }
 
@@ -189,7 +191,8 @@ div.thumbnails {
     flex-direction: row !important;
     padding-left: 3%; }
 
-  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  .woocommerce ul.products li.product,
+  .woocommerce-page ul.products li.product {
     margin: 0 20px 70px 20px !important;
     width: 29% !important; }
 
@@ -391,32 +394,6 @@ textarea {
     font-size: 14px;
     line-height: 22.652px; }
 
-  /*  h1{
-      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 3;
-      margin-top: $margin * 2;
-      margin-bottom: $margin;
-    }
-  
-    h2{
-      font-size: (($font-size * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 2;
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-  
-    h3{
-      font-size: $font-size * $ratio;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-    h4{
-      font-size: $font-size;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }*/
   h1 {
     font-size: 36.65094px;
     line-height: 45.304px;
@@ -435,7 +412,12 @@ textarea {
     margin-top: 22.652px;
     margin-bottom: 22.652px; }
 
-  p, ul, ol, pre, table, blockquote {
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote {
     margin-top: 22.652px;
     margin-bottom: 22.652px; } }
 @media (min-width: 37.5em) {
@@ -444,32 +426,6 @@ textarea {
     font-size: 15px;
     line-height: 24.27px; }
 
-  /*  h1{
-      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 3;
-      margin-top: $margin * 2;
-      margin-bottom: $margin;
-    }
-  
-    h2{
-      font-size: (($font-size * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 2;
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-  
-    h3{
-      font-size: $font-size * $ratio;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-    h4{
-      font-size: $font-size;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }*/
   h1 {
     font-size: 39.26886px;
     line-height: 48.54px;
@@ -488,7 +444,12 @@ textarea {
     margin-top: 24.27px;
     margin-bottom: 24.27px; }
 
-  p, ul, ol, pre, table, blockquote {
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote {
     margin-top: 24.27px;
     margin-bottom: 24.27px; } }
 @media (min-width: 50em) {
@@ -497,32 +458,6 @@ textarea {
     font-size: 16px;
     line-height: 25.888px; }
 
-  /*  h1{
-      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 3;
-      margin-top: $margin * 2;
-      margin-bottom: $margin;
-    }
-  
-    h2{
-      font-size: (($font-size * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 2;
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-  
-    h3{
-      font-size: $font-size * $ratio;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-    h4{
-      font-size: $font-size;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }*/
   h1 {
     font-size: 41.88678px;
     line-height: 51.776px;
@@ -541,7 +476,12 @@ textarea {
     margin-top: 25.888px;
     margin-bottom: 25.888px; }
 
-  p, ul, ol, pre, table, blockquote {
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote {
     margin-top: 25.888px;
     margin-bottom: 25.888px; } }
 @media (min-width: 64em) {
@@ -550,32 +490,6 @@ textarea {
     font-size: 17px;
     line-height: 27.506px; }
 
-  /*  h1{
-      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 3;
-      margin-top: $margin * 2;
-      margin-bottom: $margin;
-    }
-  
-    h2{
-      font-size: (($font-size * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 2;
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-  
-    h3{
-      font-size: $font-size * $ratio;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-    h4{
-      font-size: $font-size;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }*/
   h1 {
     font-size: 44.50471px;
     line-height: 55.012px;
@@ -594,7 +508,12 @@ textarea {
     margin-top: 27.506px;
     margin-bottom: 27.506px; }
 
-  p, ul, ol, pre, table, blockquote {
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote {
     margin-top: 27.506px;
     margin-bottom: 27.506px; } }
 @media (min-width: 70em) {
@@ -603,32 +522,6 @@ textarea {
     font-size: 18px;
     line-height: 29.124px; }
 
-  /*  h1{
-      font-size: ((($font-size * $ratio) * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 3;
-      margin-top: $margin * 2;
-      margin-bottom: $margin;
-    }
-  
-    h2{
-      font-size: (($font-size * $ratio) * $ratio);
-      line-height: ($font-size * $ratio) * 2;
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-  
-    h3{
-      font-size: $font-size * $ratio;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }
-    h4{
-      font-size: $font-size;
-      line-height: ($font-size * $ratio);
-      margin-top: $margin;
-      margin-bottom: $margin;
-    }*/
   h1 {
     font-size: 47.12263px;
     line-height: 58.248px;
@@ -647,7 +540,12 @@ textarea {
     margin-top: 29.124px;
     margin-bottom: 29.124px; }
 
-  p, ul, ol, pre, table, blockquote {
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote {
     margin-top: 29.124px;
     margin-bottom: 29.124px; } }
 html {
@@ -675,51 +573,6 @@ h1.entry-title {
   text-align: center;
   margin: 0; }
 
-/*p {
-	margin-bottom: 1.5em;
-}
-
-dfn, cite, em, i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	//@include font-size(0.9375);
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code, kbd, tt, var {
-	font-family: $font__code;
-	//@include font-size(0.9375);
-}
-
-abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
-	cursor: help;
-}
-
-mark, ins {
-	background: $color__background-ins;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}*/
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -736,9 +589,12 @@ body {
   background: #f9f9f9;
   /* Fallback for when there is no custom background color defined. */ }
 
-blockquote, q {
+blockquote,
+q {
   quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote:before, blockquote:after,
+  q:before,
+  q:after {
     content: ""; }
 
 hr {
@@ -747,7 +603,8 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 1.5em 3em; }
 
 ul {
@@ -784,28 +641,6 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-/*button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 0;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	//@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
-
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
-}*/
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -884,6 +719,7 @@ select {
 textarea {
   width: 100%; }
 
+/* ninja forms styling */
 .nf-field {
   padding: 0 10px; }
 
@@ -1106,7 +942,7 @@ a {
   width: 1px;
   height: 1px;
   border-radius: 2px;
-  background-color: white; }
+  background-color: #f9f9f9; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -1322,8 +1158,7 @@ object {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
-  max-width: 1200px;
-  /*  height: 500px;*/ }
+  max-width: 1200px; }
 
 .image__container {
   flex-basis: 31%;
@@ -1335,7 +1170,7 @@ object {
   width: 100%;
   height: auto; }
 
-.image__thumb--overlay {
+.image__thumb-overlay {
   position: absolute;
   top: 5%;
   bottom: 0;
@@ -1348,10 +1183,10 @@ object {
   background-color: #f9f9f9;
   z-index: 100; }
 
-.image__container:hover .image__thumb--overlay {
+.image__container:hover .image__thumb-overlay {
   opacity: 1; }
 
-.image__thumb--text {
+.image__thumb-text {
   color: #0f0f0f;
   font-size: 20px;
   position: absolute;
@@ -1365,13 +1200,13 @@ object {
   font-weight: 300;
   letter-spacing: 1.5px; }
 
-.image__thumb--icon img {
+.image__thumb-icon img {
   display: block;
   margin: 0 auto;
   padding: 13% 0;
   width: 40%; }
 
-.single-post .image__thumb--icon img {
+.single-post .image__thumb-icon img {
   margin: 40px auto;
   display: block;
   padding: 20px;
@@ -1382,25 +1217,25 @@ object {
     flex-basis: 47%;
     margin: 5px; }
 
-  .image__thumb--icon img {
+  .image__thumb-icon img {
     margin-top: 8%;
     width: 40%; }
 
-  .image__thumb--text {
+  .image__thumb-text {
     top: 80%; } }
 @media screen and (min-width: 450px) and (max-width: 800px) {
   .image__container {
     flex-basis: 47%;
     margin: 5px; }
 
-  .image__thumb--icon img {
+  .image__thumb-icon img {
     padding-top: 10%;
     width: 40%; }
 
-  .image__thumb--text {
+  .image__thumb-text {
     top: 80%; } }
 @media screen and (max-width: 800px) {
-  .image__thumb--overlay {
+  .image__thumb-overlay {
     position: relative;
     padding: 10px 0 60px;
     opacity: 1;
@@ -1435,6 +1270,9 @@ object {
   .type-post .entry-content img:first-child {
     margin-top: 60px; }
 
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -1528,8 +1366,6 @@ object {
   .instagram-pics li {
     margin: 10px;
     flex-basis: 30%; }
-    .instagram-pics li:last-child {
-      /*     margin-right: 0; */ }
 
 @media (min-width: 50em) {
   .instagram-pics {
@@ -1556,15 +1392,12 @@ object {
 section {
   margin: 50px 0; }
 
-@media (min-width: 50em) {
-  section {
-    margin: 50px 0; } }
 .home__galleries {
   margin-top: 20px;
   text-align: center; }
 
 .stars__section {
-  color: white;
+  color: #f9f9f9;
   background-image: url("images/stars-resize.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -1587,7 +1420,7 @@ section {
     padding-bottom: 50px;
     line-height: 0; }
 
-.quote-block {
+.quote__block {
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -1595,7 +1428,7 @@ section {
   justify-content: center; }
 
 @media (min-width: 50em) {
-  .quote-block {
+  .quote__block {
     flex-direction: row;
     padding-top: 150px; }
 
@@ -1606,10 +1439,10 @@ section {
     font-size: 4em;
     width: 900px; } }
 @media (max-width: 37.5em) {
-  .quote-block {
+  .quote__block {
     padding-top: 150px; } }
 @media (min-width: 37.5em) {
-  .quote-block {
+  .quote__block {
     padding-top: 150px; } }
 .about__section {
   padding: 0 20px; }
@@ -1678,32 +1511,6 @@ section {
   background-position: center;
   height: 600px; }
 
-/*
-.contact__section {
-  background-image: url('images/contact-resize.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  height:600px;
-  padding: 50px 0;
-}
-.contact__container {
-  background-color: $white;
-  width: 80%;
-  height: 450px;
-  margin: 0 auto;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 80px 20px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  h2, p {
-    margin-bottom: 60px;
-  }
-  .contact-email{
-    word-wrap: break-word;
-    line-height: 20px;
-  }
-}*/
 .contact__section {
   background-image: url("images/contact-resize.jpg");
   background-attachment: fixed;
@@ -1717,7 +1524,7 @@ section {
     font-size: 1em; }
 
 .contact__container {
-  background-color: white;
+  background-color: #f9f9f9;
   width: 60%;
   margin: 0 auto;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);

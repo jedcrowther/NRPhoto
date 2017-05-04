@@ -1,4 +1,3 @@
-
 .instagram-pics {
   margin: 4%;
   padding: 0;
@@ -9,26 +8,21 @@
   li {
     margin: 10px;
     flex-basis: 30%;
-    
-    &:last-child {
-/*     margin-right: 0; */
-    }
   }
 }
-
 
 @include breakpoint(tablet) {
   .instagram-pics {
-  flex-wrap: nowrap;
-}
+    flex-wrap: nowrap;
+  }
 }
 
 @include breakpoint(mobileonly) {
-.instagram-pics {
-  li {
-    flex-basis: 40%;
+  .instagram-pics {
+    li {
+      flex-basis: 40%;
+    }
   }
-}
 }
 
 .social-media-icons {
@@ -48,9 +42,8 @@
     margin: 50px auto;
   }
   @include breakpoint(tablet) {
-  img {
-    width: 15%;
-    
+    img {
+      width: 15%;
+    }
   }
-}
 }

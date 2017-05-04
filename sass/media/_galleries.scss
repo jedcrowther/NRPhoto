@@ -4,7 +4,6 @@
   margin: 0 auto;
   justify-content: center;
   max-width: 1200px;
-/*  height: 500px;*/ 
 }
 
 .image__container {
@@ -19,7 +18,7 @@
   height: auto;
 }
 
-.image__thumb--overlay {
+.image__thumb-overlay {
   position: absolute;
   top: 5%;
   bottom: 0;
@@ -33,33 +32,33 @@
   z-index: 100;
 }
 
-.image__container:hover .image__thumb--overlay {
+.image__container:hover .image__thumb-overlay {
   opacity: 1;
 }
 
-.image__thumb--text {
-color: #0f0f0f;
-    font-size: 20px;
-    position: absolute;
-    top: 78%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 300;
-    letter-spacing: 1.5px;
+.image__thumb-text {
+  color: #0f0f0f;
+  font-size: 20px;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1.5px;
 }
 
-.image__thumb--icon img{
-    display: block;
-    margin: 0 auto;
-    padding: 13% 0;
-    width: 40%;
+.image__thumb-icon img {
+  display: block;
+  margin: 0 auto;
+  padding: 13% 0;
+  width: 40%;
 }
 
-.single-post .image__thumb--icon img {
+.single-post .image__thumb-icon img {
   margin: 40px auto;
   display: block;
   padding: 20px;
@@ -71,15 +70,13 @@ color: #0f0f0f;
     flex-basis: 47%;
     margin: 5px;
   }
-  
-  .image__thumb--icon img{
+  .image__thumb-icon img {
     margin-top: 8%;
     width: 40%;
-}
-
-.image__thumb--text {
-  top: 80%;
-}
+  }
+  .image__thumb-text {
+    top: 80%;
+  }
 }
 
 @media screen and (min-width: 450px) and (max-width: 800px) {
@@ -87,21 +84,17 @@ color: #0f0f0f;
     flex-basis: 47%;
     margin: 5px;
   }
-  
-  .image__thumb--icon img{
+  .image__thumb-icon img {
     padding-top: 10%;
     width: 40%;
-}
-
-.image__thumb--text {
-  
-  top: 80%;
-}
-
+  }
+  .image__thumb-text {
+    top: 80%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-  .image__thumb--overlay {
+  .image__thumb-overlay {
     position: relative;
     padding: 10px 0 60px;
     opacity: 1;
@@ -135,21 +128,14 @@ color: #0f0f0f;
 }
 
 .type-post .entry-content {
-p {
-  margin-bottom: 0;
-}
-img {
-      max-width: 96%;
-    margin: 0 2%;
-    
-    
-  
-  &:first-child {
-     margin-top: 60px;
-    }
-  
-    
+  p {
+    margin-bottom: 0;
   }
-  
-  
+  img {
+    max-width: 96%;
+    margin: 0 2%;
+    &:first-child {
+      margin-top: 60px;
+    }
+  }
 }
