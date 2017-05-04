@@ -61,6 +61,24 @@ select.orderby {
 text-align: left !important;
    font-size: 35px !important;
     margin-bottom: 0em !important;
+    
+    @include breakpoint(mobileonly) {
+      font-size: 30px !important;
+    }
+}
+
+
+div.slick-list.draggable {
+      margin-left: 20%;
+}
+
+div.thumbnails {
+    display: none;
+}
+@media (min-width: 770px){
+  div.thumbnails {
+    display: block;
+  }
 }
 
 .woocommerce-cart,
@@ -100,11 +118,14 @@ h1.entry-title {
 	&:active,
 	&:focus {
 		background: lighten($navy, 10% ) !important;
-	}
-
+	}     
 }
 .single_add_to_cart_button {
   width: 50% !important;
+  @include breakpoint(mobileonly){
+    margin: 0 auto !important;
+     width: 200px !important;
+}
 }
 .product_type_simple {
   width: 100% !important;
@@ -116,6 +137,12 @@ h1.entry-title {
 }
 
 
+#wooswipe .thumbnails {
+ @include breakpoint(mobileonly){
+   height: auto !important;
+ }
+}
+  
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     float: left !important;
     margin: 0!important;

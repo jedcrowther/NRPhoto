@@ -65,6 +65,19 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
+@include breakpoint(mobileonly){
+  
+  .hero {
+    &.home__hero {
+      height: 65vh;
+    }
+    &.other__hero {
+      height: 50vh;
+    }
+  }
+  
+}
+
 .site__header {
   background-size: cover;
   background-position: center center;

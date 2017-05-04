@@ -7,22 +7,17 @@
 /*  height: 500px;*/ 
 }
 
-
-
 .image__container {
   flex-basis: 31%;
   position: relative;
   margin: 5px;
-
 }
 
 .image__thumb {
   display: block;
   width: 100%;
   height: auto;
-  
 }
-
 
 .image__thumb--overlay {
   position: absolute;

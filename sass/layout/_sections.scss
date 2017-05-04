@@ -1,5 +1,11 @@
 section {
-  margin: 100px 0;
+  margin: 50px 0;
+}
+
+@include breakpoint(tablet){
+ section {
+  margin: 50px 0;
+ }
 }
 
 .home__galleries {
@@ -23,6 +29,7 @@ section {
     text-align: center;
     line-height: 65px;
     width: 60%;
+    min-width: 250px;
   }
   .stars__quote-mark {
     opacity: 0.6;
@@ -77,8 +84,15 @@ section {
 $about-layout: (
   columns: 2,
   gutter: 50px,
+  media: 64em,
+  );
+  
+  $about-layout-tablet: (
+  columns: 2,
+  gutter: 20px,
   media: 50em,
   );
+
   
   $about-layout-mobile: (
   columns: 1,
@@ -98,11 +112,25 @@ $about-layout: (
 .about__image {
  @include grid-column(1, $about-layout-mobile);
     background-size: cover;
-    background-position: center;
+    background-position: 0% 80%;
+    height: 300px;
+  
+  @include grid-media($about-layout-tablet) {
+    @include grid-column(1);
     height: 500px;
+    background-position: center;
+  }
     
   @include grid-media($about-layout) {
     @include grid-column(1);
+    height: 500px;
+    background-position: center;
+  }
+  
+  @include breakpoint(phablet) {
+    background-position: 0% 80%;
+    height: 400px;
+    
   }
 }
 
@@ -113,7 +141,12 @@ $about-layout: (
      white-space: pre-wrap;
   }
 @include grid-column(1, $about-layout-mobile);
+
 @include grid-media($about-layout) {
+    @include grid-column(1);
+    text-align: left;
+  }
+@include grid-media($about-layout-tablet) {
     @include grid-column(1);
     text-align: left;
   }
@@ -124,9 +157,10 @@ $about-layout: (
 
 .gear__list {
   max-width: 1000px;
-  padding: 100px 50px;
+  padding: 50px;
   margin: 0 auto;
 }
+
 
 .flatlay__section {
   background-size: cover;
@@ -182,7 +216,6 @@ p {
 }
 .contact__container {
   background-color: white;
-  /*height: 200px;*/
   width: 60%;
   margin: 0 auto;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -203,8 +236,6 @@ p {
 
 .contact__page {
   h3 {
-/*    border-bottom: 1px solid;*/
-    width: 60%;
     text-align: center;
     padding: 5px;
     margin: 50px auto;
@@ -213,8 +244,11 @@ p {
 }
 
 @include breakpoint(mobileonly){
+  .contact__section {
+    padding: 160px 20px 0 20px;;
+  }
   .contact__container {
-  width: 100%;
+    margin: 10px auto;
   }
 }
 
