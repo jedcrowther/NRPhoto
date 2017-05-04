@@ -111,10 +111,12 @@ add_action('widgets_init', 'wp_underscore_widgets_init');
  * Enqueue scripts and styles.
  */
 function wp_underscore_scripts() {
+  wp_register_style('Source_Sans_Pro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+  wp_enqueue_style('Source_Sans_Pro');
 
   wp_register_style('Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
   wp_enqueue_style('Font_Awesome');
-
+  
   wp_enqueue_style('wp_underscore-style', get_stylesheet_uri());
 
   wp_enqueue_script('wp_underscore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
@@ -127,8 +129,8 @@ function wp_underscore_scripts() {
 
   wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array('jquery'), 1.1, true);
 
-  wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array('jquery'), 1.1, true);
-// <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  wp_enqueue_script('scrollreveal', get_template_directory_uri() . '/js/scrollreveal.min.js', array('jquery'), 1.1, true);
+
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');

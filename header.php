@@ -13,7 +13,6 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <?php wp_head(); ?>
   </head>
@@ -41,7 +40,7 @@
         <?php } else { ?>
           <div class="hero other__hero">
             <?php if (get_header_image()) : ?>
-              <header id="masthead" class="site__header" style="background-image: url(<?php header_image() ?>)" role="banner">
+              <header id="masthead" class="site__header site__header-other" style="background-image: url(<?php header_image() ?>)" role="banner">
                 <div id="ParallaxContent" class="site__branding">
                   <a href="<?php echo get_home_url(); ?>"><img class="nrphoto__logo--white other" src="<?php echo $image[0]; ?>" alt="Natalie Rose Photography Logo"></a>
                 </div>
