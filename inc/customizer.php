@@ -18,8 +18,18 @@ function wp_underscore_customize_register($wp_customize) {
   $wp_customize->add_setting('nrphoto_footer_logo', array('default' => ''));
   $wp_customize->add_setting('nrphoto_bio_image', array('default' => ''));
   $wp_customize->add_setting('nrphoto_gear_image', array('default' => ''));
-
-
+  $wp_customize->add_setting('nrphoto_contact_image', array('default' => ''));
+  $wp_customize->add_setting('nrphoto_quote_image', array('default' => ''));
+  
+  
+  //remove pre existing background image settings
+  $wp_customize->remove_setting('background_image');
+  $wp_customize->remove_control('background_preset');
+  $wp_customize->remove_control('background_position');
+  $wp_customize->remove_control('background_size');
+  $wp_customize->remove_control('background_repeat');
+  $wp_customize->remove_control('background_attachment');
+  
   // register area in customizer for a footer logo
   $wp_customize->add_control(
           new WP_Customize_Image_Control($wp_customize, 'footer_logo', array(
@@ -42,16 +52,39 @@ function wp_underscore_customize_register($wp_customize) {
           )
   );
 
-  // register area in customizer for a gear logo
+  // register area in customizer for a gear image
   $wp_customize->add_control(
           new WP_Customize_Image_Control($wp_customize, 'gear_image', array(
       'label' => __('Gear Image', 'nrphoto'),
       'section' => 'background_image',
-      'priority' => '10',
+      'priority' => '50',
       'settings' => 'nrphoto_gear_image'
           )
           )
   );
+  
+  // register area in customizer for a contact image
+  $wp_customize->add_control(
+          new WP_Customize_Image_Control($wp_customize, 'contact_image', array(
+      'label' => __('Contact Image', 'nrphoto'),
+      'section' => 'background_image',
+      'priority' => '10',
+      'settings' => 'nrphoto_contact_image'
+          )
+          )
+  );
+  
+    // register area in customizer for a contact image
+  $wp_customize->add_control(
+          new WP_Customize_Image_Control($wp_customize, 'quote_image', array(
+      'label' => __('Quote Image', 'nrphoto'),
+      'section' => 'background_image',
+      'priority' => '10',
+      'settings' => 'nrphoto_quote_image'
+          )
+          )
+  );
+  
 }
 
 add_action('customize_register', 'wp_underscore_customize_register');
@@ -96,7 +129,7 @@ function my_add_customizer_sections($wp_customize) {
       'priority' => 25,
       'description' => __('Add the URL for each of your social profiles.', 'nrphoto')
   ));
-
+  
   // create a setting and control for each social site
   foreach ($social_sites as $social_site => $value) {
 
