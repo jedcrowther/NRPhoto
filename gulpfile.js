@@ -10,6 +10,12 @@ var gulp = require('gulp'),
         notify = require('gulp-notify'),
         include = require('gulp-include'),
         sass = require('gulp-sass');
+        autoprefixer = require('gulp-autoprefixer');
+
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
 
 
 // Default error handler
@@ -21,7 +27,7 @@ var onError = function (err) {
 // Jshint outputs any kind of javascript problems you might have
 // Only checks javascript files inside /src directory
 gulp.task('jshint', function () {
-  return gulp.src('./js/src/*.js')
+  return gulp.src('./js/*.js')
           .pipe(jshint('.jshintrc'))
           .pipe(jshint.reporter(stylish))
           .pipe(jshint.reporter('fail'));
@@ -50,6 +56,7 @@ gulp.task('sass', function () {
   return gulp.src('sass/style.scss')
           .pipe(plumber({errorHandler: onError}))
           .pipe(sass())
+          .pipe(autoprefixer(autoprefixerOptions))
           .pipe(gulp.dest('.'))
           // Normal done, time to do minified (style.min.css)
           // remove the following 3 lines if you don't want it
@@ -77,3 +84,5 @@ gulp.task('watch', function () {
 gulp.task('default', ['watch'], function () {
   // Does nothing in this task, just triggers the dependent 'watch'
 });
+
+

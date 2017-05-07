@@ -37,7 +37,7 @@ get_header();
         <a href="portfolio"><button>View My Portfolio</button></a>
       </div>
     </section>
-    <section class="stars__section">
+    <section class="stars__section" style="background-image: url('<?php echo esc_url(get_theme_mod('nrphoto_quote_image')) ?>')">
       <div class="reveal quote__block">
         <div class="stars__quote-mark">“</div>
         <div class="stars__quote"> <?php echo get_bloginfo('description', 'display'); ?>
@@ -78,7 +78,7 @@ get_header();
 
     <?php $contact_meta = get_post_meta(259); ?>
 
-    <section class="contact__section">
+    <section class="contact__section" style="background-image: url('<?php echo esc_url(get_theme_mod('nrphoto_contact_image')) ?>')">
       <div class="reveal contact__container">
         <h3>Contact</h3>
         <a href="tel:<?php echo $contact_meta['contact_number'][0]; ?>"><p><?php echo $contact_meta['contact_number'][0]; ?></p></a>

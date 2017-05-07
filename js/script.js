@@ -40,6 +40,7 @@ jQuery(document).ready(function($) {
     tmpStar.style.top = 100 * Math.random() + '%';
     tmpStar.style.left = 100 * Math.random() + '%';
     document.getElementById('site-navigation').appendChild(tmpStar);
+    document.getElementById('fourohfour').appendChild(tmpStar);
   }
   function animateStars() {
     stars = document.querySelectorAll(".star");

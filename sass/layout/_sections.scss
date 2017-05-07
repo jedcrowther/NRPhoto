@@ -9,7 +9,6 @@ section {
 
 .stars__section {
   color: $white;
-  background-image: url('images/stars-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
   height:600px;
@@ -156,7 +155,6 @@ gutter: 0,
 }
 
 .contact__section {
-  background-image: url('images/contact-resize.jpg');
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
@@ -233,4 +231,28 @@ gutter: 0,
   text-align: center;
   max-width: 60%;
   margin: 0 auto;
+}
+
+.error404 {
+  color: $white;
+  background-color: #000029;;
+  width: 100%;
+  height: 100%;  
+
+  .hero {
+    display:none;
+  }
+  h1.page-title {
+    text-align: center;
+ padding: 20px;
+  }
+  .social-media-icons a{
+    color: $white;
+  }
+  .widget-area {
+    display:none;
+  }
+  .error-404 {
+    margin-top: 100px;
+  }
 }

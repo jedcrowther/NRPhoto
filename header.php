@@ -12,6 +12,8 @@
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="description" content="Natalie Rose photography portfolio Christchurch, New Zealand">
+    <meta name="keywords" content="Natalie Rose Crowther Astrophotography Landscapes Events Weddings Photography Portfolio Christchurch New Zealand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <?php wp_head(); ?>
@@ -50,9 +52,9 @@
 
         <div class="shadow"></div>      
         <svg class="menu__icon menu-toggle" aria-controls="primary-menu" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="30" height="16">
-          <path class="icon-top" fill="none" stroke="#999" stroke-width="2" d="M0 1h30" stroke-linecap="butt"/>
-          <path class="icon-middle" fill="none" stroke="#999" stroke-width="2" d="M0 8h30" stroke-linecap="butt"/>
-          <path class="icon-bottom" fill="none" stroke="#999" stroke-width="2" d="M0 15h30" stroke-linecap="butt"/>
+          <path class="icon-top" fill="none" stroke="#f9f9f9" stroke-width="2" d="M0 1h30" stroke-linecap="butt"/>
+          <path class="icon-middle" fill="none" stroke="#f9f9f9" stroke-width="2" d="M0 8h30" stroke-linecap="butt"/>
+          <path class="icon-bottom" fill="none" stroke="#f9f9f9" stroke-width="2" d="M0 15h30" stroke-linecap="butt"/>
         </svg>
         
         <nav id="site-navigation" class="main-navigation" role="navigation">

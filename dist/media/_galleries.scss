@@ -1,0 +1,147 @@
+.gallery__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.image__container {
+  -ms-flex-preferred-size: 31%;
+  flex-basis: 31%;
+  position: relative;
+  margin: 5px;
+}
+
+.image__thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image__thumb-overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 4%;
+  right: 0;
+  height: 90%;
+  width: 92%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: $white;
+  z-index: 100;
+}
+
+.image__container:hover .image__thumb-overlay {
+  opacity: 1;
+}
+
+.image__thumb-text {
+  color: #0f0f0f;
+  font-size: 20px;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.image__thumb-icon img {
+  display: block;
+  margin: 0 auto;
+  padding: 13% 0;
+  width: 40%;
+}
+
+.single-post .image__thumb-icon img {
+  margin: 40px auto;
+  display: block;
+  padding: 20px;
+  width: 15%;
+}
+
+@media screen and (min-width: 800px) and (max-width: 910px) {
+  .image__container {
+    -ms-flex-preferred-size: 47%;
+    flex-basis: 47%;
+    margin: 5px;
+  }
+  .image__thumb-icon img {
+    margin-top: 8%;
+    width: 40%;
+  }
+  .image__thumb-text {
+    top: 80%;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 800px) {
+  .image__container {
+    -ms-flex-preferred-size: 47%;
+    flex-basis: 47%;
+    margin: 5px;
+  }
+  .image__thumb-icon img {
+    padding-top: 10%;
+    width: 40%;
+  }
+  .image__thumb-text {
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image__thumb-overlay {
+    position: relative;
+    padding: 10px 0 60px;
+    opacity: 1;
+    background-color: $white;
+    top: 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    width: inherit;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .gallery__container {
+    display: block;
+    column-width: 300px;
+    column-gap: 5px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .image__container {
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .image__thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.type-post .entry-content {
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 96%;
+    margin: 0 2%;
+    &:first-child {
+      margin-top: 60px;
+    }
+  }
+}

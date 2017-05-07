@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( min-device-pixel-ratio: 2), only screen and ( -webkit-min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+  .header-image .site-title > a {
+    float: left;
+    min-height: 130px;
+    width: 100%;
+    background-size: 130px 65px !important;
+  }
+  .header-image .title-area,
+  .header-image .site-title,
+  .header-image .site-title a {
+    max-width: 130px;
+    min-height: 65px;
+    padding: 0;
+    width: 100%;
+    float: left;
+    margin: 0;
+  }
+}
+
+.nrphoto__logo--white {
+  display: block;
+  /*  width: 50%;*/
+  &.home {
+    margin: 28vh auto;
+    padding: 0 10%;
+  }
+  &.other {
+    padding: 0 10%;
+    margin: 20vh auto;
+  }
+}
+
+@include breakpoint(tablet) {
+  .nrphoto__logo--white {
+    &.home,
+    &.other {
+      width: 50%;
+      padding: 0 0;
+    }
+  }
+}
+
+.hero {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  &.home__hero {
+    height: 85vh;
+  }
+  &.other__hero {
+    height: 60vh;
+  }
+}
+
+@include breakpoint(mobileonly) {
+  .hero {
+    &.home__hero {
+      height: 65vh;
+    }
+    &.other__hero {
+      height: 50vh;
+    }
+  }
+}
+
+.site__header {
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+}
+
+.site__branding {
+  text-align: center;
+}
+
+.site-title {
+  margin: 5em 1em 0;
+  font-family: $font__main;
+  font-size: 2.4em;
+  font-weight: light;
+  line-height: 1.3em;
+  color: #fff;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 30em) {
+  .site-title {
+    font-size: 2em;
+  }
+}
+
+.site-title a {
+  text-decoration: none;
+}
+
+.site-title a:hover,
+.site-title a:focus {
+  text-decoration: underline;
+}
